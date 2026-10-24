@@ -1,7 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
-
-const locales = ["uz", "ru", "en"];
-const defaultLocale = "ru";
+import { locales, defaultLocale, isLocale, type Locale } from "@/lib/i18n";
 
 function hasLocale(pathname: string) {
   return locales.some(
@@ -21,50 +19,40 @@ function isSystemPath(pathname: string) {
   );
 }
 
+// Pick language from browser (Accept-Language), otherwise defaultLocale (uz)
+function detectLocale(request: NextRequest): Locale {
+  const header = request.headers.get("accept-language") || "";
+
+  for (const part of header.split(",")) {
+    const code = part.split(";")[0].trim().toLowerCase().slice(0, 2);
+    if (isLocale(code)) {
+      return code;
+    }
+  }
+
+  return defaultLocale;
+}
+
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  /*
-    If someone opens:
-    /uz/admin/login
-    /ru/admin/login
-    /en/admin/login
-
-    redirect to:
-    /admin/login
-  */
+  // /uz/admin/... -> /admin/...
   const parts = pathname.split("/");
 
-  if (
-    parts.length >= 3 &&
-    locales.includes(parts[1]) &&
-    parts[2] === "admin"
-  ) {
+  if (parts.length >= 3 && isLocale(parts[1]) && parts[2] === "admin") {
     const url = request.nextUrl.clone();
     url.pathname = `/${parts.slice(2).join("/")}`;
     return NextResponse.redirect(url);
   }
 
-  /*
-    Do not add locale to:
-    /admin
-    /admin/login
-    /api
-    /_next
-    static files
-  */
   if (isSystemPath(pathname)) {
     return NextResponse.next();
   }
 
-  /*
-    Public site locale redirect:
-    /        -> /ru
-    /contact -> /ru/contact
-  */
+  // / -> /uz (or browser language), /contact -> /uz/contact
   if (!hasLocale(pathname)) {
     const url = request.nextUrl.clone();
-    url.pathname = `/${defaultLocale}${pathname === "/" ? "" : pathname}`;
+    url.pathname = `/${detectLocale(request)}${pathname === "/" ? "" : pathname}`;
     return NextResponse.redirect(url);
   }
 

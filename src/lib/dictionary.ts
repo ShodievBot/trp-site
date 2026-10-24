@@ -43,4 +43,32 @@ export const dictionary = {
     readMore: 'Read more',
     noNews: 'No published news yet.',
   },
+  tr: {
+    brand: 'The Most Reliable Publication',
+    subtitle: 'Bilimsel Araştırma Merkezi',
+    heroText:
+      'Bilimsel yayınlar, uluslararası konferanslar, Scopus, akademik dergiler ve yayıncılık hizmetlerinde güvenilir ortağınız.',
+    services: 'Hizmetler',
+    conferences: 'Konferanslar',
+    contact: 'İletişim',
+    popularPages: 'Popüler sayfalar',
+    latestNews: 'Son haberler',
+    allNews: 'Tüm haberler',
+    readMore: 'Devamını oku',
+    noNews: 'Henüz yayınlanmış haber yok.',
+  },
+  kk: {
+    brand: 'The Most Reliable Publication',
+    subtitle: 'Ғылыми-зерттеу орталығы',
+    heroText:
+      'Ғылыми басылымдар, халықаралық конференциялар, Scopus, ОАК журналдары және баспа қызметтері бойынша сенімді серіктес.',
+    services: 'Қызметтер',
+    conferences: 'Конференциялар',
+    contact: 'Байланыс',
+    popularPages: 'Танымал беттер',
+    latestNews: 'Соңғы жаңалықтар',
+    allNews: 'Барлық жаңалықтар',
+    readMore: 'Толығырақ',
+    noNews: 'Әзірге жаңалықтар жоқ.',
+  },
 } satisfies Record<Locale, Record<string, string>>;

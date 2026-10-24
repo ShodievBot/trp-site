@@ -1,49 +1,50 @@
 import Link from "next/link";
+import type { Locale } from "@/lib/i18n";
+import { getNav } from "@/lib/navigation";
 
-type Locale = "uz" | "ru" | "en";
-
-const footer = {
+const footer: Record<
+  Locale,
+  { pages: string; tagline: string; license: string; offer: string; telegramGroup: string; rights: string }
+> = {
   uz: {
     pages: "Sahifalar",
     tagline: "Ilmiy nashrlar va akademik hamkorlik",
-    services: "Xizmatlar",
-    conferences: "Konferensiyalar",
-    news: "Yangiliklar",
-    documents: "Hujjatlar",
-    payment: "To‘lov",
-    contact: "Kontaktlar",
     license: "Nashriyot guvohnomasi",
     offer: "Ommaviy oferta",
     telegramGroup: "Telegram guruh",
     rights: "Barcha huquqlar himoyalangan.",
   },
+  en: {
+    pages: "Pages",
+    tagline: "Scientific publications & academic cooperation",
+    license: "Publishing license",
+    offer: "Public offer",
+    telegramGroup: "Telegram group",
+    rights: "All rights reserved.",
+  },
   ru: {
     pages: "Страницы",
     tagline: "Научные публикации и академическое сотрудничество",
-    services: "Услуги",
-    conferences: "Конференции",
-    news: "Новости",
-    documents: "Документы",
-    payment: "Оплата",
-    contact: "Контакты",
     license: "Лицензия издательства",
     offer: "Публичная оферта",
     telegramGroup: "Telegram-группа",
     rights: "Все права защищены.",
   },
-  en: {
-    pages: "Pages",
-    tagline: "Scientific publications & academic cooperation",
-    services: "Services",
-    conferences: "Conferences",
-    news: "News",
-    documents: "Documents",
-    payment: "Payment",
-    contact: "Contact",
-    license: "Publishing license",
-    offer: "Public offer",
-    telegramGroup: "Telegram group",
-    rights: "All rights reserved.",
+  tr: {
+    pages: "Sayfalar",
+    tagline: "Bilimsel yayınlar ve akademik iş birliği",
+    license: "Yayınevi lisansı",
+    offer: "Kamuya açık teklif",
+    telegramGroup: "Telegram grubu",
+    rights: "Tüm hakları saklıdır.",
+  },
+  kk: {
+    pages: "Беттер",
+    tagline: "Ғылыми басылымдар және академиялық серіктестік",
+    license: "Баспа лицензиясы",
+    offer: "Жария оферта",
+    telegramGroup: "Telegram тобы",
+    rights: "Барлық құқықтар қорғалған.",
   },
 };
 
@@ -53,6 +54,7 @@ type Props = {
 
 export default function SiteFooter({ locale }: Props) {
   const t = footer[locale] || footer.uz;
+  const nav = getNav(locale);
 
   return (
     <footer className="siteFooter">
@@ -69,12 +71,11 @@ export default function SiteFooter({ locale }: Props) {
         </div>
 
         <nav className="footerLinks" aria-label={t.pages}>
-          <Link href={`/${locale}/services`}>{t.services}</Link>
-          <Link href={`/${locale}/conferences`}>{t.conferences}</Link>
-          <Link href={`/${locale}/news`}>{t.news}</Link>
-          <Link href={`/${locale}/documents`}>{t.documents}</Link>
-          <Link href={`/${locale}/payment`}>{t.payment}</Link>
-          <Link href={`/${locale}/contact`}>{t.contact}</Link>
+          {nav.map((item) => (
+            <Link key={item.key} href={`/${locale}${item.path}`}>
+              {item.label}
+            </Link>
+          ))}
           <Link href={`/${locale}/license`}>{t.license}</Link>
           <Link href={`/${locale}/offer`}>{t.offer}</Link>
         </nav>

@@ -6,7 +6,7 @@ export const SITE_URL =
 
 const SITE_NAME = "The Most Reliable Publication";
 
-const ogLocale: Record<Locale, string> = { uz: "uz_UZ", ru: "ru_RU", en: "en_US" };
+const ogLocale: Record<Locale, string> = { uz: "uz_UZ", en: "en_US", ru: "ru_RU", tr: "tr_TR", kk: "kk_KZ" };
 
 /**
  * Metadata for a public page. `path` is the part after the locale, e.g. "/news" or "".
