@@ -113,7 +113,7 @@ Hujjatlar → To‘lov → Murojaat uchun
   - [x] dictionary.ts — добавлены tr, kk
   - [x] Страницы переведены на pick(); тип LocaleMap<T> в i18n.ts (uz/ru/en обязательны, tr/kk опциональны)
   - [ ] Миграция Supabase: page_stats CHECK для tr/kk
-  - [ ] Проверить npm run build → commit → merge в main
+  - [x] tsc + build OK → preview → production → merge в main (2026-10-24)
 
 ## 8. План (бэклог)
 1. [в работе] 5 языков + новый порядок меню
@@ -134,13 +134,16 @@ Hujjatlar → To‘lov → Murojaat uchun
 | 2026-10-24 | HANDOFF создан, .gitignore (backups), первый push на GitHub | 192935d |
 | 2026-10-24 | feature/i18n-menu: i18n, navigation, header, footer, proxy, seo, dictionary | 267135e |
 | 2026-10-24 | Все страницы → pick()/LocaleMap, publicNews/legalAdmin/legacyMedia под 5 языков | (см. git log) |
+| 2026-10-24 | Новости и главная → pick(); build OK; деплой на прод через vercel --prod | (см. git log) |
 
 ## 10. Следующий шаг
+0. ✅ 5 языков + меню на проде
 1. Миграция Supabase page_stats (supabase/migrations/20261024_locales_tr_kk.sql) — выполнить в SQL Editor
 2. npm run dev → проверить /tr и /kk локально
 3. Затем: страница /partners, переводы tr/kk контента, бургер-меню
 - Заметка: на главной в stats написано «3 til / 3 языка» → заменить на 5 при переводе контента
 
 ## 11. Открытые вопросы
-- Деплой в Vercel: ПОКА НЕ ДЕЛАЕМ (решение заказчика). Работаем только в ветках + GitHub. Не мержить в main без согласования.
+- Деплой: Vercel CLI из терминала. Порядок: tsc + npm run build → `vercel` (preview, проверить) → `vercel --prod`.
+  Откат: `vercel rollback`. После прода ветку мержим в main (main = то, что на сайте).
 - Русский или узбекский язык по умолчанию для «/»? (сейчас: язык браузера, иначе uz)
