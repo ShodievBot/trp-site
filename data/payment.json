@@ -1,0 +1,71 @@
+{
+  "telegramUrl": "https://t.me/Zubayda_Sherzodovna",
+  "qrImage": "",
+  "youtubeUrl": "",
+  "uz": {
+    "badge": "To‘lov",
+    "title": "Xizmatlar uchun to‘lov",
+    "subtitle": "Nashriyot xizmatlari, konferensiya ishtiroki va boshqa xizmatlar bo‘yicha to‘lov ma’lumotlari.",
+    "qrLabel": "QR",
+    "qrTitle": "Yagona QR-kod orqali to‘lov",
+    "qrComing": "QR-kod tez orada qo‘shiladi",
+    "qrText": "Yagona QR-kod keyinchalik shu yerga joylashtiriladi. Hozircha to‘lov bo‘yicha ma’lumot olish uchun Telegram orqali murojaat qilishingiz mumkin.",
+    "stepsTitle": "To‘lov tartibi",
+    "steps": [
+      "Kerakli xizmat turini tanlang.",
+      "Ariza formasini to‘ldiring yoki Telegram orqali murojaat qiling.",
+      "Mutaxassislarimiz sizga to‘lov bo‘yicha aniq ma’lumot beradi.",
+      "To‘lovdan so‘ng chekni Telegram orqali yuboring."
+    ],
+    "videoTitle": "Video ko‘rsatma",
+    "videoText": "Bu blokka keyinchalik rasmiy YouTube video joylashtiriladi.",
+    "videoComing": "Video tez orada qo‘shiladi",
+    "telegram": "Telegram orqali bog‘lanish",
+    "contact": "Ariza qoldirish",
+    "back": "Bosh sahifaga qaytish"
+  },
+  "ru": {
+    "badge": "Оплата",
+    "title": "Оплата услуг",
+    "subtitle": "Информация об оплате издательских услуг, участия в конференциях и других академических сервисов.",
+    "qrLabel": "QR",
+    "qrTitle": "Оплата через единый QR-код",
+    "qrComing": "QR-код будет добавлен позже",
+    "qrText": "Единый QR-код будет размещён в этом блоке позже. Пока вы можете получить реквизиты и точную сумму через Telegram.",
+    "stepsTitle": "Порядок оплаты",
+    "steps": [
+      "Выберите необходимый вид услуги.",
+      "Оставьте заявку на сайте или напишите в Telegram.",
+      "Наши специалисты сообщат точную сумму и реквизиты.",
+      "После оплаты отправьте чек через Telegram."
+    ],
+    "videoTitle": "Видеоинструкция",
+    "videoText": "В этот блок позже будет добавлено официальное YouTube-видео.",
+    "videoComing": "Видео будет добавлено позже",
+    "telegram": "Связаться в Telegram",
+    "contact": "Оставить заявку",
+    "back": "Вернуться на главную"
+  },
+  "en": {
+    "badge": "Payment",
+    "title": "Service payment",
+    "subtitle": "Payment information for publishing services, conference participation and other academic services.",
+    "qrLabel": "QR",
+    "qrTitle": "Payment via single QR code",
+    "qrComing": "QR code will be added later",
+    "qrText": "A single QR code will be placed in this block later. For now, you can request payment details and the exact amount via Telegram.",
+    "stepsTitle": "Payment process",
+    "steps": [
+      "Choose the required service.",
+      "Submit an application on the website or contact us via Telegram.",
+      "Our specialists will provide the exact amount and payment details.",
+      "After payment, send the receipt via Telegram."
+    ],
+    "videoTitle": "Instruction video",
+    "videoText": "An official YouTube video will be added to this block later.",
+    "videoComing": "Video will be added later",
+    "telegram": "Contact via Telegram",
+    "contact": "Submit application",
+    "back": "Back to homepage"
+  }
+}

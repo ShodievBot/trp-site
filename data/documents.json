@@ -1,0 +1,59 @@
+[
+  {
+    "id": "doc-legacy-conference-contract",
+    "slug": "international-conference-contract",
+    "status": "published",
+    "category": "Contract",
+    "imageUrl": "",
+    "fileUrl": "https://drive.google.com/file/d/1YkLOIv8NBMdwMSJZvRP9KFPsbvpNpOO9/view?usp=sharing",
+    "publishedAt": "2026-01-16",
+    "title": {
+      "uz": "Xalqaro konferensiyalar shartnomasi",
+      "ru": "Договор по международным конференциям",
+      "en": "International conference contract"
+    },
+    "description": {
+      "uz": "Xalqaro konferensiyalar bo‘yicha shartnoma.",
+      "ru": "Договор по международным конференциям.",
+      "en": "Contract for international conferences."
+    }
+  },
+  {
+    "id": "doc-legacy-scopus-contract-1",
+    "slug": "scopus-contract-1",
+    "status": "published",
+    "category": "Contract",
+    "imageUrl": "",
+    "fileUrl": "https://drive.google.com/file/d/1leSLVQvthOa35OmywYNpIjXmfg_qSAov/view?usp=sharing",
+    "publishedAt": "2026-01-16",
+    "title": {
+      "uz": "Scopus shartnomasi №1",
+      "ru": "Договор Scopus №1",
+      "en": "Scopus contract No. 1"
+    },
+    "description": {
+      "uz": "Scopus xizmatlari bo‘yicha shartnoma.",
+      "ru": "Договор на услуги, связанные со Scopus.",
+      "en": "Contract for Scopus-related services."
+    }
+  },
+  {
+    "id": "doc-legacy-scopus-contract-2",
+    "slug": "scopus-contract-2",
+    "status": "published",
+    "category": "Contract",
+    "imageUrl": "",
+    "fileUrl": "https://drive.google.com/file/d/1uAd04XW-kCo2n7QF6ogkOrlOQvLF0VQQ/view?usp=sharing",
+    "publishedAt": "2026-01-16",
+    "title": {
+      "uz": "Scopus shartnomasi №2",
+      "ru": "Договор Scopus №2",
+      "en": "Scopus contract No. 2"
+    },
+    "description": {
+      "uz": "Scopus xizmatlari bo‘yicha shartnoma.",
+      "ru": "Договор на услуги, связанные со Scopus.",
+      "en": "Contract for Scopus-related services."
+    }
+  }
+]
