@@ -1,3 +1,4 @@
+import { pick } from "@/lib/i18n";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -42,9 +43,9 @@ export default async function PaymentPage({ params }: Props) {
 
   const locale = rawLocale;
   const settings = await getPaymentSettings();
-  const t = settings[locale] || settings.uz;
+  const t = pick(settings, locale) || settings.uz;
   const videoEmbedUrl = getYouTubeEmbedUrl(settings.youtubeUrl);
-  const x = extra[locale];
+  const x = pick(extra, locale);
 
   return (
     <main className="paymentUnifiedPage">

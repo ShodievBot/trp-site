@@ -1,3 +1,4 @@
+import { pick } from "@/lib/i18n";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
@@ -178,7 +179,7 @@ export const dynamic = "force-dynamic";
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  const t = content[locale];
+  const t = pick(content, locale);
   return pageMetadata({ locale, path: "/documents", title: t.title, description: t.subtitle });
 }
 
@@ -190,7 +191,7 @@ export default async function DocumentsPage({ params }: Props) {
   }
 
   const locale = rawLocale;
-  const t = content[locale];
+  const t = pick(content, locale);
   const documents = await getPublicDocuments();
 
   return (
@@ -216,9 +217,9 @@ export default async function DocumentsPage({ params }: Props) {
           <div style={gridStyle}>
             {documents.map((item) => {
               const title =
-                item.title[locale] || item.title.ru || item.title.en || item.title.uz;
+                pick(item.title, locale) || item.title.ru || item.title.en || item.title.uz;
               const description =
-                item.description[locale] ||
+                pick(item.description, locale) ||
                 item.description.ru ||
                 item.description.en ||
                 item.description.uz;

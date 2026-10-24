@@ -157,7 +157,7 @@ const meta = {
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  return pageMetadata({ locale, path: '', ...meta[locale] });
+  return pageMetadata({ locale, path: '', ...pick(meta, locale) });
 }
 
 export default async function HomePage({ params }: Props) {

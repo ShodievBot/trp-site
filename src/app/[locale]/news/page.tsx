@@ -1,3 +1,4 @@
+import { pick } from "@/lib/i18n";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
@@ -166,7 +167,7 @@ export const dynamic = "force-dynamic";
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  const t = content[locale];
+  const t = pick(content, locale);
   return pageMetadata({ locale, path: "/news", title: t.title, description: t.subtitle });
 }
 
@@ -178,7 +179,7 @@ export default async function NewsPage({ params }: Props) {
   }
 
   const locale = rawLocale;
-  const t = content[locale];
+  const t = pick(content, locale);
   const news = await getPublicNews();
 
   return (
@@ -210,7 +211,7 @@ export default async function NewsPage({ params }: Props) {
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                     }}
-                    aria-label={item.title[locale] || item.title.ru || item.title.en || item.title.uz}
+                    aria-label={pick(item.title, locale) || item.title.ru || item.title.en || item.title.uz}
                   />
                 ) : (
                   <div style={coverStyle}>
@@ -227,11 +228,11 @@ export default async function NewsPage({ params }: Props) {
                   </div>
 
                   <h2 style={titleStyle}>
-                    {item.title[locale] || item.title.ru || item.title.en || item.title.uz}
+                    {pick(item.title, locale) || item.title.ru || item.title.en || item.title.uz}
                   </h2>
 
                   <p style={excerptStyle}>
-                    {item.excerpt[locale] || item.excerpt.ru || item.excerpt.en || item.excerpt.uz}
+                    {pick(item.excerpt, locale) || item.excerpt.ru || item.excerpt.en || item.excerpt.uz}
                   </p>
 
                   <strong style={readStyle}>{t.read}</strong>

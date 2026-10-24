@@ -1,3 +1,4 @@
+import { pick } from "@/lib/i18n";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
@@ -206,8 +207,8 @@ export async function generateMetadata({ params }: Props) {
   return pageMetadata({
     locale,
     path: `/documents/${encodeURIComponent(item.slug)}`,
-    title: item.title[locale] || item.title.en,
-    description: item.description[locale] || item.description.en || item.title[locale],
+    title: pick(item.title, locale) || item.title.en,
+    description: pick(item.description, locale) || item.description.en || pick(item.title, locale),
     image: item.imageUrl || undefined,
   });
 }
@@ -220,7 +221,7 @@ export default async function DocumentDetailPage({ params }: Props) {
   }
 
   const locale = rawLocale;
-  const t = content[locale];
+  const t = pick(content, locale);
   const decodedSlug = decodeURIComponent(slug);
   const item = await getPublicDocumentBySlug(decodedSlug);
 
@@ -228,9 +229,9 @@ export default async function DocumentDetailPage({ params }: Props) {
     notFound();
   }
 
-  const title = item.title[locale] || item.title.ru || item.title.en || item.title.uz;
+  const title = pick(item.title, locale) || item.title.ru || item.title.en || item.title.uz;
   const description =
-    item.description[locale] ||
+    pick(item.description, locale) ||
     item.description.ru ||
     item.description.en ||
     item.description.uz;

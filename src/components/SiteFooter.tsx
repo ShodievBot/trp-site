@@ -1,3 +1,4 @@
+import { pick } from "@/lib/i18n";
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n";
 import { getNav } from "@/lib/navigation";
@@ -53,7 +54,7 @@ type Props = {
 };
 
 export default function SiteFooter({ locale }: Props) {
-  const t = footer[locale] || footer.uz;
+  const t = pick(footer, locale) || footer.uz;
   const nav = getNav(locale);
 
   return (

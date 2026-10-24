@@ -1,3 +1,4 @@
+import { pick } from "@/lib/i18n";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -120,8 +121,8 @@ export async function generateMetadata({ params }: Props) {
   return pageMetadata({
     locale,
     path: `/news/${item.slug}`,
-    title: item.title[locale] || item.title.en,
-    description: item.excerpt[locale] || item.excerpt.en,
+    title: pick(item.title, locale) || item.title.en,
+    description: pick(item.excerpt, locale) || item.excerpt.en,
     image: item.imageUrl || undefined,
   });
 }
@@ -147,7 +148,7 @@ export default async function NewsDetailPage({ params }: Props) {
   }
 
   const locale = rawLocale;
-  const t = content[locale];
+  const t = pick(content, locale);
   const item = await getPublicNewsBySlug(slug);
 
   if (!item) {
@@ -159,8 +160,8 @@ export default async function NewsDetailPage({ params }: Props) {
       <section className="innerHero">
         <div className="innerHeroContent">
           <p className="innerKicker">{item.category}</p>
-          <h1>{item.title[locale]}</h1>
-          <p>{item.excerpt[locale]}</p>
+          <h1>{pick(item.title, locale)}</h1>
+          <p>{pick(item.excerpt, locale)}</p>
         </div>
       </section>
 
@@ -181,7 +182,7 @@ export default async function NewsDetailPage({ params }: Props) {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
-              aria-label={item.title[locale] || item.title.ru || item.title.en || item.title.uz}
+              aria-label={pick(item.title, locale) || item.title.ru || item.title.en || item.title.uz}
             />
           ) : (
             <div style={coverStyle}>
@@ -190,7 +191,7 @@ export default async function NewsDetailPage({ params }: Props) {
           )}
 
           <div style={contentStyle}>
-            {item.content[locale]
+            {pick(item.content, locale)
               .split("\n")
               .filter(Boolean)
               .map((paragraph) => (
@@ -204,7 +205,7 @@ export default async function NewsDetailPage({ params }: Props) {
             <div className="legacyGalleryGrid" style={{ padding: "0 28px 28px" }}>
               {item.gallery.map((src) => (
                 <a key={src} href={src} target="_blank" rel="noopener noreferrer" className="legacyGalleryItem">
-                  <Image src={src} alt={item.title[locale]} fill sizes="(max-width: 720px) 50vw, 280px" />
+                  <Image src={src} alt={pick(item.title, locale)} fill sizes="(max-width: 720px) 50vw, 280px" />
                 </a>
               ))}
             </div>
