@@ -9,7 +9,7 @@
 - Хостинг: Vercel | БД/хранилище: Supabase
 - Стек: Next.js (App Router, src/app/[locale]), TypeScript, Tailwind/PostCSS
 - Локальная папка: ~/trp-site (Mac, пользователь zavohirsodiev)
-- GitHub: (заполнить)
+- GitHub: https://github.com/ShodievBot/trp-site
 - Админка: /admin (новости, документы, оплата, юр.страницы, настройки)
 
 ## 2. Как работаем
@@ -36,7 +36,7 @@
 ## 4. Текущий статус
 - [x] HANDOFF.md создан
 - [x] Проверка на секреты перед публикацией
-- [ ] Проект загружен на GitHub
+- [x] Проект загружен на GitHub
 - [ ] Ассистент изучил код
 - [ ] План улучшений
 
