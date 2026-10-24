@@ -1,4 +1,4 @@
-import type { Locale } from "@/lib/i18n";
+import type { LocaleMap } from "@/lib/i18n";
 
 // Photos and videos carried over from the old site (themostreliablepublication.uz).
 // Large videos (>20 MB) are not re-hosted: they are linked to the old site with a local poster.
@@ -8,8 +8,8 @@ export type GalleryVideo = { src: string; poster: string; external?: boolean };
 
 export type GalleryBlock = {
   id: string;
-  title: Record<Locale, string>;
-  text: Record<Locale, string>;
+  title: LocaleMap<string>;
+  text: LocaleMap<string>;
   images: string[];
   video?: GalleryVideo;
 };

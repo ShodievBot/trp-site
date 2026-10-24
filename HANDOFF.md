@@ -111,7 +111,7 @@ Hujjatlar → To‘lov → Murojaat uchun
   - [x] proxy.ts — локали из i18n.ts, язык по Accept-Language, иначе uz
   - [x] seo.ts — ogLocale tr_TR, kk_KZ
   - [x] dictionary.ts — добавлены tr, kk
-  - [ ] Исправить ошибки tsc на страницах [locale]/* (объекты page {uz,ru,en} → pick(page, locale))
+  - [x] Страницы переведены на pick(); тип LocaleMap<T> в i18n.ts (uz/ru/en обязательны, tr/kk опциональны)
   - [ ] Миграция Supabase: page_stats CHECK для tr/kk
   - [ ] Проверить npm run build → commit → merge в main
 
@@ -132,11 +132,15 @@ Hujjatlar → To‘lov → Murojaat uchun
 | Дата | Что сделано | Коммит |
 |---|---|---|
 | 2026-10-24 | HANDOFF создан, .gitignore (backups), первый push на GitHub | 192935d |
-| 2026-10-24 | feature/i18n-menu: i18n, navigation, header, footer, proxy, seo, dictionary | (не закоммичено) |
+| 2026-10-24 | feature/i18n-menu: i18n, navigation, header, footer, proxy, seo, dictionary | 267135e |
+| 2026-10-24 | Все страницы → pick()/LocaleMap, publicNews/legalAdmin/legacyMedia под 5 языков | (см. git log) |
 
 ## 10. Следующий шаг
-`npx tsc --noEmit 2>&1 | grep error` → прислать вывод ассистенту → исправить страницы.
+1. Миграция Supabase page_stats (supabase/migrations/20261024_locales_tr_kk.sql) — выполнить в SQL Editor
+2. npm run dev → проверить /tr и /kk локально
+3. Затем: страница /partners, переводы tr/kk контента, бургер-меню
+- Заметка: на главной в stats написано «3 til / 3 языка» → заменить на 5 при переводе контента
 
 ## 11. Открытые вопросы
-- Как деплоится Vercel: автоматически из GitHub (main) или командой `vercel --prod`? (ответ: ?)
+- Деплой в Vercel: ПОКА НЕ ДЕЛАЕМ (решение заказчика). Работаем только в ветках + GitHub. Не мержить в main без согласования.
 - Русский или узбекский язык по умолчанию для «/»? (сейчас: язык браузера, иначе uz)

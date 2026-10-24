@@ -36,3 +36,7 @@ export function isLocale(value: string): value is Locale {
 export function pick<T>(map: Partial<Record<Locale, T>> & { uz: T }, locale: Locale): T {
   return map[locale] ?? map[fallbackLocale[locale]] ?? map.uz;
 }
+
+// Languages that every text must have. tr/kk are optional (fallback via pick)
+export type BaseLocale = "uz" | "ru" | "en";
+export type LocaleMap<T> = Record<BaseLocale, T> & Partial<Record<Locale, T>>;

@@ -1,3 +1,4 @@
+import { pick, type LocaleMap } from "@/lib/i18n";
 import Link from 'next/link';
 import type { Locale } from '@/lib/i18n';
 import { dictionary } from '@/lib/dictionary';
@@ -19,7 +20,7 @@ export async function PopularPages({ locale }: Props) {
     <section className="premiumSection">
       <div className="premiumSectionHeader">
         <div>
-          <p className="sectionKicker">{kicker[locale]}</p>
+          <p className="sectionKicker">{pick(kicker, locale)}</p>
           <h2>{t.popularPages}</h2>
         </div>
         <p>
@@ -42,7 +43,7 @@ export async function PopularPages({ locale }: Props) {
               {cleanTitle(page.title) || page.path}
             </span>
             <span className="popularViews">
-              {page.views} {views[locale]}
+              {page.views} {pick(views, locale)}
             </span>
           </Link>
         ))}
@@ -51,8 +52,8 @@ export async function PopularPages({ locale }: Props) {
   );
 }
 
-const kicker = { uz: 'Statistika', ru: 'Статистика', en: 'Analytics' } satisfies Record<Locale, string>;
-const views = { uz: 'ko‘rish', ru: 'просмотров', en: 'views' } satisfies Record<Locale, string>;
+const kicker = { uz: 'Statistika', ru: 'Статистика', en: 'Analytics' } satisfies LocaleMap<string>;
+const views = { uz: 'ko‘rish', ru: 'просмотров', en: 'views' } satisfies LocaleMap<string>;
 
 function cleanTitle(title: string | null) {
   if (!title) return '';

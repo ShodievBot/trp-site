@@ -1,3 +1,4 @@
+import { pick, type LocaleMap } from "@/lib/i18n";
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { isLocale, type Locale } from '@/lib/i18n';
@@ -168,12 +169,12 @@ const page = {
       'Academic cooperation and international networking',
     ],
   },
-} satisfies Record<Locale, unknown>;
+} satisfies LocaleMap<unknown>;
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  const c = page[locale];
+  const c = pick(page, locale);
   return pageMetadata({ locale, path: '/conferences', title: c.kicker, description: c.description });
 }
 
@@ -185,7 +186,7 @@ export default async function ConferencesPage({ params }: Props) {
   }
 
   const locale = rawLocale as Locale;
-  const c = page[locale];
+  const c = pick(page, locale);
 
   return (
     <main>

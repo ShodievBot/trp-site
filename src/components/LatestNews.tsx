@@ -1,3 +1,4 @@
+import { pick, type LocaleMap } from "@/lib/i18n";
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import {
@@ -150,7 +151,7 @@ const emptyStyle: CSSProperties = {
 };
 
 export async function LatestNews({ locale }: { locale: Locale }) {
-  const t = content[locale] || content.uz;
+  const t = pick(content, locale) || content.uz;
   const news = await getLatestPublicNews(3);
 
   return (
@@ -187,11 +188,11 @@ export async function LatestNews({ locale }: { locale: Locale }) {
                 </div>
 
                 <h3 style={titleStyle}>
-                  {item.title[locale] || item.title.ru || item.title.en || item.title.uz}
+                  {pick(item.title, locale) || item.title.ru || item.title.en || item.title.uz}
                 </h3>
 
                 <p style={excerptStyle}>
-                  {item.excerpt[locale] || item.excerpt.ru || item.excerpt.en || item.excerpt.uz}
+                  {pick(item.excerpt, locale) || item.excerpt.ru || item.excerpt.en || item.excerpt.uz}
                 </p>
 
                 <strong style={readStyle}>{t.read}</strong>

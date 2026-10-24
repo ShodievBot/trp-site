@@ -1,3 +1,4 @@
+import { pick, type LocaleMap } from "@/lib/i18n";
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { isLocale, type Locale } from '@/lib/i18n';
@@ -133,7 +134,7 @@ const content = {
       'Dissertation and internship support',
     ],
   },
-} satisfies Record<Locale, unknown>;
+} satisfies LocaleMap<unknown>;
 
 const meta = {
   uz: {
@@ -151,7 +152,7 @@ const meta = {
     description:
       'Publications in Scopus and academic journals, monographs and textbooks, international conference organization. A scientific research center and publishing house.',
   },
-} satisfies Record<Locale, { title: string; description: string }>;
+} satisfies LocaleMap<{ title: string; description: string }>;
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
@@ -168,7 +169,7 @@ export default async function HomePage({ params }: Props) {
 
   const locale = rawLocale as Locale;
   const t = dictionary[locale];
-  const c = content[locale];
+  const c = pick(content, locale);
 
   return (
     <main>

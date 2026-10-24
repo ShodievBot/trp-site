@@ -1,6 +1,15 @@
 import { getAdminNews, type NewsItem } from "@/lib/newsAdmin";
 
-export type Locale = "uz" | "ru" | "en";
+import type { Locale } from "@/lib/i18n";
+export type { Locale };
+
+const dateLocale: Record<Locale, string> = {
+  uz: "uz-UZ",
+  en: "en-US",
+  ru: "ru-RU",
+  tr: "tr-TR",
+  kk: "kk-KZ",
+};
 export type PublicNewsItem = NewsItem;
 
 export async function getPublicNews() {
@@ -21,7 +30,7 @@ export async function getPublicNewsBySlug(slug: string) {
 export function formatNewsDate(date: string, locale: Locale) {
   try {
     return new Intl.DateTimeFormat(
-      locale === "uz" ? "uz-UZ" : locale === "ru" ? "ru-RU" : "en-US",
+      dateLocale[locale] || "uz-UZ",
       {
         year: "numeric",
         month: "long",

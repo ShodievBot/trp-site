@@ -1,3 +1,4 @@
+import { pick, type LocaleMap } from "@/lib/i18n";
 import { notFound } from 'next/navigation';
 import { isLocale, type Locale } from '@/lib/i18n';
 import { ContactForm } from '@/components/ContactForm';
@@ -102,7 +103,7 @@ const page = {
       'Other service',
     ],
   },
-} satisfies Record<Locale, unknown>;
+} satisfies LocaleMap<unknown>;
 
 const contacts = {
   email: 'themostreliablepublication@gmail.com',
@@ -119,7 +120,7 @@ const contacts = {
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  const c = page[locale];
+  const c = pick(page, locale);
   return pageMetadata({ locale, path: '/contact', title: c.kicker, description: c.description });
 }
 
@@ -131,7 +132,7 @@ export default async function ContactPage({ params }: Props) {
   }
 
   const locale = rawLocale as Locale;
-  const c = page[locale];
+  const c = pick(page, locale);
 
   return (
     <main>

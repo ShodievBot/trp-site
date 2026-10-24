@@ -16,7 +16,7 @@ const LEGAL_FILE = "legal.json";
 const emptySettings: LegalSettings = {
   licenseImage: "",
   offerFileUrl: "",
-  offerText: { uz: "", ru: "", en: "" },
+  offerText: { uz: "", ru: "", en: "", tr: "", kk: "" },
   offerUpdatedAt: "",
 };
 
@@ -29,7 +29,13 @@ export function normalizeLegalSettings(value: unknown): LegalSettings {
   return {
     licenseImage: asString(source.licenseImage),
     offerFileUrl: asString(source.offerFileUrl),
-    offerText: { uz: asString(text.uz), ru: asString(text.ru), en: asString(text.en) },
+    offerText: {
+      uz: asString(text.uz),
+      ru: asString(text.ru),
+      en: asString(text.en),
+      tr: asString(text.tr),
+      kk: asString(text.kk),
+    },
     offerUpdatedAt: asString(source.offerUpdatedAt),
   };
 }

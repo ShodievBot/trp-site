@@ -1,3 +1,4 @@
+import { pick, type LocaleMap } from "@/lib/i18n";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ImageLightbox from "@/components/ImageLightbox";
@@ -54,12 +55,12 @@ const page = {
     scansText: "License and confirmations for organizing international conferences in Türkiye.",
     contact: "Contact us",
   },
-} satisfies Record<Locale, Record<string, string>>;
+} satisfies LocaleMap<Record<string, string>>;
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  const c = page[locale];
+  const c = pick(page, locale);
   return pageMetadata({ locale, path: "/license", title: c.title, description: c.description });
 }
 
@@ -70,7 +71,7 @@ export default async function LicensePage({ params }: Props) {
     notFound();
   }
 
-  const c = page[locale];
+  const c = pick(page, locale);
   const image = getLicenseImage(await getLegalSettings());
 
   return (

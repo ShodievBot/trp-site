@@ -1,3 +1,4 @@
+import { pick, type LocaleMap } from "@/lib/i18n";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isLocale, type Locale } from "@/lib/i18n";
@@ -49,12 +50,12 @@ const page = {
     contracts: "Contract templates",
     payment: "Payment page",
   },
-} satisfies Record<Locale, Record<string, string>>;
+} satisfies LocaleMap<Record<string, string>>;
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  const c = page[locale];
+  const c = pick(page, locale);
   return pageMetadata({ locale, path: "/offer", title: c.title, description: c.description });
 }
 
@@ -65,7 +66,7 @@ export default async function OfferPage({ params }: Props) {
     notFound();
   }
 
-  const c = page[locale];
+  const c = pick(page, locale);
   const settings = await getLegalSettings();
   const text = settings.offerText[locale] || settings.offerText.ru || settings.offerText.uz;
 
