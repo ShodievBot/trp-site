@@ -15,6 +15,7 @@ const staticPages = [
   "/contact",
   "/license",
   "/offer",
+  "/privacy",
 ] as const;
 
 function safeDate(value?: string) {

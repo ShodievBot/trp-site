@@ -171,3 +171,13 @@ vercel.json: regions ["syd1"] (рядом с базой).
 ### 2026-10-24 — Этап 1 (скорость) на проде
 Замер TTFB/total, второй проход: uz 0.52s (было 2.36s), uz/news 0.46s, uz/services 0.39s, ru/conferences 0.45s (x-vercel-cache: HIT; ~0.27s из них — соединение+TLS).
 Деплой пока только через CLI (`vercel --prod`). `vercel git connect` НЕ подключали, чтобы push не выкатывал на прод случайно.
+
+### 2026-10-24 — Юр. документы (ветка feature/legal)
+- Оферта и Политика (uz/ru/en) в content/legal/*.html (из docx через pandoc), страницы /offer и /privacy (tr→en, kk→ru с плашкой), force-static.
+- Контакты/домен — только в src/lib/siteConfig.ts (домен trp-nashriyoti.uz, Telegram @TRP_nashriyoti). В html — метки {{SITE_DOMAIN}} {{TELEGRAM}} {{PHONE}} {{EMAIL}}.
+- Яндекс Метрика: src/components/YandexMetrika.tsx, ID через NEXT_PUBLIC_YM_ID, вебвизор ВЫКЛ.
+- Заявки: форма → /api/contact → Telegram-бот → закрытая группа. В Supabase НЕ сохраняются.
+  ⚠️ Если начнём сохранять заявки в Supabase/админку — в тот же день обновить Политику (6.1, 5.3).
+- Политика 5.3 обещает удалять заявки без договора из группы после обработки — соблюдать.
+- TODO: подключить домен trp-nashriyoti.uz к Vercel; потом переключить seo.ts; ссылки /privacy в футер, sitemap, строка согласия в форме.
+- Открыто (юрист): 7.3 возврат, 9.1/9.2, 5.3 валюта, 2.2.6 подача от имени автора, локализация ПД (ст. 27¹), язык приоритета.

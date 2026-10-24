@@ -42,11 +42,11 @@ export async function POST(request: Request) {
 
     const name = body.name?.trim();
     const phone = body.phone?.trim();
-    const service = body.service?.trim();
-    const message = body.message?.trim();
+    const service = body.service?.trim() || "—";
+    const message = body.message?.trim() || "—";
     const locale = body.locale?.trim() || "uz";
 
-    if (!name || !phone || !service || !message) {
+    if (!name || !phone) {
       return NextResponse.json(
         {
           ok: false,

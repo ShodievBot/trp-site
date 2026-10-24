@@ -117,3 +117,8 @@
 
 /* Отступ между hero и «Markaz haqida» */
 .premiumIntro { margin-top: clamp(40px, 6vw, 72px) !important; }
+
+/* Строка согласия под формой заявки */
+.formConsent { margin: 4px 0 0; font-size: 13px; line-height: 1.5; opacity: .75; }
+.formConsent a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.formConsent a:hover { color: var(--gold, #d4a72c); opacity: 1; }

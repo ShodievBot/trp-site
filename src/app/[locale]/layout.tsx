@@ -6,6 +6,7 @@ import SiteFooter from "@/components/SiteFooter";
 import MotionReveal from "@/components/MotionReveal";
 import { plexSans } from "@/lib/fonts";
 import { isLocale, locales } from "@/lib/i18n";
+import YandexMetrika from "@/components/YandexMetrika";
 
 type Props = {
   children: React.ReactNode;
@@ -31,6 +32,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <SiteHeader locale={locale} />
         {children}
         <SiteFooter locale={locale} />
+        <YandexMetrika />
         <MotionReveal />
       </body>
     </html>

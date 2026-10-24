@@ -5,13 +5,14 @@ import { getNav } from "@/lib/navigation";
 
 const footer: Record<
   Locale,
-  { pages: string; tagline: string; license: string; offer: string; telegramGroup: string; rights: string }
+  { pages: string; tagline: string; license: string; offer: string; privacy: string; telegramGroup: string; rights: string }
 > = {
   uz: {
     pages: "Sahifalar",
     tagline: "Ilmiy nashrlar va akademik hamkorlik",
     license: "Nashriyot guvohnomasi",
     offer: "Ommaviy oferta",
+    privacy: "Konfidensiallik siyosati",
     telegramGroup: "Telegram guruh",
     rights: "Barcha huquqlar himoyalangan.",
   },
@@ -20,6 +21,7 @@ const footer: Record<
     tagline: "Scientific publications & academic cooperation",
     license: "Publishing license",
     offer: "Public offer",
+    privacy: "Privacy policy",
     telegramGroup: "Telegram group",
     rights: "All rights reserved.",
   },
@@ -28,6 +30,7 @@ const footer: Record<
     tagline: "Научные публикации и академическое сотрудничество",
     license: "Лицензия издательства",
     offer: "Публичная оферта",
+    privacy: "Политика конфиденциальности",
     telegramGroup: "Telegram-группа",
     rights: "Все права защищены.",
   },
@@ -36,6 +39,7 @@ const footer: Record<
     tagline: "Bilimsel yayınlar ve akademik iş birliği",
     license: "Yayınevi lisansı",
     offer: "Kamuya açık teklif",
+    privacy: "Gizlilik politikası",
     telegramGroup: "Telegram grubu",
     rights: "Tüm hakları saklıdır.",
   },
@@ -44,6 +48,7 @@ const footer: Record<
     tagline: "Ғылыми басылымдар және академиялық серіктестік",
     license: "Баспа лицензиясы",
     offer: "Жария оферта",
+    privacy: "Құпиялылық саясаты",
     telegramGroup: "Telegram тобы",
     rights: "Барлық құқықтар қорғалған.",
   },
@@ -79,6 +84,7 @@ export default function SiteFooter({ locale }: Props) {
           ))}
           <Link href={`/${locale}/license`}>{t.license}</Link>
           <Link href={`/${locale}/offer`}>{t.offer}</Link>
+          <Link href={`/${locale}/privacy`}>{t.privacy}</Link>
         </nav>
 
         <div className="footerContacts">

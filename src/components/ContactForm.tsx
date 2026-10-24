@@ -1,7 +1,16 @@
 'use client';
 
 import { useState } from 'react';
-import type { Locale } from '@/lib/i18n';
+import Link from 'next/link';
+import { pick, type Locale, type LocaleMap } from '@/lib/i18n';
+
+const consentText: LocaleMap<{ before: string; link: string; after: string }> = {
+  uz: { before: 'Ariza yuborish orqali siz ', link: 'Konfidensiallik siyosati', after: 'ga muvofiq ma\'lumotlaringiz qayta ishlanishiga rozilik bildirasiz.' },
+  ru: { before: 'Отправляя заявку, вы соглашаетесь с ', link: 'Политикой конфиденциальности', after: '.' },
+  en: { before: 'By submitting, you agree to our ', link: 'Privacy Policy', after: '.' },
+  tr: { before: 'Başvuru göndererek ', link: 'Gizlilik Politikası', after: '\'nı kabul etmiş olursunuz.' },
+  kk: { before: 'Өтінім жібере отырып, сіз ', link: 'Құпиялылық саясатымен', after: ' келісесіз.' },
+};
 
 type Props = {
   locale: Locale;
@@ -19,6 +28,7 @@ type Props = {
 };
 
 export function ContactForm({ locale, labels, services }: Props) {
+  const consent = pick(consentText, locale);
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [statusText, setStatusText] = useState('');
 
@@ -98,6 +108,10 @@ export function ContactForm({ locale, labels, services }: Props) {
       >
         {status === 'loading' ? '...' : labels.button}
       </button>
+
+      <p className="formConsent">
+        {consent.before}<Link href={`/${locale}/privacy`}>{consent.link}</Link>{consent.after}
+      </p>
 
       {statusText ? (
         <div className={`formStatus ${status === 'success' ? 'formStatusSuccess' : 'formStatusError'}`}>
