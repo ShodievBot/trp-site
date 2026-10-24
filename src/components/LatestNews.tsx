@@ -35,7 +35,7 @@ const content = {
 };
 
 const sectionStyle: CSSProperties = {
-  maxWidth: "1120px",
+  maxWidth: "var(--container)",
   margin: "0 auto",
   padding: "28px 20px 48px",
 };

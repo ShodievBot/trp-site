@@ -1,4 +1,5 @@
 import "../globals.css";
+import "../header.css";
 import { notFound } from "next/navigation";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";

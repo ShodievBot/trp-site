@@ -58,7 +58,7 @@ const pageStyle: CSSProperties = {
 };
 
 const sectionStyle: CSSProperties = {
-  maxWidth: "1120px",
+  maxWidth: "var(--container)",
   margin: "0 auto",
   padding: "28px 20px 52px",
 };

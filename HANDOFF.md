@@ -169,5 +169,5 @@ vercel.json: regions ["syd1"] (рядом с базой).
 Идея на будущее: перенести базу в eu-central-1 (Франкфурт), ближе к пользователям в UZ/TR.
 
 ### 2026-10-24 — Этап 1 (скорость) на проде
-Замер TTFB/total, второй проход: uz 0.52s (было 2.36s), uz/news 0.46s, uz/services 0.39s, ru/conferences ~1s (проверить x-vercel-cache).
+Замер TTFB/total, второй проход: uz 0.52s (было 2.36s), uz/news 0.46s, uz/services 0.39s, ru/conferences 0.45s (x-vercel-cache: HIT; ~0.27s из них — соединение+TLS).
 Деплой пока только через CLI (`vercel --prod`). `vercel git connect` НЕ подключали, чтобы push не выкатывал на прод случайно.
