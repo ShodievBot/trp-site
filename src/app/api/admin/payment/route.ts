@@ -1,3 +1,4 @@
+import { withRevalidate } from "@/lib/revalidate";
 import { NextResponse } from "next/server";
 import { isAdminRequest } from "@/lib/adminAuth";
 import { getPaymentSettings, savePaymentSettings } from "@/lib/paymentAdmin";
@@ -18,7 +19,7 @@ export async function GET() {
   });
 }
 
-export async function POST(request: Request) {
+async function POSTHandler(request: Request) {
   if (!(await isAdminRequest())) {
     return NextResponse.json({ ok: false, error: "Unauthorized" }, { status: 401 });
   }
@@ -43,3 +44,5 @@ export async function POST(request: Request) {
     );
   }
 }
+
+export const POST = withRevalidate(POSTHandler);

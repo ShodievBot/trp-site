@@ -4,7 +4,7 @@ import { isLocale, type Locale } from '@/lib/i18n';
 import { ContactForm } from '@/components/ContactForm';
 import { pageMetadata } from '@/lib/seo';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 300;
 
 type Props = {
   params: Promise<{

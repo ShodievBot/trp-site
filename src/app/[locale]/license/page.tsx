@@ -7,7 +7,7 @@ import { getLegalSettings, getLicenseImage } from "@/lib/legalAdmin";
 import { legacyLicenseScans } from "@/lib/legacyMedia";
 import { pageMetadata } from "@/lib/seo";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 300;
 
 type Props = {
   params: Promise<{

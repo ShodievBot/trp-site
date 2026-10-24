@@ -197,7 +197,7 @@ const secondaryButtonStyle: CSSProperties = {
   boxShadow: "0 10px 22px rgba(15, 23, 42, 0.045)",
 };
 
-export const dynamic = "force-dynamic";
+export const revalidate = 300;
 
 export async function generateMetadata({ params }: Props) {
   const { locale, slug } = await params;

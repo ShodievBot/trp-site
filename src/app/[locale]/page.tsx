@@ -8,7 +8,7 @@ import { LatestNews } from '@/components/LatestNews';
 import { LegacyGallery } from '@/components/LegacyGallery';
 import { pageMetadata } from '@/lib/seo';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 300;
 
 type Props = {
   params: Promise<{

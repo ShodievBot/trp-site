@@ -1,3 +1,4 @@
+import { withRevalidate } from "@/lib/revalidate";
 import { NextResponse } from "next/server";
 import { isAdminRequest } from "@/lib/adminAuth";
 import {
@@ -39,7 +40,7 @@ export async function GET(_request: Request, { params }: Params) {
   });
 }
 
-export async function PUT(request: Request, { params }: Params) {
+async function PUTHandler(request: Request, { params }: Params) {
   if (!(await isAdminRequest())) {
     return NextResponse.json({ ok: false, error: "Unauthorized" }, { status: 401 });
   }
@@ -76,7 +77,7 @@ export async function PUT(request: Request, { params }: Params) {
   }
 }
 
-export async function DELETE(_request: Request, { params }: Params) {
+async function DELETEHandler(_request: Request, { params }: Params) {
   if (!(await isAdminRequest())) {
     return NextResponse.json({ ok: false, error: "Unauthorized" }, { status: 401 });
   }
@@ -110,3 +111,6 @@ export async function DELETE(_request: Request, { params }: Params) {
     );
   }
 }
+
+export const PUT = withRevalidate(PUTHandler);
+export const DELETE = withRevalidate(DELETEHandler);

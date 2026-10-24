@@ -115,6 +115,13 @@ Hujjatlar → To‘lov → Murojaat uchun
   - [ ] Миграция Supabase: page_stats CHECK для tr/kk
   - [x] tsc + build OK → preview → production → merge в main (2026-10-24)
 
+## 8a. Аудит 2026-10-24
+СКОРОСТЬ: force-dynamic на всех страницах (→ ISR revalidate=300 + revalidatePath из админ-API через lib/revalidate.ts);
+регион функций Vercel ≠ регион Supabase (→ vercel.json regions); globals.css раздут (дубли override-блоков); много backdrop-filter.
+ТИПОГРАФИКА: H1 до 104px vs подписи 11px, letter-spacing -0.065em, weight 800 → шкала H1 40–64 / H2 28–40 / H3 20 / body 17 / min 13.
+ШИРИНА: 1280 (секции, шапка) / 1080 (LatestNews inline) / 1040 (premiumIntro) / 980 (stats) → единый --container: 1200px.
+Ветка: feature/perf.
+
 ## 8. План (бэклог)
 1. [в работе] 5 языков + новый порядок меню
 2. Страница /partners (Hamkorliklar) + enabled:true
@@ -147,3 +154,16 @@ Hujjatlar → To‘lov → Murojaat uchun
 - Деплой: Vercel CLI из терминала. Порядок: tsc + npm run build → `vercel` (preview, проверить) → `vercel --prod`.
   Откат: `vercel rollback`. После прода ветку мержим в main (main = то, что на сайте).
 - Русский или узбекский язык по умолчанию для «/»? (сейчас: язык браузера, иначе uz)
+
+### 2026-10-24 — Supabase недоступен
+Проект Supabase `btraayhkjoxahnphddri` отвечает 521 (вероятно, на паузе, free tier).
+Сайт работает на JSON-fallback → медленно и, возможно, со старыми данными.
+TODO: найти аккаунт (почта: поиск "supabase"/"paused"), Restore project, проверить Region → vercel.json.
+
+### 2026-10-24 — Supabase восстановлен, кэширование
+Supabase: проект btraayhkjoxahnphddri, регион ap-southeast-2 (Sydney), аккаунт через GitHub ShodievBot, Free plan.
+Был на паузе (Free tier засыпает после ~7 дней без активности), восстановлен, curl → 401 = работает.
+vercel.json: regions ["syd1"] (рядом с базой).
+Страницы /[locale]/* теперь ISR (● 5m), кэш сбрасывается при сохранении в админке (src/lib/revalidate.ts).
+Ещё динамические (ƒ): /news/[slug], /documents/[slug], оптимизировать позже.
+Идея на будущее: перенести базу в eu-central-1 (Франкфурт), ближе к пользователям в UZ/TR.

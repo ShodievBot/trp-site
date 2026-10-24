@@ -174,7 +174,7 @@ const emptyStyle: CSSProperties = {
   lineHeight: 1.7,
 };
 
-export const dynamic = "force-dynamic";
+export const revalidate = 300;
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;

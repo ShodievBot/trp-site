@@ -1,3 +1,4 @@
+import { withRevalidate } from "@/lib/revalidate";
 import { NextResponse } from "next/server";
 import { isAdminRequest } from "@/lib/adminAuth";
 import { saveLegalSettings } from "@/lib/legalAdmin";
@@ -5,7 +6,7 @@ import { saveLegalSettings } from "@/lib/legalAdmin";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-export async function POST(request: Request) {
+async function POSTHandler(request: Request) {
   if (!(await isAdminRequest())) {
     return NextResponse.json({ ok: false, error: "Unauthorized" }, { status: 401 });
   }
@@ -21,3 +22,5 @@ export async function POST(request: Request) {
     );
   }
 }
+
+export const POST = withRevalidate(POSTHandler);

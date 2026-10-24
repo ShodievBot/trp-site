@@ -111,7 +111,7 @@ function isLocale(value: string): value is Locale {
   return value === "uz" || value === "ru" || value === "en";
 }
 
-export const dynamic = "force-dynamic";
+export const revalidate = 300;
 
 export async function generateMetadata({ params }: Props) {
   const { locale, slug } = await params;
