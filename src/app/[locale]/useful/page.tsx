@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import ServicesPromo from "@/components/ServicesPromo";
 import { isLocale, pick, type LocaleMap } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/seo";
-import { usefulArticles, usefulCover } from "@/lib/useful";
+import { articleCover, usefulArticles } from "@/lib/useful";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -55,7 +55,7 @@ export default async function UsefulPage({ params }: Props) {
         <div className="usefulGrid">
           {usefulArticles.map((a) => (
             <Link href={`/${locale}/useful/${a.slug}`} className="usefulCard" key={a.slug}>
-              <Image src={usefulCover(a.slug)} alt={pick(a.title, locale)} width={1200} height={630} sizes="(max-width: 720px) 100vw, 380px" />
+              <Image src={articleCover(a)} alt={pick(a.title, locale)} width={1200} height={630} sizes="(max-width: 720px) 100vw, 380px" />
               <div>
                 <h2>{pick(a.title, locale)}</h2>
                 <p>{pick(a.description, locale)}</p>

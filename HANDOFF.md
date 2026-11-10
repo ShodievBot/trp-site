@@ -214,3 +214,10 @@ vercel.json: regions ["syd1"] (рядом с базой).
 - У новости без картинки подставляется /images/covers/news.webp (src/lib/publicNews.ts).
 - public/llms.txt + поимённые правила для ИИ-ботов в robots.ts.
 - 2026-11-11: «Полезное», блок услуг, llms.txt выкачены на прод (деплой по команде заказчика).
+
+### 2026-11-11 — Отдельные страницы услуг, конференций и документов (в ветке, ждём «деплой»)
+- Общий движок: src/components/ArticleView.tsx → articleRoute(section, items, labels). Роуты [slug] для useful, services, conferences, license состоят из 8 строк.
+- Контент: src/content/services.ts (6), conferences.ts (5), licenses.ts (3), useful/*.ts (14). Тип UsefulArticle в src/lib/useful.ts (cover, meta, source, pages, gallery).
+- Конференция берёт фото и видео из legacyMedia.galleryBlocks по полю gallery (= id блока = slug). У Трабзона и Аланьи фото нет, стоят фирменные обложки.
+- Списки кликабельны: карточки услуг (/services и главная), карточки конференций, заголовки блоков галереи на главной, документы на /license.
+- Новая конференция: объект в conferences.ts + (если есть медиа) блок в legacyMedia.ts с тем же id.

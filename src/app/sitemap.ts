@@ -3,6 +3,9 @@ import { getPublicNews } from "@/lib/publicNews";
 import { getPublicDocuments } from "@/lib/documentsAdmin";
 import { SITE_URL } from "@/lib/seo";
 import { usefulArticles } from "@/lib/useful";
+import { services } from "@/content/services";
+import { conferences } from "@/content/conferences";
+import { licenses } from "@/content/licenses";
 
 const locales = ["uz", "ru", "en"] as const;
 
@@ -68,14 +71,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
-  for (const item of usefulArticles) {
-    for (const locale of locales) {
-      urls.push({
-        url: `${SITE_URL}/${locale}/useful/${item.slug}`,
-        lastModified: safeDate(item.date),
-        changeFrequency: "monthly",
-        priority: 0.7,
-      });
+  const sections = { useful: usefulArticles, services, conferences, license: licenses };
+
+  for (const [section, items] of Object.entries(sections)) {
+    for (const item of items) {
+      for (const locale of locales) {
+        urls.push({
+          url: `${SITE_URL}/${locale}/${section}/${item.slug}`,
+          lastModified: safeDate(item.date),
+          changeFrequency: "monthly",
+          priority: 0.7,
+        });
+      }
     }
   }
 

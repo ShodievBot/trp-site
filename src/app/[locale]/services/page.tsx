@@ -1,4 +1,7 @@
 import { pick, type LocaleMap } from "@/lib/i18n";
+import { services } from "@/content/services";
+
+const more = { uz: "Batafsil", ru: "Подробнее", en: "Learn more" };
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { isLocale, type Locale } from '@/lib/i18n';
@@ -243,11 +246,13 @@ export default async function ServicesPage({ params }: Props) {
                 <em>{service.tag}</em>
               </div>
 
-              <h2>{service.title}</h2>
+              <h2>
+                <Link href={`/${locale}/services/${services[index].slug}`}>{service.title}</Link>
+              </h2>
               <p>{service.text}</p>
 
-              <Link href={`/${locale}/contact`} className="servicesPageLink">
-                {c.ctaButton} →
+              <Link href={`/${locale}/services/${services[index].slug}`} className="servicesPageLink">
+                {pick(more, locale)} →
               </Link>
             </article>
           ))}

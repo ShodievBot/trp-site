@@ -1,5 +1,7 @@
 import { pick, type LocaleMap } from "@/lib/i18n";
 import Image from "next/image";
+import Link from "next/link";
+import { conferences } from "@/content/conferences";
 import type { Locale } from "@/lib/i18n";
 import { galleryBlocks } from "@/lib/legacyMedia";
 
@@ -24,7 +26,13 @@ export function LegacyGallery({ locale }: { locale: Locale }) {
       {galleryBlocks.map((block) => (
         <article className="legacyGalleryBlock" key={block.id} id={block.id}>
           <div className="legacyGalleryText">
-            <h3>{pick(block.title, locale)}</h3>
+            <h3>
+              {conferences.some((x) => x.slug === block.id) ? (
+                <Link href={`/${locale}/conferences/${block.id}`}>{pick(block.title, locale)}</Link>
+              ) : (
+                pick(block.title, locale)
+              )}
+            </h3>
             <p>{pick(block.text, locale)}</p>
           </div>
 

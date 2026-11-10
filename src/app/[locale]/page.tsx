@@ -1,3 +1,4 @@
+import { services } from "@/content/services";
 import { pick, type LocaleMap } from "@/lib/i18n";
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -226,7 +227,7 @@ export default async function HomePage({ params }: Props) {
 
         <div className="serviceGrid">
           {c.services.map((service: string, index: number) => (
-            <Link href={`/${locale}/services`} className="serviceCard" key={service}>
+            <Link href={`/${locale}/services/${services[index]?.slug ?? ""}`} className="serviceCard" key={service}>
               <div className="serviceNumber">{String(index + 1).padStart(2, '0')}</div>
               <h3>{service}</h3>
               <span>→</span>

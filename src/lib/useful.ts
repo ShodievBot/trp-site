@@ -8,11 +8,16 @@ export type UsefulArticle = {
   title: LocaleMap<string>;
   description: LocaleMap<string>;
   body: LocaleMap<string>;
+  cover?: string; // defaults to the generated «Полезное» cover
+  meta?: LocaleMap<string>; // short line under the title, e.g. date and place
+  source?: string; // press coverage link
+  pages?: string[]; // document scans, opened full size
+  gallery?: string; // id of a block in legacyMedia.galleryBlocks (photos and video)
 };
 
 export const usefulArticles: UsefulArticle[] = articles;
 
-export const usefulCover = (slug: string) => `/images/useful/${slug}.webp`;
+export const articleCover = (a: UsefulArticle) => a.cover ?? a.pages?.[0] ?? `/images/useful/${a.slug}.webp`;
 
 export type Block = { type: "h2" | "p"; text: string } | { type: "ul"; items: string[] };
 
