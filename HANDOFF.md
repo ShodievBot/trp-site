@@ -201,3 +201,7 @@ vercel.json: regions ["syd1"] (рядом с базой).
 - Индексация ВЫКЛ (meta noindex). Включить: NEXT_PUBLIC_INDEXING=1 в Vercel + деплой, после «да» заказчика.
 - DNS домена на Vercel (ns1/ns2.vercel-dns.com). Добавлена TXT google-site-verification (vercel dns). Яндекс: public/yandex_04d8f90f4abf8e14.html.
 - В Search Console ресурс заведён с опечаткой trp-nashiyoti.uz — заказчику пересоздать на trp-nashriyoti.uz.
+
+### 2026-11-10 — ИНДЕКСАЦИЯ ВКЛЮЧЕНА
+- NEXT_PUBLIC_INDEXING=1 в Vercel (Production), деплой на прод. Выключить: удалить переменную + деплой.
+- Google TXT заменён на код для правильного домена (старый удалён). Заказчику: подтвердить в Search Console и Вебмастере, отправить https://trp-nashriyoti.uz/sitemap.xml.
