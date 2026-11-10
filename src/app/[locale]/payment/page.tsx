@@ -8,12 +8,27 @@ import {
   type Locale,
 } from "@/lib/paymentAdmin";
 import { pageMetadata } from "@/lib/seo";
+import { site } from "@/lib/siteConfig";
 
 const extra = {
-  uz: { process: "Jarayon", video: "Video", offer: "Ommaviy oferta", license: "Nashriyot guvohnomasi" },
-  ru: { process: "Порядок", video: "Видео", offer: "Публичная оферта", license: "Лицензия издательства" },
-  en: { process: "Process", video: "Video", offer: "Public offer", license: "Publishing license" },
+  uz: {
+    process: "Jarayon", video: "Video", offer: "Ommaviy oferta", license: "Nashriyot guvohnomasi",
+    reqTitle: "Bank rekvizitlari",
+    req: ["Oluvchi", "STIR", "Hisob raqami", "Bank", "MFO", "Manzil", "Direktor"],
+  },
+  ru: {
+    process: "Порядок", video: "Видео", offer: "Публичная оферта", license: "Лицензия издательства",
+    reqTitle: "Банковские реквизиты",
+    req: ["Получатель", "ИНН (СТИР)", "Расчётный счёт", "Банк", "МФО", "Адрес", "Директор"],
+  },
+  en: {
+    process: "Process", video: "Video", offer: "Public offer", license: "Publishing license",
+    reqTitle: "Bank details",
+    req: ["Payee", "TIN (STIR)", "Account", "Bank", "MFO", "Address", "Director"],
+  },
 };
+
+const requisites = [site.legalName, site.stir, site.account, site.bank, site.mfo, site.address, site.director];
 
 type Props = {
   params: Promise<{
@@ -59,9 +74,12 @@ export default async function PaymentPage({ params }: Props) {
 
       <section className="paymentUnifiedSection">
         <div className="paymentUnifiedGrid">
-          <article className="paymentUnifiedCard paymentUnifiedQrCard">
-            <div className="paymentUnifiedQrPlaceholder">
-              {settings.qrImage ? (
+          <article
+            className="paymentUnifiedCard paymentUnifiedQrCard"
+            style={settings.qrImage ? undefined : { gridTemplateColumns: "1fr" }}
+          >
+            {settings.qrImage && (
+              <div className="paymentUnifiedQrPlaceholder">
                 <Image
                   src={settings.qrImage}
                   alt={t.qrTitle}
@@ -70,22 +88,24 @@ export default async function PaymentPage({ params }: Props) {
                   className="paymentUnifiedQrImage"
                   unoptimized
                 />
-              ) : (
-                <>
-                  <div className="paymentUnifiedQrIcon">{t.qrLabel}</div>
-                  <span>{t.qrComing}</span>
-                </>
-              )}
-            </div>
+              </div>
+            )}
 
             <div className="paymentUnifiedText">
               <p className="sectionKicker">{t.badge}</p>
-              <h2>{t.qrTitle}</h2>
-              <p>{t.qrText}</p>
+              <h2>{x.reqTitle}</h2>
+              <dl className="requisites">
+                {x.req.map((label, i) => (
+                  <div key={label} style={{ display: "contents" }}>
+                    <dt>{label}</dt>
+                    <dd>{requisites[i]}</dd>
+                  </div>
+                ))}
+              </dl>
 
               <div className="paymentUnifiedActions">
                 <a
-                  href={settings.telegramUrl}
+                  href={site.telegramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="premiumButton premiumButtonPrimary"
@@ -118,15 +138,14 @@ export default async function PaymentPage({ params }: Props) {
           </article>
         </div>
 
-        <article className="paymentUnifiedVideoCard">
-          <div className="paymentUnifiedVideoText">
-            <p className="sectionKicker">{x.video}</p>
-            <h2>{t.videoTitle}</h2>
-            <p>{t.videoText}</p>
-          </div>
+        {videoEmbedUrl && (
+          <article className="paymentUnifiedVideoCard">
+            <div className="paymentUnifiedVideoText">
+              <p className="sectionKicker">{x.video}</p>
+              <h2>{t.videoTitle}</h2>
+            </div>
 
-          <div className="paymentUnifiedVideoPlaceholder">
-            {videoEmbedUrl ? (
+            <div className="paymentUnifiedVideoPlaceholder">
               <iframe
                 className="paymentUnifiedVideoFrame"
                 src={videoEmbedUrl}
@@ -134,14 +153,9 @@ export default async function PaymentPage({ params }: Props) {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
-            ) : (
-              <>
-                <div className="paymentUnifiedPlay"></div>
-                <span>{t.videoComing}</span>
-              </>
-            )}
-          </div>
-        </article>
+            </div>
+          </article>
+        )}
 
         <div className="paymentUnifiedBack">
           <Link href={`/${locale}/offer`} className="premiumButton premiumButtonSecondary">

@@ -171,6 +171,54 @@ const page = {
   },
 } satisfies LocaleMap<unknown>;
 
+// Held conferences, newest first. `source` is press coverage, when there is one.
+const past: { title: string; source?: string; meta: LocaleMap<string>; text: LocaleMap<string> }[] = [
+  {
+    title: 'Uzbekistan–Türkiye International Academic Cooperation Summit',
+    meta: { uz: '20–25-iyun 2026 · Trabzon, Turkiya', ru: '20–25 июня 2026 · Трабзон, Турция', en: '20–25 June 2026 · Trabzon, Türkiye' },
+    text: {
+      uz: 'Xalqaro akademik hamkorlik sammiti, 40 nafar ishtirokchi.',
+      ru: 'Международный саммит академического сотрудничества, 40 участников.',
+      en: 'International academic cooperation summit with 40 participants.',
+    },
+  },
+  {
+    title: '“Musiqa pedagogikasida innovatsiyalar va madaniyatlararo yondashuvlar: Yevrosiyo tajribalari”',
+    meta: { uz: '27–28-mart 2026 · Samarqand, O‘zbekiston', ru: '27–28 марта 2026 · Самарканд, Узбекистан', en: '27–28 March 2026 · Samarkand, Uzbekistan' },
+    text: {
+      uz: 'Samarqand davlat pedagogika instituti bilan hamkorlikda o‘tkazilgan xalqaro ilmiy-amaliy anjuman.',
+      ru: 'Международная научно-практическая конференция совместно с Самаркандским государственным педагогическим институтом.',
+      en: 'International research and practice conference held with Samarkand State Pedagogical Institute.',
+    },
+  },
+  {
+    title: 'Türk–Özbek Bilim Zirvesi: “Uluslararası Bilim Liderleri ve Yenilikçi Araştırmalar Konferansı — Türkiye 2026”',
+    source: 'https://www.yenialanya.com/istanbulda-turk-ozbek-bilim-zirvesi',
+    meta: { uz: '27-yanvar 2026 · Istanbul, Turkiya', ru: '27 января 2026 · Стамбул, Турция', en: '27 January 2026 · Istanbul, Türkiye' },
+    text: {
+      uz: 'Kadıköy, Moda, İDEA zalida Baygenç Yayıncılık bilan hamkorlikda o‘tkazildi. O‘zbekistondan 24 nafar professor va olim qatnashdi; dasturda Scopus bo‘yicha mahorat darsi va sertifikatlar topshirish marosimi bo‘ldi.',
+      ru: 'Прошла в зале İDEA (Мода, Кадыкёй) совместно с издательством Baygenç Yayıncılık. Участвовали 24 профессора и учёных из Узбекистана; в программе были мастер-класс по Scopus и вручение сертификатов.',
+      en: 'Held at the İDEA hall (Moda, Kadıköy) together with Baygenç Yayıncılık. 24 professors and scholars from Uzbekistan took part; the programme included a Scopus masterclass and a certificate ceremony.',
+    },
+  },
+  {
+    title: '“Avrasya’da Stratejik Ortaklık ve Türkiye–Özbekistan Bilimsel Konferansı”',
+    source: 'https://www.yenialanya.com/foto/26659355/alanya-kultur-merkezinde-turkiye-ozbekistan-arasinda-is-birligi-konferansi-yapildi',
+    meta: { uz: 'Oktabr 2025 · Alanya, Turkiya', ru: 'Октябрь 2025 · Аланья, Турция', en: 'October 2025 · Alanya, Türkiye' },
+    text: {
+      uz: 'Alanya madaniyat markazida Baygenç Yayıncılık bilan hamkorlikda o‘tkazildi. Ishtirokchilarning ilmiy maqolalari 302 betlik shu nomdagi to‘plamda nashr etildi.',
+      ru: 'Прошла в Культурном центре Аланьи совместно с издательством Baygenç Yayıncılık. Научные статьи участников вышли в одноимённом сборнике объёмом 302 страницы.',
+      en: 'Held at the Alanya Culture Centre together with Baygenç Yayıncılık. Participants’ papers were published in a 302-page volume of the same name.',
+    },
+  },
+];
+
+const pastLabels = {
+  uz: { title: 'O‘tkazilgan konferensiyalar', source: 'Matbuotda' },
+  ru: { title: 'Проведённые конференции', source: 'Публикация в прессе' },
+  en: { title: 'Past conferences', source: 'Press coverage' },
+} satisfies LocaleMap<unknown>;
+
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
@@ -220,6 +268,29 @@ export default async function ConferencesPage({ params }: Props) {
             </Link>
           </div>
         </div>
+      </section>
+
+      <section className="conferenceDetails" style={{ gridTemplateColumns: '1fr' }}>
+        <article className="conferenceInfoCard">
+          <h2>{pick(pastLabels, locale).title}</h2>
+          <ul>
+            {past.map((item) => (
+              <li key={item.title}>
+                <strong>{item.title}</strong>
+                <br />
+                {pick(item.meta, locale)}. {pick(item.text, locale)}
+                {item.source && (
+                  <>
+                    {' '}
+                    <a href={item.source} target="_blank" rel="noopener noreferrer">
+                      {pick(pastLabels, locale).source} ↗
+                    </a>
+                  </>
+                )}
+              </li>
+            ))}
+          </ul>
+        </article>
       </section>
 
       <section className="conferenceDetails">

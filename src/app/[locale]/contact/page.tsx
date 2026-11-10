@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { isLocale, type Locale } from '@/lib/i18n';
 import { ContactForm } from '@/components/ContactForm';
 import { pageMetadata } from '@/lib/seo';
+import { site } from '@/lib/siteConfig';
 
 export const revalidate = 300;
 
@@ -29,8 +30,10 @@ const page = {
     error: 'Xatolik yuz berdi. Iltimos, keyinroq qayta urinib ko‘ring.',
     required: 'Ism va telefon raqamini kiriting.',
     contactsTitle: 'Kontakt ma’lumotlari',
-    telegram: 'Telegram',
-    telegramGroup: 'Telegram guruhi',
+    telegram: 'Telegram (murojaatlar uchun)',
+    director: 'Direktor',
+    address: 'Manzil',
+    telegramGroup: 'Telegram kanal (e’lonlar)',
     email: 'Email',
     phoneUz: 'Telefon Uzbekistan',
     phoneTr: 'Telefon Türkiye',
@@ -59,8 +62,10 @@ const page = {
     error: 'Произошла ошибка. Пожалуйста, попробуйте позже.',
     required: 'Введите имя и номер телефона.',
     contactsTitle: 'Контактная информация',
-    telegram: 'Telegram',
-    telegramGroup: 'Telegram-группа',
+    telegram: 'Telegram (для обращений)',
+    director: 'Директор',
+    address: 'Адрес',
+    telegramGroup: 'Telegram-канал (объявления)',
     email: 'Email',
     phoneUz: 'Телефон Узбекистан',
     phoneTr: 'Телефон Турция',
@@ -89,8 +94,10 @@ const page = {
     error: 'An error occurred. Please try again later.',
     required: 'Please enter your name and phone number.',
     contactsTitle: 'Contact information',
-    telegram: 'Telegram',
-    telegramGroup: 'Telegram group',
+    telegram: 'Telegram (enquiries)',
+    director: 'Director',
+    address: 'Address',
+    telegramGroup: 'Telegram channel (announcements)',
     email: 'Email',
     phoneUz: 'Phone Uzbekistan',
     phoneTr: 'Phone Türkiye',
@@ -107,10 +114,10 @@ const page = {
 
 const contacts = {
   email: 'themostreliablepublication@gmail.com',
-  telegram: 'https://t.me/Zubayda_Sherzodovna',
-  telegramLabel: '@Zubayda_Sherzodovna',
-  telegramGroup: 'https://t.me/Scopus_xalqaro_respublika_Oak',
-  telegramGroupLabel: 'Scopus_xalqaro_respublika_Oak',
+  telegram: site.telegramUrl,
+  telegramLabel: site.telegram,
+  telegramGroup: site.channelUrl,
+  telegramGroupLabel: site.channel,
   phoneUz: '+998501076556',
   phoneUzLabel: '+998 50 107 65 56',
   phoneTr: '+905306476809',
@@ -151,6 +158,11 @@ export default async function ContactPage({ params }: Props) {
           <h2>{c.contactsTitle}</h2>
 
           <div className="contactList">
+            <div className="contactItem">
+              <span>{c.address}</span>
+              <strong>{site.address}</strong>
+            </div>
+
             <a href={`tel:${contacts.phoneUz}`} className="contactItem">
               <span>{c.phoneUz}</span>
               <strong>{contacts.phoneUzLabel}</strong>
@@ -169,6 +181,11 @@ export default async function ContactPage({ params }: Props) {
             <a href={contacts.telegram} className="contactItem" target="_blank" rel="noopener noreferrer">
               <span>{c.telegram}</span>
               <strong>{contacts.telegramLabel}</strong>
+            </a>
+
+            <a href={site.directorTelegramUrl} className="contactItem" target="_blank" rel="noopener noreferrer">
+              <span>{c.director}</span>
+              <strong>{site.directorTelegram}</strong>
             </a>
 
             <a href={contacts.telegramGroup} className="contactItem" target="_blank" rel="noopener noreferrer">

@@ -57,6 +57,49 @@ const page = {
   },
 } satisfies LocaleMap<Record<string, string>>;
 
+// Official documents sent by the company (JPEG pages in public/images/docs).
+const docs: { pages: string[]; title: LocaleMap<string>; text: LocaleMap<string> }[] = [
+  {
+    pages: ["registration-1"],
+    title: {
+      uz: "Yuridik shaxsni davlat ro‘yxatidan o‘tkazish guvohnomasi",
+      ru: "Свидетельство о государственной регистрации юридического лица",
+      en: "Certificate of state registration of a legal entity",
+    },
+    text: {
+      uz: "“THE MOST RELIABLE PUBLICATION” MCHJ, STIR 311 122 349. Ro‘yxatga olingan sana: 22.02.2024, № 1838843. Bergan organ: Samarqand shahar davlat xizmatlari markazi.",
+      ru: "ООО «THE MOST RELIABLE PUBLICATION», ИНН (СТИР) 311 122 349. Дата регистрации: 22.02.2024, № 1838843. Выдано Центром государственных услуг г. Самарканда.",
+      en: "THE MOST RELIABLE PUBLICATION LLC, TIN 311 122 349. Registered on 22 February 2024, No. 1838843. Issued by the Samarkand City Public Services Centre.",
+    },
+  },
+  {
+    pages: ["publishing-1", "publishing-2", "publishing-3"],
+    title: {
+      uz: "Noshirlik faoliyati to‘g‘risidagi tasdiqnoma № 1090203",
+      ru: "Подтверждение о начале издательской деятельности № 1090203",
+      en: "Confirmation of publishing activity No. 1090203",
+    },
+    text: {
+      uz: "O‘zbekiston Respublikasi Prezidenti Administratsiyasi huzuridagi Axborot va ommaviy kommunikatsiyalar agentligi tomonidan 12.10.2025 da berilgan, reyestr raqami X-25579. Ilmiy, o‘quv, ilmiy-ommabop va boshqa turdagi nashrlarni qamrab oladi.",
+      ru: "Выдано Агентством информации и массовых коммуникаций при Администрации Президента Республики Узбекистан 12.10.2025, номер в реестре Х-25579. Охватывает научные, учебные, научно-популярные и другие виды изданий.",
+      en: "Issued by the Agency of Information and Mass Communications under the Administration of the President of the Republic of Uzbekistan on 12 October 2025, register No. X-25579. Covers scientific, educational, popular-science and other publications.",
+    },
+  },
+  {
+    pages: ["permit-1", "permit-2"],
+    title: {
+      uz: "Ommaviy tadbirlarni o‘tkazish uchun ruxsatnoma № 1316085",
+      ru: "Разрешение на проведение массовых мероприятий № 1316085",
+      en: "Permit to hold public events No. 1316085",
+    },
+    text: {
+      uz: "Samarqand viloyati Ichki ishlar boshqarmasi tomonidan berilgan, reyestr raqami R-3972254. Amal qilish muddati: 15.01.2026 dan 15.01.2027 gacha.",
+      ru: "Выдано Управлением внутренних дел Самаркандской области, номер в реестре R-3972254. Срок действия: с 15.01.2026 по 15.01.2027.",
+      en: "Issued by the Samarkand Regional Department of Internal Affairs, register No. R-3972254. Valid from 15 January 2026 to 15 January 2027.",
+    },
+  },
+];
+
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
@@ -85,18 +128,31 @@ export default async function LicensePage({ params }: Props) {
       </section>
 
       <section className="legalSection">
-        <article className="legalCard">
-          <h2>{c.mainTitle}</h2>
-
-          {image ? (
+        {image && (
+          <article className="legalCard">
+            <h2>{c.mainTitle}</h2>
             <ImageLightbox src={image} alt={c.mainTitle} openLabel={c.open} closeLabel={c.close} />
-          ) : (
-            <div className="legalPlaceholder">
-              <strong>TRP</strong>
-              <span>{c.placeholder}</span>
+          </article>
+        )}
+
+        {docs.map((doc) => (
+          <article className="legalCard" key={doc.pages[0]}>
+            <h2>{pick(doc.title, locale)}</h2>
+            <p>{pick(doc.text, locale)}</p>
+
+            <div className="legalScans legalDocPages">
+              {doc.pages.map((name, index) => (
+                <ImageLightbox
+                  key={name}
+                  src={`/images/docs/${name}.jpg`}
+                  alt={`${pick(doc.title, locale)}, ${index + 1}`}
+                  openLabel={c.open}
+                  closeLabel={c.close}
+                />
+              ))}
             </div>
-          )}
-        </article>
+          </article>
+        ))}
 
         <article className="legalCard">
           <h2>{c.scansTitle}</h2>

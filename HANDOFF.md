@@ -187,3 +187,10 @@ vercel.json: regions ["syd1"] (рядом с базой).
 - В Vercel NEXT_PUBLIC_SITE_URL = trp-site.vercel.app → canonical/hreflang/sitemap/robots ведут на vercel.app. При деплое сменить на https://trp-nashriyoti.uz.
 - Индексация: выключена по умолчанию (meta robots noindex,nofollow из [locale]/layout.tsx). Включить: NEXT_PUBLIC_INDEXING=1 в Vercel + деплой — только после заполнения данных и «да» пользователя.
 - Аудит и список данных от заказчика — в треде проекта (trp/trp-audit-2026-11-10.md).
+
+### 2026-11-10 — Данные от заказчика (ветка claude/project-thread-xusccr, НЕ на проде)
+- Документы JPEG в public/images/docs: registration-1 (гос. регистрация 22.02.2024), publishing-1..3 (тасдиқнома № 1090203, АОКА, 12.10.2025), permit-1..2 (рухсатнома № 1316085, действует до 15.01.2027 — обновить скан после продления). Описаны в license/page.tsx (массив docs).
+- Реквизиты и роли Telegram — в src/lib/siteConfig.ts: @TRP_nashriyoti чат обращений (основной), @Zubayda_Sherzodovna директор, @Scopus_xalqaro_respublika_Oak канал объявлений (только чтение).
+- /payment: карточка реквизитов; блоки QR и видео скрыты, пока в админке пусто. /conferences: список проведённых (Аланья 10.2025, Стамбул 27.01.2026, Самарканд, Трабзон).
+- ⚠️ Supabase btraayhkjoxahnphddri.supabase.co не резолвится (DNS) — проект на паузе или удалён. Сайт живёт на data/*.json, админка не сохраняет.
+- Ждём от заказчика: QR, видеоинструкция, остальные конференции, партнёры, логотип, видео mp4, ВАК/ОАК, Метрика/вебмастера.

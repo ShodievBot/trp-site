@@ -2,6 +2,7 @@ import { pick } from "@/lib/i18n";
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n";
 import { getNav } from "@/lib/navigation";
+import { site } from "@/lib/siteConfig";
 
 const footer: Record<
   Locale,
@@ -13,7 +14,7 @@ const footer: Record<
     license: "Nashriyot guvohnomasi",
     offer: "Ommaviy oferta",
     privacy: "Konfidensiallik siyosati",
-    telegramGroup: "Telegram guruh",
+    telegramGroup: "Telegram kanal",
     rights: "Barcha huquqlar himoyalangan.",
   },
   en: {
@@ -22,7 +23,7 @@ const footer: Record<
     license: "Publishing license",
     offer: "Public offer",
     privacy: "Privacy policy",
-    telegramGroup: "Telegram group",
+    telegramGroup: "Telegram channel",
     rights: "All rights reserved.",
   },
   ru: {
@@ -31,7 +32,7 @@ const footer: Record<
     license: "Лицензия издательства",
     offer: "Публичная оферта",
     privacy: "Политика конфиденциальности",
-    telegramGroup: "Telegram-группа",
+    telegramGroup: "Telegram-канал",
     rights: "Все права защищены.",
   },
   tr: {
@@ -40,7 +41,7 @@ const footer: Record<
     license: "Yayınevi lisansı",
     offer: "Kamuya açık teklif",
     privacy: "Gizlilik politikası",
-    telegramGroup: "Telegram grubu",
+    telegramGroup: "Telegram kanalı",
     rights: "Tüm hakları saklıdır.",
   },
   kk: {
@@ -49,7 +50,7 @@ const footer: Record<
     license: "Баспа лицензиясы",
     offer: "Жария оферта",
     privacy: "Құпиялылық саясаты",
-    telegramGroup: "Telegram тобы",
+    telegramGroup: "Telegram арнасы",
     rights: "Барлық құқықтар қорғалған.",
   },
 };
@@ -90,12 +91,11 @@ export default function SiteFooter({ locale }: Props) {
         <div className="footerContacts">
           <a href="tel:+998501076556">+998 50 107 65 56</a>
           <a href="tel:+905306476809">+90 530 647 68 09</a>
-          <a
-            href="https://t.me/Scopus_xalqaro_respublika_Oak"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {t.telegramGroup}: @Scopus_xalqaro_respublika_Oak
+          <a href={site.telegramUrl} target="_blank" rel="noopener noreferrer">
+            Telegram: {site.telegram}
+          </a>
+          <a href={site.channelUrl} target="_blank" rel="noopener noreferrer">
+            {t.telegramGroup}: {site.channel}
           </a>
           <a href="mailto:themostreliablepublication@gmail.com">
             themostreliablepublication@gmail.com
@@ -104,7 +104,9 @@ export default function SiteFooter({ locale }: Props) {
       </div>
 
       <div className="siteFooterBottom">
-        <span>© {new Date().getFullYear()} The Most Reliable Publication</span>
+        <span>
+          © {new Date().getFullYear()} {site.legalName} · STIR {site.stir} · {site.address}
+        </span>
         <span>{t.rights}</span>
       </div>
     </footer>

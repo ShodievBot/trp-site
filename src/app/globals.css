@@ -7570,6 +7570,40 @@ body {
   aspect-ratio: 5 / 8;
 }
 
+.legalDocPages {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  margin-top: 18px;
+}
+
+.requisites {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 18px;
+  margin: 0 0 22px;
+  line-height: 1.5;
+}
+
+.requisites dt {
+  color: var(--muted);
+}
+
+.requisites dd {
+  margin: 0;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 560px) {
+  .requisites {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .requisites dd {
+    margin-bottom: 10px;
+  }
+}
+
 .legalActions,
 .paymentUnifiedBack {
   display: flex;
