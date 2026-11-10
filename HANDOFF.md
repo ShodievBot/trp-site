@@ -213,3 +213,4 @@ vercel.json: regions ["syd1"] (рядом с базой).
 - src/components/ServicesPromo.tsx — мини-реклама услуг на всех страницах новостей и «Полезного».
 - У новости без картинки подставляется /images/covers/news.webp (src/lib/publicNews.ts).
 - public/llms.txt + поимённые правила для ИИ-ботов в robots.ts.
+- 2026-11-11: «Полезное», блок услуг, llms.txt выкачены на прод (деплой по команде заказчика).
