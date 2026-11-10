@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { getPublicNews } from "@/lib/publicNews";
 import { getPublicDocuments } from "@/lib/documentsAdmin";
 import { SITE_URL } from "@/lib/seo";
+import { usefulArticles } from "@/lib/useful";
 
 const locales = ["uz", "ru", "en"] as const;
 
@@ -10,6 +11,7 @@ const staticPages = [
   "/services",
   "/conferences",
   "/news",
+  "/useful",
   "/documents",
   "/payment",
   "/contact",
@@ -60,6 +62,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       urls.push({
         url: `${SITE_URL}/${locale}/news/${encodeSlug(item.slug)}`,
         lastModified: safeDate(item.publishedAt),
+        changeFrequency: "monthly",
+        priority: 0.7,
+      });
+    }
+  }
+
+  for (const item of usefulArticles) {
+    for (const locale of locales) {
+      urls.push({
+        url: `${SITE_URL}/${locale}/useful/${item.slug}`,
+        lastModified: safeDate(item.date),
         changeFrequency: "monthly",
         priority: 0.7,
       });

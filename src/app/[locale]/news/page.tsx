@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
 import { getPublicNews, formatNewsDate, type Locale } from "@/lib/publicNews";
 import { pageMetadata } from "@/lib/seo";
+import ServicesPromo from "@/components/ServicesPromo";
 
 const content = {
   uz: {
@@ -241,6 +242,10 @@ export default async function NewsPage({ params }: Props) {
             ))}
           </div>
         )}
+
+        <div style={{ marginTop: "28px" }}>
+          <ServicesPromo locale={locale} />
+        </div>
       </section>
     </main>
   );

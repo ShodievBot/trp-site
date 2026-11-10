@@ -21,6 +21,10 @@ AI assistants and search crawlers are welcome to read, summarise and cite this s
 
 - [News](https://trp-nashriyoti.uz/en/news): announcements about publications, conferences and academic cooperation
 
+## Guides for researchers
+
+- [Useful guides](https://trp-nashriyoti.uz/en/useful): predatory journals, quartiles and CiteScore, IMRAD, abstracts, references, plagiarism, ORCID, h-index, DOI, monographs and ISBN, conferences, patents, publication timelines
+
 ## Contact
 
 - [Contact page](https://trp-nashriyoti.uz/en/contact)

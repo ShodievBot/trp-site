@@ -7779,3 +7779,138 @@ body {
     transition: none;
   }
 }
+
+/* «Полезное» section and the services promo block */
+.usefulSection {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 28px 20px 52px;
+  display: grid;
+  gap: 28px;
+}
+
+.usefulArticleSection {
+  max-width: 940px;
+}
+
+.usefulGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 20px;
+}
+
+.usefulCard,
+.usefulArticle,
+.servicesPromo {
+  overflow: hidden;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid rgba(17, 19, 28, 0.09);
+  box-shadow: 0 18px 54px rgba(6, 19, 47, 0.075);
+}
+
+.usefulCard {
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+}
+
+.usefulCard img,
+.usefulArticle img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.usefulCard > div {
+  padding: 20px 22px 24px;
+}
+
+.usefulCard h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.usefulCard p {
+  margin: 0 0 14px;
+  color: #475467;
+  line-height: 1.6;
+}
+
+.usefulCard strong {
+  color: #a97822;
+}
+
+.usefulArticleBody {
+  padding: 28px;
+}
+
+.usefulArticleBody h2 {
+  margin: 28px 0 12px;
+  font-size: 24px;
+  letter-spacing: -0.02em;
+}
+
+.usefulArticleBody h2:first-child {
+  margin-top: 0;
+}
+
+.usefulArticleBody p,
+.usefulArticleBody li {
+  color: #273244;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.usefulArticleBody p {
+  margin: 0 0 16px;
+}
+
+.usefulArticleBody ul {
+  margin: 0 0 16px;
+  padding-left: 22px;
+}
+
+.servicesPromo {
+  padding: 28px;
+  background: linear-gradient(135deg, #ffffff, #fbf6ea);
+  border-color: rgba(169, 120, 34, 0.28);
+}
+
+.servicesPromo h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  letter-spacing: -0.02em;
+}
+
+.servicesPromo > p:not(.sectionKicker) {
+  margin: 0 0 14px;
+  color: #344054;
+  line-height: 1.7;
+}
+
+.servicesPromo ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.servicesPromo li {
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: rgba(5, 24, 58, 0.06);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.servicesPromoActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

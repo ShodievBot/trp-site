@@ -5,6 +5,7 @@ export type NavKey =
   | "conferences"
   | "partners"
   | "news"
+  | "useful"
   | "documents"
   | "payment"
   | "contact";
@@ -15,6 +16,7 @@ export const navItems: { key: NavKey; path: string; enabled: boolean }[] = [
   { key: "conferences", path: "/conferences", enabled: true },
   { key: "partners", path: "/partners", enabled: false },
   { key: "news", path: "/news", enabled: true },
+  { key: "useful", path: "/useful", enabled: true },
   { key: "documents", path: "/documents", enabled: true },
   { key: "payment", path: "/payment", enabled: true },
   { key: "contact", path: "/contact", enabled: true },
@@ -26,6 +28,7 @@ export const navLabels: Record<Locale, Record<NavKey, string>> = {
     conferences: "Konferensiyalar",
     partners: "Hamkorliklar",
     news: "Yangiliklar",
+    useful: "Foydali",
     documents: "Hujjatlar",
     payment: "To‘lov",
     contact: "Murojaat uchun",
@@ -35,6 +38,7 @@ export const navLabels: Record<Locale, Record<NavKey, string>> = {
     conferences: "Conferences",
     partners: "Partnerships",
     news: "News",
+    useful: "Useful",
     documents: "Documents",
     payment: "Payment",
     contact: "Contact",
@@ -44,6 +48,7 @@ export const navLabels: Record<Locale, Record<NavKey, string>> = {
     conferences: "Конференции",
     partners: "Партнёрство",
     news: "Новости",
+    useful: "Полезное",
     documents: "Документы",
     payment: "Оплата",
     contact: "Контакты",
@@ -53,6 +58,7 @@ export const navLabels: Record<Locale, Record<NavKey, string>> = {
     conferences: "Konferanslar",
     partners: "İş birlikleri",
     news: "Haberler",
+    useful: "Faydalı",
     documents: "Belgeler",
     payment: "Ödeme",
     contact: "İletişim",
@@ -62,6 +68,7 @@ export const navLabels: Record<Locale, Record<NavKey, string>> = {
     conferences: "Конференциялар",
     partners: "Серіктестік",
     news: "Жаңалықтар",
+    useful: "Пайдалы",
     documents: "Құжаттар",
     payment: "Төлем",
     contact: "Байланыс",

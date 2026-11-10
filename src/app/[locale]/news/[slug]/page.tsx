@@ -9,6 +9,7 @@ import {
   type Locale,
 } from "@/lib/publicNews";
 import { pageMetadata } from "@/lib/seo";
+import ServicesPromo from "@/components/ServicesPromo";
 
 const content = {
   uz: {
@@ -210,6 +211,10 @@ export default async function NewsDetailPage({ params }: Props) {
               ))}
             </div>
           ) : null}
+        </div>
+
+        <div style={{ marginTop: "24px" }}>
+          <ServicesPromo locale={locale} />
         </div>
 
         <div style={actionsStyle}>

@@ -205,3 +205,11 @@ vercel.json: regions ["syd1"] (рядом с базой).
 ### 2026-11-10 — ИНДЕКСАЦИЯ ВКЛЮЧЕНА
 - NEXT_PUBLIC_INDEXING=1 в Vercel (Production), деплой на прод. Выключить: удалить переменную + деплой.
 - Google TXT заменён на код для правильного домена (старый удалён). Заказчику: подтвердить в Search Console и Вебмастере, отправить https://trp-nashriyoti.uz/sitemap.xml.
+
+### 2026-11-11 — Раздел «Полезное», блок услуг, llms.txt (в ветке, НЕ на проде, ждём «деплой»)
+- /useful и /useful/[slug]: 14 статей (uz/ru/en) в src/content/useful/*.ts, порядок в index.ts. Формат body — лёгкий markdown (## заголовок, - пункт), разбор в src/lib/useful.ts. Пункт меню «Полезное», sitemap.
+- Новая статья: файл в src/content/useful + строка в index.ts + строка в scripts/make-covers.mjs → `node scripts/make-covers.mjs` (обложка public/images/useful/<slug>.webp).
+- Темы 1 (проверка журнала в Scopus) и 4 (перечень ОАК) заказчик пока отложил. В статьях про ОАК и антиплагиат цифр нет намеренно.
+- src/components/ServicesPromo.tsx — мини-реклама услуг на всех страницах новостей и «Полезного».
+- У новости без картинки подставляется /images/covers/news.webp (src/lib/publicNews.ts).
+- public/llms.txt + поимённые правила для ИИ-ботов в robots.ts.

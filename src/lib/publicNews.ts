@@ -14,7 +14,10 @@ export type PublicNewsItem = NewsItem;
 
 export async function getPublicNews() {
   const items = await getAdminNews();
-  return items.filter((item) => item.status === "published");
+  // Every news page must have a picture: fall back to the branded cover.
+  return items
+    .filter((item) => item.status === "published")
+    .map((item) => ({ ...item, imageUrl: item.imageUrl || "/images/covers/news.webp" }));
 }
 
 export async function getLatestPublicNews(limit = 3) {
