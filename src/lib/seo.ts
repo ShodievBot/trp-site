@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { locales, type Locale } from "@/lib/i18n";
 
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://trp-site.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://trp-nashriyoti.uz";
+
+// Indexing is off until the content is filled in. Turn on with NEXT_PUBLIC_INDEXING=1 in Vercel.
+export const INDEXING = process.env.NEXT_PUBLIC_INDEXING === "1";
 
 const SITE_NAME = "The Most Reliable Publication";
 

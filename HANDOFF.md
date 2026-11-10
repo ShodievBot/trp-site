@@ -181,3 +181,9 @@ vercel.json: regions ["syd1"] (рядом с базой).
 - Политика 5.3 обещает удалять заявки без договора из группы после обработки — соблюдать.
 - TODO: подключить домен trp-nashriyoti.uz к Vercel; потом переключить seo.ts; ссылки /privacy в футер, sitemap, строка согласия в форме.
 - Открыто (юрист): 7.3 возврат, 9.1/9.2, 5.3 валюта, 2.2.6 подача от имени автора, локализация ПД (ст. 27¹), язык приоритета.
+
+### 2026-11-10 — Подготовка к индексации (ветка claude/project-thread-xusccr, от feature/legal)
+- Домен trp-nashriyoti.uz живой (www и trp-site.vercel.app → 308 на него). На проде старый деплой (main): /privacy 404, дизайн v2 не выкачен.
+- В Vercel NEXT_PUBLIC_SITE_URL = trp-site.vercel.app → canonical/hreflang/sitemap/robots ведут на vercel.app. При деплое сменить на https://trp-nashriyoti.uz.
+- Индексация: выключена по умолчанию (meta robots noindex,nofollow из [locale]/layout.tsx). Включить: NEXT_PUBLIC_INDEXING=1 в Vercel + деплой — только после заполнения данных и «да» пользователя.
+- Аудит и список данных от заказчика — в треде проекта (trp/trp-audit-2026-11-10.md).

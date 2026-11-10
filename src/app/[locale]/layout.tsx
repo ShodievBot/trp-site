@@ -7,6 +7,9 @@ import MotionReveal from "@/components/MotionReveal";
 import { plexSans } from "@/lib/fonts";
 import { isLocale, locales } from "@/lib/i18n";
 import YandexMetrika from "@/components/YandexMetrika";
+import { INDEXING } from "@/lib/seo";
+
+export const metadata = INDEXING ? {} : { robots: { index: false, follow: false } };
 
 type Props = {
   children: React.ReactNode;
