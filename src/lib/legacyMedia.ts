@@ -54,6 +54,21 @@ export const galleryBlocks: GalleryBlock[] = [
     video: { src: "/videos/turkiye-2026.mp4", poster: img("turkiye-2026-poster") },
   },
   {
+    id: "samdaqu-2025",
+    title: {
+      uz: "26-sentyabr 2025: SamDAQU bilan xalqaro ilmiy-amaliy konferensiya",
+      ru: "26 сентября 2025: международная научно-практическая конференция с СамГАСУ",
+      en: "26 September 2025: international conference with Samarkand State University of Architecture and Construction",
+    },
+    text: {
+      uz: "Mirzo Ulug‘bek nomidagi Samarqand davlat arxitektura-qurilish universiteti va The Most Reliable Publication hamkorligida “Zamonaviy arxitektura, dizayn va shaharsozlikni barqaror rivojlantirishning dolzarb muammolari va innovatsion yechimlari” mavzusidagi xalqaro ilmiy-amaliy konferensiya o‘tkazildi.",
+      ru: "Самаркандский государственный архитектурно-строительный университет имени Мирзо Улугбека и The Most Reliable Publication провели международную научно-практическую конференцию «Актуальные проблемы и инновационные решения устойчивого развития современной архитектуры, дизайна и градостроительства».",
+      en: "Mirzo Ulugbek Samarkand State University of Architecture and Construction and The Most Reliable Publication held the international conference “Current Problems and Innovative Solutions for the Sustainable Development of Modern Architecture, Design and Urban Planning”.",
+    },
+    images: series("samdaqu-2025", 11),
+    video: { src: "/videos/samdaqu-2025.mp4", poster: img("samdaqu-2025-1") },
+  },
+  {
     id: "events-2025",
     title: {
       uz: "Konferensiyalar va hamkorlik uchrashuvlari",

@@ -211,6 +211,15 @@ const past: { title: string; source?: string; meta: LocaleMap<string>; text: Loc
       en: 'Held at the Alanya Culture Centre together with Baygenç Yayıncılık. Participants’ papers were published in a 302-page volume of the same name.',
     },
   },
+  {
+    title: '“Zamonaviy arxitektura, dizayn va shaharsozlikni barqaror rivojlantirishning dolzarb muammolari va innovatsion yechimlari”',
+    meta: { uz: '26-sentyabr 2025 · Samarqand, O‘zbekiston', ru: '26 сентября 2025 · Самарканд, Узбекистан', en: '26 September 2025 · Samarkand, Uzbekistan' },
+    text: {
+      uz: 'Mirzo Ulug‘bek nomidagi Samarqand davlat arxitektura-qurilish universiteti (SamDAQU) bilan hamkorlikda o‘tkazilgan xalqaro ilmiy-amaliy konferensiya. Mahalliy va xorijiy olimlar, soha mutaxassislari va talabalar ishtirok etdi.',
+      ru: 'Международная научно-практическая конференция совместно с Самаркандским государственным архитектурно-строительным университетом имени Мирзо Улугбека (СамГАСУ). Участвовали местные и зарубежные учёные, специалисты отрасли и студенты.',
+      en: 'International research and practice conference held with Mirzo Ulugbek Samarkand State University of Architecture and Construction. Local and foreign scholars, industry specialists and students took part.',
+    },
+  },
 ];
 
 const pastLabels = {
