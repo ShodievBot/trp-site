@@ -195,3 +195,9 @@ vercel.json: regions ["syd1"] (рядом с базой).
 - ⚠️ Supabase btraayhkjoxahnphddri.supabase.co не резолвится (DNS) — проект на паузе или удалён. Сайт живёт на data/*.json, админка не сохраняет.
 - Ждём от заказчика: QR, видеоинструкция, остальные конференции, партнёры, логотип, видео mp4, ВАК/ОАК, Метрика/вебмастера.
 - 2026-11-10: добавлена конференция с СамГАСУ (SamDAQU) 26.09.2025: блок галереи samdaqu-2025 (11 фото webp + public/videos/samdaqu-2025.mp4, сжато с 40 до 14.5 МБ) и строка в списке на /conferences. Фото с EXIF-поворотом конвертировать через sharp().rotate(), не sips+cwebp.
+
+### 2026-11-10 — ДЕПЛОЙ на прод (ветка claude/project-thread-xusccr, в main ещё не влита)
+- На проде: юр. страницы (/privacy), шапка v2, документы, реквизиты, конференции, галерея СамГАСУ. NEXT_PUBLIC_SITE_URL в Vercel = https://trp-nashriyoti.uz.
+- Индексация ВЫКЛ (meta noindex). Включить: NEXT_PUBLIC_INDEXING=1 в Vercel + деплой, после «да» заказчика.
+- DNS домена на Vercel (ns1/ns2.vercel-dns.com). Добавлена TXT google-site-verification (vercel dns). Яндекс: public/yandex_04d8f90f4abf8e14.html.
+- В Search Console ресурс заведён с опечаткой trp-nashiyoti.uz — заказчику пересоздать на trp-nashriyoti.uz.
