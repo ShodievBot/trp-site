@@ -61,9 +61,9 @@ export const galleryBlocks: GalleryBlock[] = [
       en: "26 September 2025: international conference with Samarkand State University of Architecture and Construction",
     },
     text: {
-      uz: "Mirzo Ulug‘bek nomidagi Samarqand davlat arxitektura-qurilish universiteti va The Most Reliable Publication hamkorligida “Zamonaviy arxitektura, dizayn va shaharsozlikni barqaror rivojlantirishning dolzarb muammolari va innovatsion yechimlari” mavzusidagi xalqaro ilmiy-amaliy konferensiya o‘tkazildi.",
-      ru: "Самаркандский государственный архитектурно-строительный университет имени Мирзо Улугбека и The Most Reliable Publication провели международную научно-практическую конференцию «Актуальные проблемы и инновационные решения устойчивого развития современной архитектуры, дизайна и градостроительства».",
-      en: "Mirzo Ulugbek Samarkand State University of Architecture and Construction and The Most Reliable Publication held the international conference “Current Problems and Innovative Solutions for the Sustainable Development of Modern Architecture, Design and Urban Planning”.",
+      uz: "Mirzo Ulug‘bek nomidagi Samarqand davlat arxitektura-qurilish universiteti va The Most Reliable Publication hamkorligida “Zamonaviy arxitektura, dizayn va shaharsozlikni barqaror rivojlantirishning dolzarb muammolari va innovatsion yechimlari” mavzusidagi xalqaro ilmiy-amaliy konferensiya o‘tkazildi. Hamkor davlatlar: Turkiya, Rossiya, Qozog‘iston, Koreya.",
+      ru: "Самаркандский государственный архитектурно-строительный университет имени Мирзо Улугбека и The Most Reliable Publication провели международную научно-практическую конференцию «Актуальные проблемы и инновационные решения устойчивого развития современной архитектуры, дизайна и градостроительства». Страны-партнёры: Турция, Россия, Казахстан, Корея.",
+      en: "Mirzo Ulugbek Samarkand State University of Architecture and Construction and The Most Reliable Publication held the international conference “Current Problems and Innovative Solutions for the Sustainable Development of Modern Architecture, Design and Urban Planning”. Partner countries: Türkiye, Russia, Kazakhstan, Korea.",
     },
     images: series("samdaqu-2025", 11),
     video: { src: "/videos/samdaqu-2025.mp4", poster: img("samdaqu-2025-1") },
