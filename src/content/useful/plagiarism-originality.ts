@@ -4,16 +4,78 @@ export const article: UsefulArticle = {
   slug: "plagiarism-originality",
   date: "2026-11-10",
   title: {
+    tr: "İntihal taraması: özgünlük yüzdesi ve onu dürüstçe artırmanın yolları",
+    kk: "Антиплагиат: түпнұсқалық пайызы және оны адал көтеру жолдары",
     uz: "Antiplagiat: originallik foizi va uni halol oshirish yo‘llari",
     ru: "Антиплагиат: процент оригинальности и как повысить его честно",
     en: "Plagiarism checks: similarity scores and how to improve originality honestly",
   },
   description: {
+    tr: "İntihal tespit sistemlerinin nasıl çalıştığı, benzerlik yüzdesinin ne anlama geldiği, öz-intihal nedir ve özgünlüğü doğru yoldan nasıl yükseltirsiniz.",
+    kk: "Антиплагиат жүйелері қалай жұмыс істейді, сәйкестік пайызы нені білдіреді, өзіндік плагиат деген не және мәтін түпнұсқалығын дұрыс қалай көтеру керек.",
     uz: "Antiplagiat tizimlari qanday ishlaydi, o‘xshashlik foizi nimani anglatadi, o‘z-o‘zidan plagiat nima va matn originalligini to‘g‘ri oshirish usullari.",
     ru: "Как работают системы антиплагиата, что означает процент совпадений, что такое самоплагиат и как правильно повысить оригинальность текста.",
     en: "How plagiarism detection works, what a similarity score means, what self-plagiarism is and how to raise originality the right way.",
   },
   body: {
+    tr: `
+## Sistemler nasıl çalışır
+
+İntihal tespit sistemleri metninizi internet sayfaları, dergi makaleleri ve tezlerden oluşan bir veri tabanıyla karşılaştırır ve eşleşen bölümleri işaretler. Uluslararası dergiler çoğunlukla iThenticate (Crossref Similarity Check), üniversiteler ise Turnitin ve benzeri sistemler kullanır. Sistemlerin veri tabanları farklıdır, bu yüzden aynı metin farklı sonuç verir.
+
+## Yüzde ne anlama gelir
+
+Rapordaki sayı bir intihal hükmü değil, benzerlik oranıdır. İçine doğru düzenlenmiş alıntılar, kaynakça listesi, genel terimler ve standart ifadeler de girer. Bu yüzden editör yalnızca toplam yüzdede değil, tek bir kaynaktan ne kadar metin alındığına ve hangi bölümde olduğuna bakar.
+
+## Ne kadar yüzde kabul edilir
+
+Tek bir standart yoktur. Her dergi, üniversite ve bilim kurulu kendi eşiğini belirler; bu kurallar zamanla değişir. Kesin rakamı derginin yazar kılavuzundan veya kurumunuzun yürürlükteki yönetmeliğinden alın.
+
+## Öz-intihal
+
+Daha önce yayımlanmış kendi metninizi atıfsız yeniden kullanmak da ihlal sayılır. Bir makaleyi iki dergiye gönderemez veya eski makaleden büyük bölümler kopyalayamazsınız. Kendi işinize de başkalarınınki gibi atıf verin.
+
+## Özgünlük nasıl artırılır
+
+- Kaynağı okuyun, kapatın ve fikri kendi cümlelerinizle yazın, sonra atıf verin.
+- Kelimesi kelimesine alınmış cümleleri tırnak içine alın ve kaynağını gösterin.
+- Kaynakça incelemesinde metinleri özetlemeyin; karşılaştırın ve analiz edin.
+- Kendi verileriniz, tablolarınız ve çıkarımlarınızın oranını artırın.
+- Göndermeden önce metni taratın ve işaretlenen bölümleri yeniden düzenleyin.
+
+## Ne yapılmamalı
+
+Harf değiştirme, görünmez karakter ekleme veya metni otomatik "eşanlamlılaştırma" gibi yöntemler modern sistemlerce tespit edilir ve makalenin reddine, hatta yazarın kara listeye girmesine yol açar. Yapay zekâ ile yazılan metinler için de dergiler kendi kurallarını getirmektedir: bunları önceden okuyun.
+`,
+    kk: `
+## Жүйелер қалай жұмыс істейді
+
+Антиплагиат жүйелері мәтініңізді интернет-беттер, журнал мақалалары мен dissertationлар базасымен салыстырып, сәйкес келетін фрагменттерді белгілейді. Халықаралық журналдар көбіне iThenticate (Crossref Similarity Check), университеттер Turnitin, «Антиплагиат» және тектес жүйелерді қолданады. Жүйелердің базалары әртүрлі, сондықтан бір мәтін бойынша нәтиже өзгеше болады.
+
+## Пайыз нені білдіреді
+
+Есептегі сан — бұл плагиат емес, сәйкестік үлесі. Оған дұрыс рәсімделген дәйексөздер, әдебиеттер тізімі, ортақ терминдер мен стандартты тіркестер де кіреді. Сондықтан редактор жалпы пайызға ғана емес, бір дереккөзден қанша мәтін алынғанына және қай бөлімде екеніне қарайды.
+
+## Қанша пайыз рұқсат етіледі
+
+Бірыңғай норма жоқ. Әр журнал, университет және ғылыми кеңес өз шегін белгілейді, бұл талаптар уақыт өте өзгереді. Нақты санды журналдың авторларға арналған нұсқаулығынан немесе ұйымыңыздың қолданыстағы ережесінен алыңыз.
+
+## Өзіндік плагиат
+
+Бұрын жарияланған өз мәтініңізді сілтемесіз қайта қолдану да бұзушылық болып саналады. Бір мақаланы екі журналға жіберу немесе ескі мақаладан үлкен бөліктер көшіруге болмайды. Өз еңбегіңізге де басқа дереккөздер сияқты сілтеме беріңіз.
+
+## Түпнұсқалықты қалай көтеру керек
+
+- Дереккөзді оқып, жабыңыз да, ойды өз сөздеріңізбен жазыңыз, содан кейін сілтеме қойыңыз.
+- Сөзбе-сөз алынған сөйлемдерді тырнақшаға алып, дереккөзін көрсетіңіз.
+- Әдебиеттер шолуында мәтіндерді қайта баяндамай, оларды салыстырып, талдаңыз.
+- Өз деректеріңіздің, кестелеріңіз бен қорытындыларыңыздың үлесін арттырыңыз.
+- Жібермес бұрын мәтінді тексеріп, белгіленген фрагменттерді қайта өңдеңіз.
+
+## Нені жасамау керек
+
+Әріптерді ауыстыру, көрінбейтін белгілер қосу немесе мәтінді автоматты «синонимдеу» сияқты тәсілдер заманауи жүйелермен анықталады және мақаланың қайтарылуына, кейде автордың қара тізімге түсуіне әкеледі. Жасанды интеллект көмегімен жазылған мәтіндер бойынша да журналдар өз ережелерін енгізуде: оларды алдын ала оқыңыз.
+`,
     uz: `
 ## Tizimlar qanday ishlaydi
 

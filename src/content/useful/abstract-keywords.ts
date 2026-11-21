@@ -4,16 +4,90 @@ export const article: UsefulArticle = {
   slug: "abstract-keywords",
   date: "2026-11-10",
   title: {
+    tr: "Özet nasıl yazılır ve anahtar kelimeler nasıl seçilir",
+    kk: "Аннотацияны қалай жазу және кілт сөздерді қалай таңдау",
     uz: "Annotatsiya qanday yoziladi va kalit so‘zlar qanday tanlanadi",
     ru: "Как написать аннотацию и подобрать ключевые слова",
     en: "How to write an abstract and choose keywords",
   },
   description: {
+    tr: "Bilimsel makale özetinin yapısı, uzunluğu ve bir örneği, anahtar kelime seçimi kuralları ve en sık yapılan hatalar.",
+    kk: "Ғылыми мақала аннотациясының құрылымы, көлемі және үлгісі, кілт сөздерді таңдау ережелері мен ең жиі қателер.",
     uz: "Ilmiy maqola annotatsiyasining tuzilishi, hajmi va namunasi, kalit so‘zlarni tanlash qoidalari hamda eng ko‘p uchraydigan xatolar.",
     ru: "Структура, объём и пример аннотации научной статьи, правила подбора ключевых слов и самые частые ошибки.",
     en: "Structure, length and an example of a research abstract, rules for choosing keywords and the most common mistakes.",
   },
   body: {
+    tr: `
+## Özet neden önemlidir
+
+Özet, makalenin en çok okunan bölümüdür. Editör ve hakemler değerlendirmeye tam olarak özetle başlar; Scopus ve Google Scholar kullanıcıları da tam metni açıp açmayacağına buradan karar verir.
+
+## Yapı
+
+İyi bir özet, dört bölümden oluşan makalenin küçük bir kopyasıdır:
+
+- Amaç: çalışmanın hangi sorunu ele aldığı.
+- Yöntemler: kimin veya neyin, hangi yöntemlerle incelendiği.
+- Sonuçlar: ana bulgular, mümkünse sayılarla.
+- Sonuç: bulguların ne anlama geldiği ve nerede uygulanabileceği.
+
+## Uzunluk ve üslup
+
+Çoğu dergi 150–250 kelimelik özet ister, ancak kesin sınırı derginin yazar kılavuzundan alın. Özette kaynakça atfı, açıklanmamış kısaltmalar ve makalede olmayan bilgiler bulunmamalıdır. Genel ifadeler yerine somut olgular yazın: "sonuçlar tartışıldı" değil, "başarı %18 arttı".
+
+## Anahtar kelimeler
+
+Anahtar kelimeler makalenin aramada bulunmasına yardım eder. Genellikle 4–6 kelime veya ifade verilir.
+
+- Alanınızda yerleşmiş terimleri seçin: meslektaşlarınız arama kutusuna ne yazıyor?
+- Çok genel sözcüklerden ("eğitim", "analiz") kaçının, daha kesin ifadeler seçin.
+- Başlıktaki kelimeleri aynen tekrarlamayın; onları tamamlayın.
+- Her terimin İngilizce yazımını kontrol edin.
+
+## Sık yapılan hatalar
+
+- Özet, girişten kopyalanıyor ve sonuç vermiyor.
+- Fazla uzun veya tek cümleden oluşuyor.
+- Kelimesi kelimesine çevrilmiş ve İngilizcede anlaşılmıyor.
+
+Özeti en son, makale tamamen bittikten sonra yazın.
+`,
+    kk: `
+## Аннотация неге маңызды
+
+Аннотация — мақаланың ең көп оқылатын бөлігі. Редактор мен рецензент бағалауды дәл аннотациядан бастайды, ал Scopus пен Google Scholar қолданушылары толық мәтінді ашу-ашпауды осы бойынша шешеді.
+
+## Құрылымы
+
+Жақсы аннотация — мақаланың кішігірім көшірмесі, төрт бөліктен тұрады:
+
+- Мақсат: зерттеу қандай мәселені шешеді.
+- Әдістер: кім немесе не зерттелді, қандай тәсілдермен.
+- Нәтижелер: негізгі табыстар, мүмкін болса сандармен.
+- Қорытынды: нәтижелер нені білдіреді және қай жерде қолданылады.
+
+## Көлем және стиль
+
+Көптеген журналдар 150–250 сөздік аннотация сұрайды, бірақ нақты талапты журналдың авторларға арналған нұсқаулығынан алыңыз. Аннотацияда әдебиетке сілтемелер, түсіндірілмеген аббревиатуралар мен мақалада жоқ ақпарат болмауы керек. Жалпы тіркестердің орнына нақты фактілерді жазыңыз: «нәтижелер талқыланды» емес, «үлгерім 18 пайызға өсті».
+
+## Кілт сөздер
+
+Кілт сөздер мақаланы іздеуде табуға көмектеседі. Әдетте 4–6 сөз немесе тіркес беріледі.
+
+- Саладаңызда қабылданған терминдерді таңдаңыз: әріптестеріңіз іздеуге нені жазады.
+- Тым жалпы сөздерден («білім», «талдау») сақ болып, нақты тіркестер алыңыз.
+- Атаудағы сөздерді толық қайталамай, толықтырыңыз.
+- Терминнің ағылшынша дұрыс жазылуын тексеріңіз.
+
+## Жиі кездесетін қателер
+
+- Аннотация кіріспеден көшірілген және нәтижелерді хабарламайды.
+- Тым ұзақ немесе бір сөйлемнен тұрады.
+- Сөзбе-сөз аударылған және ағылшын тілінде түсініксіз.
+
+Аннотацияны мақала толық дайын болғаннан кейін, ең соңында жазыңыз.
+`,
     uz: `
 ## Annotatsiya nega muhim
 

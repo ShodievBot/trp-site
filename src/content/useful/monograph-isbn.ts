@@ -4,16 +4,88 @@ export const article: UsefulArticle = {
   slug: "monograph-isbn",
   date: "2026-11-10",
   title: {
+    tr: "Monografi veya ders kitabı nasıl yayımlanır: ISBN, UDC, LBC ve hakemler",
+    kk: "Монография немесе оқулықты қалай шығару керек: ISBN, УДК, ББК және пікіршілер",
     uz: "Monografiya yoki darslikni qanday nashr etish kerak: ISBN, UDK, BBK va taqrizchilar",
     ru: "Как издать монографию или учебник: ISBN, УДК, ББК и рецензенты",
     en: "How to publish a monograph or textbook: ISBN, UDC, LBC and reviewers",
   },
   description: {
+    tr: "Monografi ve ders kitabı yayımlamanın aşamaları: metin hazırlığı, hakem raporları, ISBN, UDC ve LBC kodları, dizgi, baskı adedi ve yasal zorunlu nüshalar.",
+    kk: "Монография мен оқулық шығару кезеңдері: қолжазбаны дайындау, пікірлер, ISBN, УДК және ББК кодтары, беттеу, тираж және міндетті даналар.",
     uz: "Monografiya va darslik nashr etish bosqichlari: qo‘lyozma tayyorlash, taqrizlar, ISBN, UDK va BBK kodlari, sahifalash, tiraj va majburiy nusxalar.",
     ru: "Этапы издания монографии и учебника: подготовка рукописи, рецензии, ISBN, коды УДК и ББК, вёрстка, тираж и обязательные экземпляры.",
     en: "The stages of publishing a monograph or textbook: preparing the manuscript, reviews, ISBN, UDC and LBC codes, typesetting, print run and legal deposit.",
   },
   body: {
+    tr: `
+## Monografi ile ders kitabının farkı
+
+Monografi, tek bir sorunu derinlemesine inceleyen ve uzman okurlar için yazılan bilimsel eserdir. Ders kitabı ve ders notu ise bir dersin programına uygun biçimde öğrenciler için yazılır. Yayın türü kitabın yapısını, hakemlik sürecini ve biçimlendirme koşullarını belirler.
+
+## 1. aşama: metin
+
+Metni tamamlanmış hâlde teslim edin: giriş, bölümler, sonuç, kaynakça, numaralanmış tablolar ve şekiller. Özgünlüğü önceden kontrol edin ve başkalarının şekil ile tablolarını kullanma hakkınızın olduğunu doğrulayın.
+
+## 2. aşama: hakem raporları ve öneri
+
+Bilimsel yayın için genellikle alanda akademik dereceli uzmanların hakem raporları gerekir. Çoğu zaman kurumun bilim veya eğitim-metodik kurulunun yayına önerisi de istenir. Hakemler ve öneri kitabın künye sayfasında belirtilir. Ders kitapları için onay (grif) süreci ayrı olabilir: bunu kurumunuzdan öğrenin.
+
+## 3. aşama: ISBN, UDC ve LBC
+
+- ISBN, kitabın 13 haneli uluslararası standart numarasıdır. Bunu yazar değil, yayıncı ulusal ISBN ajansı aracılığıyla alır. Her basım ve her biçim (basılı, elektronik) ayrı ISBN alır.
+- UDC (UDK), kitabın konusunu gösteren Evrensel Ondalık Sınıflandırma kodudur.
+- LBC (BBK), kütüphanelerde yerleştirme için kullanılan kütüphane sınıflandırma kodudur.
+- Künyede ayrıca yazar işareti ve kısa özet (anotasyon) yer alır.
+
+## 4. aşama: editörlük ve dizgi
+
+Yayınevi metni düzenler, cilt öncesi okuma yapar, kitabı dizgiler ve kapağı hazırlar. Yazar hazır şablonu okuyup imzasıyla onaylar. Hataları düzeltmenin en ucuz olduğu aşama tam budur.
+
+## 5. aşama: baskı ve dağıtım
+
+Baskı adedini, kâğıdı ve cilt türünü önceden kararlaştırın. Yayından sonra yayınevi, yasada öngörülen zorunlu nüshaları ilgili kurum ve kütüphanelere gönderir. Elektronik sürüm ve DOI konusunu da konuşun.
+
+## Yayınevi seçerken nelere bakmalı
+
+- Yayıncılık faaliyetini doğrulayan resmî belge var mı.
+- ISBN tam olarak bu yayınevi adına mı kayıtlı.
+- Sözleşmede süre, baskı adedi, fiyat ve telif hakları açıkça yazılı mı.
+  `,
+    kk: `
+## Монография мен оқулықтың айырмашылығы
+
+Монография — бір мәселені терең қарастырған ғылыми еңбек, оның оқырманы — мамандар. Оқулық пен оқу құралы пән бағдарламасына сай студенттер үшін жазылады. Басылым түрі кітаптың құрылымын, пікіралау ретін және ресімдеу талаптарын анықтайды.
+
+## 1-кезең: қолжазба
+
+Мәтінді аяқталған күйде тапсырыңыз: кіріспе, тараулар, қорытынды, әдебиеттер тізімі, нөмірленген кесте мен суреттер. Мәтіннің өзіндігін алдын ала тексеріңіз және бөгде сурет пен кестелерді пайдалану құқығыңыз бар екеніне көз жеткізіңіз.
+
+## 2-кезең: пікірлер мен ұсыныс
+
+Ғылыми басылымға әдетте осы саладағы ғылыми дәрежесі бар мамандардың пікірлері керек. Жиі мекеменің ғылыми немесе оқу-әдістемелік кеңесінің баспаға ұсынысы да талап етіледі. Пікіршілер мен ұсыныс туралы мәлімет кітаптың шығарылым деректері бетінде көрсетіледі. Оқулықтар үшін гриф алу реті бөлек болуы мүмкін: оны өз мекемеңізден анықтаңыз.
+
+## 3-кезең: ISBN, УДК және ББК
+
+- ISBN — кітаптың 13 саннан тұратын халықаралық стандартты нөмірі. Оны автор емес, баспагер ұлттық ISBN агенттігі арқылы алады. Әр басылым мен әр формат (баспалық, электрондық) бөлек ISBN алады.
+- УДК — Әмбебап ондық жіктеу коды, кітап тақырыбын көрсетеді.
+- ББК — кітапхана-библиографиялық жіктеу коды, кітапханаларға орналастыру үшін қажет.
+- Авторлық белгі мен аннотация да шығарылым деректеріне кіреді.
+
+## 4-кезең: редакциялау және беттеу
+
+Баспагер мәтінді редакциялайды, корректордан өткізеді, беттейді және мұқаба дайындайды. Автор дайын макетті оқып шығып, қолтаңбасымен бекітеді. Қателерді түзету ең арзан тұрған кезең дәл осы.
+
+## 5-кезең: басып шығару және тарату
+
+Тиражды, қағаз бен мұқаба түрін алдын ала келісіңіз. Басылымнан кейін баспагер заңнамада белгіленген міндетті даналарды тиісті ұйымдар мен кітапханаларға жібереді. Электрондық нұсқа мен DOI мәселесін де талқылаңыз.
+
+## Баспагер таңдағанда неге көңіл бөлу керек
+
+- Баспагерлік қызметті растайтын ресми құжат бар ма.
+- ISBN дәл осы баспагердің атына берілген бе.
+- Шартта мерзім, тираж, баға және авторлық құқық нақты жазылған ба.
+  `,
     uz: `
 ## Monografiya va darslik farqi
 

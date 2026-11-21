@@ -4,16 +4,82 @@ export const article: UsefulArticle = {
   slug: "references-apa-gost",
   date: "2026-11-10",
   title: {
+    tr: "Kaynakça düzenleme: APA, GOST ve dergi gereksinimleri",
+    kk: "Әдебиеттер тізімін рәсімдеу: APA, GOST және журнал талаптары",
     uz: "Adabiyotlar ro‘yxatini rasmiylashtirish: APA, GOST va jurnal talablari",
     ru: "Оформление списка литературы: APA, ГОСТ и требования журналов",
     en: "Formatting a reference list: APA, GOST and journal requirements",
   },
   description: {
+    tr: "Kaynakçanın APA ve GOST biçiminde düzenlenmesi, metin içi atıflar, DOI gösterimi ve Mendeley, Zotero gibi kaynak yöneticilerinin kullanımı.",
+    kk: "Әдебиеттер тізімін APA пен GOST бойынша рәсімдеу, мәтін ішіндегі сілтемелер, DOI көрсету және Mendeley, Zotero сияқты сілтеме менеджерлерімен жұмыс.",
     uz: "Adabiyotlar ro‘yxatini APA va GOST uslubida rasmiylashtirish, matn ichidagi havolalar, DOI ko‘rsatish va Mendeley, Zotero kabi dasturlardan foydalanish.",
     ru: "Как оформить список литературы по APA и ГОСТ, ссылки в тексте, указание DOI и работа с менеджерами ссылок Mendeley и Zotero.",
     en: "How to format references in APA and GOST style, in-text citations, DOIs and reference managers such as Mendeley and Zotero.",
   },
   body: {
+    tr: `
+## Neden önemlidir
+
+Kötü düzenlenmiş bir kaynakça, makalenin teknik nedenle geri çevrilmesinin en yaygın sebeplerinden biridir. Ayrıca Scopus atıfları tam olarak listedeki kayıtlara göre sayar: hatalı bir kaynak sayılmayabilir.
+
+## APA biçimi
+
+APA, uluslararası dergilerde en yaygın biçimlerden biridir. Metinde yazar ve yıl verilir: (Karimov, 2024). Liste alfabetik düzenlenir. Bir dergi makalesi şöyle görünür:
+
+Karimov, A. B., & Aliyeva, N. S. (2024). Makale başlığı. Dergi Adı, 12(3), 45–58. https://doi.org/10.xxxx/xxxxx
+
+## GOST
+
+BDT ülkelerinin dergilerinde ve tezlerde çoğunlukla GOST standartları uygulanır. Kaynaklar metinde genellikle köşeli parantez içinde numarayla verilir: [5, s. 12]; listede ise yazar, başlık, yayım yeri, yayıncı, yıl ve sayfalar yer alır. GOST'un birkaç nüshası vardır; kurumunuz hangisini istiyor, önceden öğrenin.
+
+## Derginin kuralı her şeyden önce gelir
+
+Her dergi kendi biçimini belirler: APA, Vancouver, Harvard, IEEE veya kendi varyantı. Yazar kılavuzunu açın ve son sayıdaki makaleden örnek alın.
+
+## Pratik öneriler
+
+- DOI'si olan her kaynağa DOI ekleyin.
+- Kiril alfabesindeki kaynaklar için birçok uluslararası dergi transliterasyon ve İngilizce çeviri ister.
+- Metindeki her atıf listede, listedeki her kaynak metinde yer almalıdır.
+- Son beş yılın ve saygın dergilerin kaynaklarına dikkat edin.
+- Kendi eserlerinize aşırı atıf yapmaktan kaçının.
+
+## Araçlar
+
+Mendeley, Zotero ve EndNote kaynaklarınızı saklar ve listeyi istenen biçimde otomatik oluşturur. Biçim tek tuşla değişir; bu, makaleyi başka bir dergiye yeniden gönderirken çok zaman kazandırır.
+`,
+    kk: `
+## Неліктен маңызды
+
+Дұрыс рәсімделмеген әдебиеттер тізімі — мақаланың техникалық себеппен қайтарылуының ең жиі себептерінің бірі. Сонымен қатар Scopus дәйексөздерді дәл тізімдегі жазбалар бойынша есептейді: қатесі бар дереккөз есептелмей қалуы мүмкін.
+
+## APA стилі
+
+APA — халықаралық журналдардағы ең кең тараған стильдердің бірі. Мәтінде автор мен жыл көрсетіледі: (Karimov, 2024). Тізім алфавит бойынша құрылады. Журнал мақаласының үлгісі:
+
+Karimov, A. B., & Aliyeva, N. S. (2024). Мақала атауы. Журнал атауы, 12(3), 45–58. https://doi.org/10.xxxx/xxxxx
+
+## GOST
+
+ТМД елдерінің журналдары мен dissertationларында көбіне GOST стандарттары қолданылады. Онда дереккөздер мәтінде әдетте шаршы жақтағы нөмірмен беріледі: [5, 12-б.], ал тізімде автор, атау, шығарылған жері, баспа, жыл мен беттер келтіріледі. GOST-тың бірнеше редакциясы бар — ұйымыңыз қайсысын талап ететінін анықтаңыз.
+
+## Журнал талабы бәрінен жоғары
+
+Әр журнал өз стилін белгілейді: APA, Vancouver, Harvard, IEEE немесе өз нұсқасы. Авторларға арналған нұсқаулықты ашыңыз және соңғы нөмірдегі мақаладан үлгі алыңыз.
+
+## Тәжірибелік кеңестер
+
+- DOI-і бар әр дереккөзге DOI көрсетіңіз.
+- Кирилл әріптеріндегі дереккөздер үшін көптеген халықаралық журналдар транслитерация мен ағылшынша аударманы сұрайды.
+- Мәтінідегі әр сілтеме тізімде, ал тізімдегі әр дереккөз мәтінде ескерілуі керек.
+- Соңғы 5 жылдағы дереккөздер мен беделді журналдар үлесіне көңіл бөліңіз.
+- Өз еңбектеріңізге шектен тыс көп сілтеме бермеңіз.
+
+## Бағдарламалар
+
+Mendeley, Zotero және EndNote дереккөздерді сақтап, тізімді қажетті стильде автоматты түрде құрады. Стиль бір түймемен ауыстырылады — бұл мақаланы басқа журналға қайта жібергенде уақытты үнемдейді.
+`,
     uz: `
 ## Nega bu muhim
 

@@ -4,16 +4,98 @@ export const article: UsefulArticle = {
   slug: "oak-requirements-phd-dsc",
   date: "2026-11-10",
   title: {
+    tr: "PhD ve DSc savunması için yayınlar: OAK koşullarını nasıl kontrol eder, işi nasıl planlarsınız",
+    kk: "PhD және DSc қорғауы үшін жарияланымдар: OAK талаптарын қалай тексеру және жоспарлау керек",
     uz: "PhD va DSc himoyasi uchun nashrlar: OAK talablarini qanday tekshirish va rejalashtirish kerak",
     ru: "Публикации для защиты PhD и DSc: как проверить требования ОАК и спланировать работу",
     en: "Publications for a PhD or DSc defence: how to check OAK requirements and plan ahead",
   },
   description: {
+    tr: "Doktora savunması için bilimsel yayın planlama: OAK koşullarını resmî kaynaklardan kontrol etme, dergi seçimi ve sık yapılan hatalar.",
+    kk: "Диссертация қорғауы үшін ғылыми жарияланымдарды жоспарлау: OAK талаптарын ресми дереккөзден тексеру, журнал таңдау және жиі кездесетін қателер.",
     uz: "Dissertatsiya himoyasi uchun ilmiy nashrlarni rejalashtirish: OAK talablarini rasmiy manbadan tekshirish, jurnal tanlash va ko‘p uchraydigan xatolar.",
     ru: "Как спланировать научные публикации для защиты диссертации: проверка требований ОАК по официальным источникам, выбор журналов и частые ошибки.",
     en: "Planning research publications for a dissertation defence: checking OAK requirements in official sources, choosing journals and avoiding common mistakes.",
   },
   body: {
+    tr: `
+## Önce önemli bir not
+
+Yayınların sayısı ve türüne ilişkin kesin koşulları Yüksek Attestasyon Komisyonu (OAK) belirler ve bunlar zaman zaman güncellenir. Bu yüzden bu yazıda kesin rakamlar yoktur. Güncel koşulları her zaman OAK'ın resmî sitesinden (oak.uz), yürürlükteki yönetmelikten ve kendi bilim kuruluşunuzun sekreterinden kontrol edin.
+
+## Genellikle ne istenir
+
+Koşullar genellikle birkaç yayın türünü kapsar:
+
+- OAK'ın önerdiği bilimsel yayınlar listesindeki ulusal dergilerde makaleler.
+- Yabancı dergilerde, aralarında Scopus veya Web of Science'ta dizinlenen dergilerdeki makaleler.
+- Uluslararası ve ulusal bilimsel konferansların bildiri kitaplarındaki özetler ve bildiriler.
+- Bazı durumlarda monografi, patent veya yazılım tescil belgesi.
+
+PhD ve DSc için koşullar farklıdır ve uzmanlık alanlarına göre özel kurallar olabilir.
+
+## Bir dergiyi nasıl kontrol edersiniz
+
+- Derginin OAK listesinin güncel nüshasında ve tam olarak sizin uzmanlık alanınızda olduğundan emin olun.
+- Liste değişir: önemli olan, makaleniz çıktığı tarihte derginin listede olmasıdır.
+- Yabancı dergi için veri tabanında şu anda aktif olarak dizinlendiğini kontrol edin.
+- Makalenin konusu tez konunuza ve uzmanlık tanımınıza uysun.
+
+## İşi nasıl planlarsınız
+
+- Yayın planını tez bölümlerine göre kurun: her ana sonuç ayrı bir makale olur.
+- Sürelere bol pay bırakın: saygın dergilerde hakemlik aylar sürer.
+- Ortak yazarlı çalışmalarda kendi katkınızı açıkça belirtin.
+- Her yayın için belgeleri saklayın: dergi kapağı, içindekiler, makale metni, DOI veya bağlantı.
+
+## Sık yapılan hatalar
+
+- Listeden çıkarılmış bir dergiye makale göndermek.
+- Savunmadan birkaç ay önce bütün makaleleri birden çıkarmaya çalışmak.
+- Aynı sonucu birkaç makalede tekrarlamak.
+- Yırtıcı bir dergide yayımlamak: böyle bir çalışma sayılmayabilir.
+
+Şüpheli bir durumda danışmanınız ve kurul sekreteri ile görüşün: son kararı onlar ve OAK verir.
+  `,
+    kk: `
+## Алдымен маңызды ескертпе
+
+Жарияланымдардың саны мен түріне қатысты нақты талаптарды Жоғарғы аттестациялық комиссия (OAK) белгілейді және олар мерзім-мерзімімен жаңарып отырады. Сондықтан бұл мақалада нақты сандар жоқ. Қолданыстағы талаптарды әрқашан OAK-тың ресми сайтынан (oak.uz), қолданыстағы ережеден және өзіңіздің ғылыми кеңесіңіздің хатшысынан тексеріңіз.
+
+## Әдетте нені талап етеді
+
+Талаптар әдетте бірнеше түрлі жарияланымдарды қамтиды:
+
+- OAK ұсынған ғылыми басылымдар тізіміндегі отандық журналдардағы мақалалар.
+- Шетелдік журналдардағы, соның ішінде Scopus немесе Web of Science базаларында индекстелетін журналдардағы мақалалар.
+- Халықаралық және республикалық ғылыми конференциялар материалдарындағы тезисдер мен баяндамалар.
+- Кейбір жағдайларда монография, патент немесе бағдарламалық өнім туралы куәлік.
+
+PhD мен DSc үшін талаптар өзгеше, мамандықтар бойынша да өзіндік ерекшеліктер болуы мүмкін.
+
+## Журналды қалай тексеру керек
+
+- Журнал OAK тізімінің қолданыстағы редакциясында және дәл сіздің мамандығыңыз бойынша бар екенін тексеріңіз.
+- Тізім жаңарып отырады: мақала шыққан күні журнал тізімде болғаны маңызды.
+- Шетелдік журнал үшін оның қазір базада белсенді индекстеліп жүргенін көріңіз.
+- Мақала тақырыбы диссертация тақырыбына және мамандық паспортына сәйкес болсын.
+
+## Жұмысты қалай жоспарлау керек
+
+- Жарияланымдар жоспарын диссертация тараулары бойынша құрыңыз: әрбір негізгі нәтиже — бөлек мақала.
+- Мерзімдерді қорымен есептеңіз: беделді журналдарда қарау айларға созылады.
+- Бірлескен еңбекте өз үлесіңізді нақты көрсетіңіз.
+- Әр жарияланым бойынша растайтын құжаттарды сақтаңыз: журнал мұқабасы, мазмұны, мақала мәтіні, DOI немесе сілтеме.
+
+## Жиі кездесетін қателер
+
+- Журнал тізімнен шығарылғанын білмей мақала тапсыру.
+- Қорғауға бірнеше ай қалғанда барлық мақаланы бірден шығаруға тырысу.
+- Бір нәтижені бірнеше мақалада қайталау.
+- Жыртқыш журналда жариялау: мұндай еңбек есепке алынбауы мүмкін.
+
+Күмәнді жағдайда ғылыми жетекшіңіз бен ғылыми кеңес хатшысымен ақылдасыңыз: соңғы шешімді дәл олар мен OAK қабылдайды.
+  `,
     uz: `
 ## Avval muhim eslatma
 

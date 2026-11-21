@@ -28,7 +28,7 @@ const page: LocaleMap<{
     name: "Ibodullayeva Zubayda Sherzodovna",
     title: "Ibodullayeva Zubayda Sherzodovna — nashriyot direktori",
     description:
-      "Ibodullayeva Zubayda Sherzodovna — “THE MOST RELIABLE PUBLICATION” MCHJ ilmiy tadqiqotlar markazi va nashriyotining direktori, pedagogika bo‘yicha ilmiy nashrlar muallifi.",
+      "Ibodullayeva Zubayda Sherzodovna — “THE MOST RELIABLE PUBLICATION” MCHJ ilmiy tadqiqotlar markazi va nashriyotining direktori, pedagogika bo‘yicha 20 dan ortiq ilmiy ish muallifi.",
     roleTitle: "Faoliyati",
     role: [
       "“THE MOST RELIABLE PUBLICATION” MCHJ ilmiy tadqiqotlar markazi va nashriyotiga rahbarlik qiladi. Kompaniya Samarqandda ro‘yxatga olingan (STIR 311122349) va Scopus, OAK jurnallarida nashr, kitob va monografiyalar chop etish hamda xalqaro konferensiyalar tashkil etish bilan shug‘ulanadi.",
@@ -37,7 +37,7 @@ const page: LocaleMap<{
     ],
     scienceTitle: "Ilmiy qiziqishlar",
     science:
-      "Pedagogika yo‘nalishida ilmiy maqolalar muallifi. Ishlari, xususan, madaniy xilma-xillik sharoitida pedagogik faoliyat va ta’limda innovatsion texnologiyalarni joriy etishga bag‘ishlangan. Nashrlar Google Scholar profilida keltirilgan.",
+      "Pedagogika yo‘nalishida 20 dan ortiq ilmiy ish muallifi (2023–2025). Ishlari ta’limda innovatsion texnologiyalar (STEAM konsepsiyasi, elektron o‘quv platformalari, “flipped classroom” metod), sun’iy intellektga asoslangan baholash tizimlari, o‘qituvchilarning raqamli kompetensiyalari, madaniy xilma-xillik sharoitida pedagogik faoliyat hamda Xorazm jadidlarining pedagogik qarashlari masalalariga bag‘ishlangan. Nashrlar Google Scholar profilida keltirilgan.",
     contactTitle: "Bog‘lanish",
     photoNote: "[Direktor rasmi — foto keyinroq qo‘shiladi]",
   },
@@ -46,7 +46,7 @@ const page: LocaleMap<{
     name: "Ибодуллаева Зубайда Шерзодовна",
     title: "Ибодуллаева Зубайда Шерзодовна — директор издательства",
     description:
-      "Ибодуллаева Зубайда Шерзодовна — директор научного центра и издательства «THE MOST RELIABLE PUBLICATION» MCHJ, автор научных публикаций по педагогике.",
+      "Ибодуллаева Зубайда Шерзодовна — директор научного центра и издательства «THE MOST RELIABLE PUBLICATION» MCHJ, автор более 20 научных работ по педагогике.",
     roleTitle: "Деятельность",
     role: [
       "Руководит научным центром и издательством «THE MOST RELIABLE PUBLICATION» MCHJ. Компания зарегистрирована в Самарканде (ИНН 311122349) и занимается публикациями в журналах Scopus и ОАК, изданием книг и монографий, организацией международных конференций.",
@@ -55,7 +55,7 @@ const page: LocaleMap<{
     ],
     scienceTitle: "Научные интересы",
     science:
-      "Автор научных статей по педагогике. Работы посвящены, в частности, педагогической деятельности в условиях культурного разнообразия и внедрению инновационных технологий в образовании. Публикации приведены в профиле Google Scholar.",
+      "Автор более 20 научных работ (2023–2025) по педагогике. Работы посвящены инновационным технологиям в образовании (концепция STEAM, электронные обучающие платформы, метод «перевёрнутого класса»), системам оценивания на основе искусственного интеллекта, цифровым компетенциям учителей, педагогической деятельности в условиях культурного разнообразия, а также педагогическим взглядам хорезмских джадидов. Публикации приведены в профиле Google Scholar.",
     contactTitle: "Контакты",
     photoNote: "[Фотография директора — будет добавлена позже]",
   },
@@ -64,7 +64,7 @@ const page: LocaleMap<{
     name: "Zubayda Sherzodovna Ibodullayeva",
     title: "Zubayda Sherzodovna Ibodullayeva — director of the publishing house",
     description:
-      "Zubayda Sherzodovna Ibodullayeva is the director of the research centre and publishing house \"THE MOST RELIABLE PUBLICATION\" LLC, an author of research publications in pedagogy.",
+      "Zubayda Sherzodovna Ibodullayeva is the director of the research centre and publishing house \"THE MOST RELIABLE PUBLICATION\" LLC and the author of more than 20 scholarly works in pedagogy.",
     roleTitle: "Role",
     role: [
       "Heads the research centre and publishing house \"THE MOST RELIABLE PUBLICATION\" LLC. The company is registered in Samarkand (TIN 311122349) and provides Scopus and OAK journal publications, book and monograph publishing, and international conference organisation.",
@@ -73,9 +73,45 @@ const page: LocaleMap<{
     ],
     scienceTitle: "Research interests",
     science:
-      "Author of research articles in pedagogy. Her works focus, in particular, on pedagogical activity in the context of cultural diversity and the introduction of innovative technologies in education. Publications are listed in her Google Scholar profile.",
+      "Author of more than 20 scholarly works (2023–2025) in pedagogy. Her research covers innovative technologies in education (the STEAM concept, e-learning platforms, the flipped classroom method), AI-based assessment systems, teachers' digital competences, pedagogical activity in the context of cultural diversity, and the pedagogical views of the Khorezm Jadids. Publications are listed in her Google Scholar profile.",
     contactTitle: "Contact",
     photoNote: "[Director photo — to be added later]",
+  },
+  tr: {
+    kicker: "Yönetim",
+    name: "Zubayda Sherzodovna Ibodullayeva",
+    title: "Zubayda Sherzodovna Ibodullayeva — yayınevi direktörü",
+    description:
+      "Zubayda Sherzodovna Ibodullayeva — \"THE MOST RELIABLE PUBLICATION\" LLC araştırma merkezi ve yayınevinin direktörü, pedagoji alanında 20'den fazla bilimsel çalışmanın yazarı.",
+    roleTitle: "Faaliyet",
+    role: [
+      "Araştırma merkezi ve \"THE MOST RELIABLE PUBLICATION\" LLC yayınevine önderlik etmektedir. Şirket Semerkant'ta kayıtlıdır (VKN 311122349) ve Scopus ile OAK dergilerinde yayınlar, kitap ve monografi yayıncılığı ile uluslararası konferansların organizasyonu ile uğraşmaktadır.",
+      "2025–2026 yıllarında merkez, Türkiye (Trabzon, İstanbul, Alanya) ve Özbekistan üniversiteleriyle iş birliği içinde uluslararası bilimsel etkinlikler düzenledi; Semerkant Devlet Pedagoji Enstitüsü ve SamDAQU ile konferanslar dâhil.",
+      "Yayınevi resmî belgelere dayalı olarak faaliyet yürütmektedir: devlet kaydı (22.02.2024), yayıncılık faaliyeti onayı № 1090203 ve kamu etkinlikleri izni № 1316085.",
+    ],
+    scienceTitle: "Bilimsel ilgi alanları",
+    science:
+      "Pedagoji alanında 20'den fazla bilimsel çalışmanın yazarıdır (2023–2025). Çalışmaları eğitimde yenilikçi teknolojileri (STEAM kavramı, e-öğrenme platformları, \"ters yüz sınıf\" yöntemi), yapay zekâ tabanlı değerlendirme sistemlerini, öğretmenlerin dijital yeterliliklerini, kültürel çeşitlilik bağlamında pedagojik faaliyeti ve Harezm Ceditlerinin pedagojik görüşlerini kapsamaktadır. Yayınlar Google Scholar profilinde listelenmiştir.",
+    contactTitle: "İletişim",
+    photoNote: "[Yönetici fotoğrafı — daha sonra eklenecek]",
+  },
+  kk: {
+    kicker: "Басшылық",
+    name: "Ибодуллаева Зубайда Шерзодовна",
+    title: "Ибодуллаева Зубайда Шерзодовна — баспа үйінің директоры",
+    description:
+      "Ибодуллаева Зубайда Шерзодовна — «THE MOST RELIABLE PUBLICATION» ЖШС ғылыми орталығы мен баспа үйінің директоры, педагогика салонындағы 20-дан астам ғылыми еңбектің авторы.",
+    roleTitle: "Қызмет",
+    role: [
+      "«THE MOST RELIABLE PUBLICATION» ЖШС ғылыми орталығы мен баспа үйін басқарады. Компания Самарқантта тіркелген (СТИН 311122349) және Scopus пен ОАК журналдарындағы жарияланымдар, кітап пен монографиялар шығару, халықаралық конференциялар ұйымдастырумен айналысады.",
+      "2025–2026 жылдары орталық Түркиямен (Трабзон, Стамбул, Аланья) және Өзбекстан университеттерімен бірлесіп халықаралық ғылыми іс-шаралар өткізді, соның ішінде Самарқант мемлекеттік педагогикалық институты және СамДАҚУ-мен конференциялар.",
+      "Баспа үйі ресми құжаттар негізінде жұмыс істейді: мемлекеттік тіркеу (22.02.2024), баспалық қызметті растау № 1090203 және жариялы іс-шараларға рұқсат № 1316085.",
+    ],
+    scienceTitle: "Ғылыми қызығушылықтары",
+    science:
+      "Педагогика салонындағы 20-дан астам ғылыми еңбектің авторы (2023–2025). Еңбектері білім берудегі инновациялық технологияларға (STEAM тұжырымдамасы, электрондық оқыту платформалары, «аударылған сынып» әдісі), жасанды интеллект негізіндегі бағалау жүйелеріне, мұғалімдердің цифрлық құзыреттіліктеріне, мәдени алуантүрлілік жағдайындағы педагогикалық қызметке және хорезмдік жәдіттердің педагогикалық көзқарастарына арналған. Жарияланымдар Google Scholar профилінде келтірілген.",
+    contactTitle: "Байланыс",
+    photoNote: "[Директор фотосы — кейін қосылады]",
   },
 };
 
@@ -177,7 +213,15 @@ export default async function DirectorPage({ params }: Props) {
             </p>
             <p style={{ marginTop: 20 }}>
               <Link href={`/${locale}/contact`} className="premiumButton premiumButtonPrimary">
-                {locale === "ru" ? "Оставить заявку" : locale === "en" ? "Submit a request" : "Ariza qoldirish"}
+                {locale === "ru"
+                  ? "Оставить заявку"
+                  : locale === "en"
+                    ? "Submit a request"
+                    : locale === "tr"
+                      ? "Talep gönderin"
+                      : locale === "kk"
+                        ? "Өтініш қалдыру"
+                        : "Ariza qoldirish"}
               </Link>
             </p>
           </div>

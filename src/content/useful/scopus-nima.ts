@@ -4,16 +4,68 @@ export const article: UsefulArticle = {
   slug: "scopus-nima",
   date: "2026-11-21",
   title: {
+    tr: "Scopus nedir: yayın neden önemlidir ve kime gereklidir",
+    kk: "Scopus деген не: жарияланым неге маңызды және кімге керек",
     uz: "Scopus bu nima: nima uchun nashr muhim va kimqa kerak",
     ru: "Что такое Scopus: почему публикация важна и кому нужна",
     en: "What is Scopus: why publishing there matters and who needs it",
   },
   description: {
+    tr: "Scopus veri tabanının ne olduğu, nasıl çalıştığı, Özbekistan'da PhD ve DSc için neden zorunlu olduğu ve makalenizin veri tabanına ne zaman girdiği.",
+    kk: "Scopus базасы деген не, қалай жұмыс істейді, Өзбекстанда PhD пен DSc үшін неге міндетті және мақалаңыз базаға қашан енеді.",
     uz: "Scopus bazasi nima, u qanday ishladi, O‘zbekistonda PhD va DSc uchun nima uchun majburiy va maqolangizni qaysi holatda ushbu bazaga kiritiladi.",
     ru: "Что такое база Scopus, как она работает, почему она обязательна для PhD и DSc в Узбекистане и когда ваша статья попадает в базу.",
     en: "What the Scopus database is, how it works, why it is mandatory for PhD and DSc in Uzbekistan, and when your paper enters the database.",
   },
   body: {
+    tr: `
+## Scopus nedir
+
+Scopus, Elsevier akademik yayıncılık şirketinin 2004'ten bu yana yürüttüğü en büyük bilimsel yayın veri tabanıdır. Dünyanın 40.000'den fazla dergisi, konferans bildirileri ve kitapları burada dizinlenir: başlıklar, yazarlar, özetler, atıflar ve kaynakça. Bilimin neredeyse tüm alanları kapsanır.
+
+## Neden önemlidir
+
+Özbekistan'da 1 Ocak 2023'ten itibaren PhD ve DSc adaylarının tezlerinin ana bilimsel sonuçlarını Scopus veya Web of Science dergilerinde yayımlaması istenir. Bu nedenle Scopus yayını doktora ve akademik kariyer için zorunlu bir adımdır. Birçok üniversite bu tür yayınlar için teşvikler de getirmiştir.
+
+## Makale veri tabanına ne zaman girer
+
+Makale dergide yayımlandığı gün veri tabanına otomatik girmez. Scopus yayınevleriyle sözleşmelerle çalışır ve yeni sayıları düzenli olarak yükler — genellikle yayından sonra birkaç haftadan birkaç aya kadar. Yayından sonra makalenizin Scopus'ta dizinlenmesini DOI veya başlıkla kontrol edin.
+
+## Bir dergi Scopus'tan çıkabilir mi
+
+Evet. Scopus dergileri yılda bir değerlendirir ve kalitesi düşen dergileri ("discontinued") veri tabanından çıkarır. Bu yüzden makale göndermeden önce derginin güncel durumunu kontrol etmek çok önemlidir — nasıl yapılacağını ayrı bir kılavuzda anlattık.
+
+## Nereden başlamalı
+
+- Araştırma konunuza uygun alan ve kuartildeki dergileri seçin.
+- Derginin "Yazarlar için kılavuz"unu okuyun ve makaleyi gereksinimlere uyarlayın.
+- Makaleyi akademik İngilizceyle IMRAD yapısında hazırlayın.
+- Her adımda destek gerekiyorsa talep bırakın: dergi seçiminden yayın takibine kadar yanınızdayız.
+`,
+    kk: `
+## Scopus деген не
+
+Scopus — Elsevier компаниясы 2004 жылдан бері жүргізетін ірі ғылыми жарияланымдар базасы. Онда әлемдегі 40 000-нан астам журнал, конференция материалдары мен кітаптар индексталады: атаулар, авторлар, аннотациялар, дәйексөздер және библиография. Ғылымның дерлік барлық салалары қамтылады.
+
+## Неліктен маңызды
+
+Өзбекстанда 2023 жылдың 1 қаңтарынан бастап PhD және DSc дәрежесіне үміткерлер dissertацияның негізгі ғылыми нәтижелерін Scopus немесе Web of Science базаларының журналдарында жариялауы тиіс. Сондықтан Scopus-тағы жарияланым — докторантура мен ғылыми мансап үшін міндетті қадам. Көптеген университеттер мұндай жарияланымдар үшін көтермелеу де енгізген.
+
+## Мақала базаға қашан енеді
+
+Мақала журналда жарық көрген күні-ақ базаға автоматты түрде енбейді. Scopus баспалармен шарт негізінде жұмыс істейді және жаңа нөмірлерді тұрақты жүктеп отырады — әдетте жарияланымнан кейінгі бірнеше аптадан бірнеше айға дейін. Жарияланымнан кейін мақаланың Scopus-та индекстелуін DOI немесе атауы бойынша тексеріңіз.
+
+## Журнал Scopus-тан шығып қалуы мүмкін бе
+
+Иә. Scopus журналдарды жыл сайн бағалайды да, сапасы төмендеуін («discontinued») базадан шығарып тастайды. Сондықтан мақала жібермес бұрын журналдың бүгінгі күйін тексеру аса маңызды — мұны қалай тексеруді бөлек нұсқаулықта жазып шықтық.
+
+## Неден бастау керек
+
+- Зерттеу тақырыбыңызға сай саладағы және квартильдегі журналдарды таңдаңыз.
+- Журналдың «Авторларға арналған нұсқаулығын» оқып, мақаланы талаптарға сайлаңыз.
+- Мақаланы академиялық ағылшын тілінде IMRAD құрылымында дайындаңыз.
+- Әр қадамда көмек керек болса — өтініш қалдырыңыз: журнал таңдаудан жарияланымды қадағалауға дейін сүйемелдейміз.
+`,
     uz: `
 ## Scopus nima
 

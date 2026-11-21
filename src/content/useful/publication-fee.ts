@@ -4,16 +4,70 @@ export const article: UsefulArticle = {
   slug: "publication-fee",
   date: "2026-11-21",
   title: {
+    tr: "Yayın ücreti (APC): fiyat neye bağlıdır ve neleri kapsar",
+    kk: "Жарияланым ақысы (APC): баға неден тәуелді және нені қамтиды",
     uz: "Nashr to‘lovi (APC): narx nimaga bog‘liq va nimani o‘z ichiga oladi",
     ru: "Публикационный взнос (APC): от чего зависит цена и что она включает",
     en: "Publication fees (APC): what the price depends on and what it includes",
   },
   description: {
+    tr: "Bilimsel dergide yayın ücretinin ne olduğu, fiyatın nelere bağlı olduğu, danışmanlık desteğinin neleri kapsadığı ve opak ödemelerden nasıl korunulacağı.",
+    kk: "Ғылыми журналдағы жарияланым ақысы деген не, баға неден тәуелді, сүйемелдеу нені қамтиды және мөлдір емес төлемдерден қалай сақтану керек.",
     uz: "Ilmiy jurnalda nashr to‘lovi nima, narx nimalarga bog‘liq, xizmat hamrohligi nimani o‘z ichiga oladi va shaffof bo‘lmagan to‘lovlardan qanday saqlanish.",
     ru: "Что такое публикационный взнос в научный журнал, от чего зависит цена, что включает сопровождение и как защититься от непрозрачных платежей.",
     en: "What a journal publication fee is, what drives the price, what our support includes and how to avoid opaque payments.",
   },
   body: {
+    tr: `
+## Yayın ücreti nedir
+
+Bilimsel dergilerin çoğu "yazar öder" modeliyle çalışır: makale kabul edildikten sonra yazar, yayınlama, editörlük, DOI ve çevrimiçi dağıtım masraflarını karşılayan bir ücret öder (APC — Article Processing Charge). Bu model açık erişim (Open Access) dergilerinde yaygındır. Bazı dergiler ise tamamen ücretsiz yayımlar — genellikle abonelik modelindeki yayınlar.
+
+## Fiyat neye bağlıdır
+
+- Dergi ve kuartili: Q1 dergilerinde APC, Q3–Q4'e göre belirgin şekilde yüksektir.
+- Makale uzunluğu: sayfa veya kelime limiti aşılırsa ek ücret çıkabilir.
+- Yayıncı politikası: indirimler ve tarifeler ülkeye ve alana göre değişir.
+- Ek hizmetler: akademik çeviri, editörlük, sayfa düzeni ayrıca hesaplanır.
+
+Net rakam konunuza ve seçtiğiniz dergiye göre belirlenir: biz yazara fiyatlarıyla birlikte birkaç seçenek gösteririz.
+
+## Desteğimiz neleri kapsar
+
+- Konuya uygun dergileri seçmek ve veri tabanlarındaki durumunu kontrol etmek.
+- Makaleyi dergi gereksinimlerine uyarlamaya yönelik yönlendirme.
+- Yayın sürecini izlemek ve editör kuruluyla iletişim.
+- Yayınlamadan sonra makalenin DOI ve dizinlenmesini kontrol etmek.
+
+## Şeffaflık kuralları
+
+Ödemeden önce net bir bütçe isteyin: hangi hizmet, ne kadar, hangi aşamada. Numaralandırılmış sözleşme veya teklifname üzerine çalışırız; banka bilgileri /payment sayfasında açıkça yayımlanır. "3 günde garantili Scopus yayını" vaatleri ve belgesiz kişisel karta ödemeler yırtıcı yayıncılık belirtileridir.
+`,
+    kk: `
+## Жарияланым ақысы деген не
+
+Ғылыми журналдардың көпшілігі «автор төлейді» моделінде жұмыс істейді: мақала қабылданғаннан кейін автор жариялану, редакциялау, DOI және онлайн тарату шығындарын жабатын ақы төлейді (APC — Article Processing Charge). Бұл модель ашық қолжетімділіктің (Open Access) журналдарында кең тараған. Кейбір журналдар мүлдем тегін жариялайды — әдетте жазылым моделіндегі басылымдар.
+
+## Баға неден тәуелді
+
+- Журнал және оның квартилі: Q1 журналдарында APC Q3–Q4-пен салыстырғанда әлдеқайда жоғары.
+- Мақала көлемі: бет немесе сөз шегінен асып кетсе, қосымша төлем шығуы мүмкін.
+- Баспа саясаты: жеңілдіктер мен тарифтер ел мен сала бойынша өзгешеленеді.
+- Қосымша қызметтер: академиялық аударма, редакциялау, беттеу — бөлек есептеледі.
+
+Нақты сома тақырыбыңызға және таңдалған журналға байланысты шығады: біз авторға бағаларымен бірнеше нұсқаны көрсетеміз.
+
+## Біздің сүйемелдеу нені қамтиды
+
+- Тақырыпқа сай журналдарды таңдау және олардың базалардағы күйін тексеру.
+- Мақаланы журнал талаптарына бейімдеу бойынша ұсыныстар.
+- Жарияланым процесін қадағалау және редакциямен байланыс.
+- Жарияланымнан кейін мақаланың DOI және индекстелуін тексеру.
+
+## Мөлдірлік ережелері
+
+Төлемнен бұрын нақты смета сұраңыз: қандай қызмет, қанша, қай кезеңде. Біз шарт немесе жария өферта негізінде жұмыс істейміз; банк деректемелері /payment бетінде ашық берілген. «3 күнде кепілдік берілген Scopus жарияланымы» деген уәделер мен құжатсыз жеке картаға төлем — жыртқыш басылым белгілері.
+`,
     uz: `
 ## Nashr to‘lovi nima
 

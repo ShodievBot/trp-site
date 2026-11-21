@@ -4,16 +4,92 @@ export const article: UsefulArticle = {
   slug: "orcid-scopus-id-scholar",
   date: "2026-11-10",
   title: {
+    tr: "ORCID, Scopus Author ID ve Google Scholar: araştırmacı profilleri nasıl açılır",
+    kk: "ORCID, Scopus Author ID және Google Scholar: ғалым профильдерін қалай ашу",
     uz: "ORCID, Scopus Author ID va Google Scholar: olim profillarini qanday ochish kerak",
     ru: "ORCID, Scopus Author ID и Google Scholar: как завести профили учёного",
     en: "ORCID, Scopus Author ID and Google Scholar: how to set up your researcher profiles",
   },
   description: {
+    tr: "ORCID kimliği alma, Scopus Author ID profilini kontrol etme ve düzeltme, Google Scholar profili oluşturma üzerine adım adım kılavuz.",
+    kk: "ORCID идентификаторын алу, Scopus Author ID профилін тексеру және түзету, Google Scholar профилін құру бойынша қадамдық нұсқаулық.",
     uz: "ORCID identifikatorini olish, Scopus Author ID profilini tekshirish va tuzatish, Google Scholar profilini yaratish bo‘yicha bosqichma-bosqich qo‘llanma.",
     ru: "Пошагово: как получить ORCID, проверить и исправить профиль Scopus Author ID и создать профиль в Google Scholar.",
     en: "Step by step: getting an ORCID iD, checking and correcting your Scopus Author ID profile and creating a Google Scholar profile.",
   },
   body: {
+    tr: `
+## Profiller neden gereklidir
+
+Aynı soyadlı bilim insanları çoktur ve isim farklı dillerde farklı yazılır. Kişisel tanımlayıcılar tüm makalelerinizi tam olarak size bağlar: atıflar doğru sayılır ve dergiler ile fon kuruluşları sizi hızla bulur.
+
+## ORCID
+
+ORCID, ücretsiz, 16 haneli uluslararası bir tanımlayıcıdır. Birçok dergi makale gönderiminde bunu zorunlu tutar.
+
+- orcid.org sitesinde kaydolun; adınızı pasaporttaki Latin yazımıyla girin.
+- İş yeri, eğitim ve adınızın diğer yazılışlarını ekleyin.
+- Makaleleri DOI üzerinden veya Scopus, Crossref bağlantısıyla içe aktarın.
+- Profil görünürlüğünü "herkese açık" yapın.
+
+## Scopus Author ID
+
+Bu profili siz oluşturmazsınız: Scopus, ilk dizinlenen makalenizden sonra onu otomatik açar. Göreviniz onu kontrol etmektir.
+
+- scopus.com sitesinde ücretsiz "Author search" ile kendinizi bulun.
+- Makaleleriniz iki veya daha fazla profile bölünmüşse "Request to merge authors" ile birleştirme isteyin.
+- Yabancı bir makale eklenmişse veya kurum bilgisi yanlışsa Author Feedback Wizard ile düzeltme gönderin.
+- Scopus profilinizi ORCID ile bağlayın.
+
+## Google Scholar
+
+- scholar.google.com sitesine Google hesabınızla girin ve "Profilim"i açın.
+- Kurumunuzu ve varsa kurumsal e-postanızı ekleyin: doğrulanmış profil aramada görünür.
+- Sistemin önerdiği makalelerden yalnızca kendinize ait olanları seçin.
+- Profili herkese açık yapın ve yeni makaleler için manuel onay seçin; böylece başkalarının işleri eklenmez.
+
+## Öneriler
+
+- Adınızı ve soyadınızı tüm makalelerde aynı yazın.
+- Daima kurumun resmî İngilizce adını gösterin.
+- Profilleri yılda en az bir-iki kez güncelleyin.
+`,
+    kk: `
+## Профильдер не үшін керек
+
+Бір аттас ғалымдар көп, ал аты-жөні әр тілде түрліше жазылады. Жеке идентификаторлар барлық мақалаларыңызды дәл сізге байланыстырады: дәйексөздер дұрыс есептеледі, журналдар мен гранттық ұйымдар сізді жылдам табады.
+
+## ORCID
+
+ORCID — тегін, 16 саннан тұратын халықаралық идентификатор. Көптеген журналдар мақала тапсыру кезінде оны міндетті сұрайды.
+
+- orcid.org сайтында тіркеліңіз, атыңызды паспорттағы латын жазуымен енгізіңіз.
+- Жұмыс орны, білім және атыңыздың басқа жазылу нұсқаларын қосыңыз.
+- Мақалаларды DOI арқылы немесе Scopus, Crossref байланысы арқылы импорттаңыз.
+- Профиль көрінісін «барлығына ашық» етіп қойыңыз.
+
+## Scopus Author ID
+
+Бұл профильді өзіңіз жасамайсыз: Scopus оны бірінші индекстелген мақалаңыздан кейін автоматты ашады. Сіздің міндетіңіз — оны тексеру.
+
+- scopus.com сайтында тегін «Author search» арқылы өзіңізді табыңыз.
+- Мақалаларыңыз екі немесе одан көп профильге бөлінсе, «Request to merge authors» арқылы біріктіруді сұраңыз.
+- Бөтен мақала қосылған немесе ұйым қате көрсетілсе, Author Feedback Wizard арқылы түзету жіберіңіз.
+- Scopus профилін ORCID-пен байланыстырыңыз.
+
+## Google Scholar
+
+- scholar.google.com сайтына Google аккаунтыңызбен кіріп, «Менің профилім» ашыңыз.
+- Ұйымыңызды және мүмкін болса жұмыс (корпоративтік) поштаңызды көрсетіңіз: расталған профиль іздеуде көрінеді.
+- Жүйе ұсынған мақалалардан тек өзіңіздікінің белгілеңіз.
+- Профильді ашық етіп, жаңа мақалаларды қолмен растау режимін таңдаңыз — сонда бөтен еңбектер қосылмайды.
+
+## Кеңестер
+
+- Аты-жөніңізді барлық мақалада бірдей жазыңыз.
+- Әрқашан ұйымның ресми ағылшынша атауын көрсетіңіз.
+- Профильдерді жылына кемінде бір-екі рет жаңартып отырыңыз.
+`,
     uz: `
 ## Profillar nima uchun kerak
 

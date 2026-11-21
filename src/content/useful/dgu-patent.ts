@@ -4,16 +4,88 @@ export const article: UsefulArticle = {
   slug: "dgu-patent",
   date: "2026-11-10",
   title: {
+    tr: "Yazılım tescil belgesi (DGU) ve patent: bir programı veya icadı nasıl tescil ettirirsiniz",
+    kk: "ДГУ куәлігі және патент: бағдарламаны немесе өнертабысты қалай тіркеу керек",
     uz: "DGU guvohnomasi va patent: dastur yoki ixtironi qanday ro‘yxatdan o‘tkazish kerak",
     ru: "Свидетельство ДГУ и патент: как зарегистрировать программу или изобретение",
     en: "Software certificate (DGU) and patent: how to register a program or an invention",
   },
   description: {
+    tr: "Bilgisayar programı tescil belgesinin (DGU) icat ve faydalı model patentinden farkı, gereken belgeler ve tescil aşamaları.",
+    kk: "ЭЕМ-ге арналған бағдарламаға берілген ДГУ куәлігі мен өнертабыс және пайдалы модель патентінің айырмашылығы, қажетті құжаттар мен тіркеу кезеңдері.",
     uz: "EHM dasturi uchun DGU guvohnomasi, ixtiro va foydali model patenti o‘rtasidagi farq, kerakli hujjatlar va ro‘yxatdan o‘tkazish bosqichlari.",
     ru: "Чем свидетельство ДГУ на программу для ЭВМ отличается от патента на изобретение и полезную модель, какие нужны документы и этапы регистрации.",
     en: "How a software registration certificate (DGU) differs from an invention or utility model patent, which documents are needed and how registration works.",
   },
   body: {
+    tr: `
+## Hangi belge neyi korur
+
+- DGU belgesi, bir bilgisayar programının veya veri tabanının resmî tescilini doğrular. Yazılım, doğduğu andan itibaren telif hakkıyla korunur; tescil ise yazarlığın kanıtlanmasını kolaylaştırır.
+- İcat patenti, teknik bir çözümü korur: aygıt, yöntem veya madde. Çözümün yeni olması, icat basamağı taşıması ve sanayide uygulanabilir olması gerekir.
+- Faydalı model patenti, aygıtlarla ilgili teknik çözümler içindir; koşullar daha hafif, inceleme genellikle daha hızlıdır.
+- Endüstriyel tasarım, ürünün görünüşünü korur.
+
+## Nereye başvurulur
+
+Özbekistan'da fikri mülkiyet nesnelerinin tescilini Adalet Bakanlığı bünyesindeki yetkili organ yürütür. Başvuru formları, harç tutarları ve süreler değişir; bunları resmî siteden veya patent vekilinden öğrenin.
+
+## Yazılımı tescil ettirmek (DGU)
+
+- Yazarları ve hak sahibini belirleyin: program bir iş görevi kapsamında geliştirildiyse hak sahibi işveren olabilir.
+- Başvuruyu, program özetini ve programı tanımlayıcı materyalleri (genellikle kaynak kodun bir bölümünü) hazırlayın.
+- Harcı ödeyin ve belgeleri teslim edin.
+- İncelemeden sonra program sicile yazılır ve belge verilir.
+
+## İcat patenti almak
+
+- Patent araştırması yapın: aynı çözüm daha önce tescil edilmiş mi.
+- İcat açıklamasını, taleplerini (claims), çizimlerini ve özetini hazırlayın. Talepler koruma kapsamını belirler; bu yüzden dikkatle yazılmaları çok önemli.
+- Başvuruyu yapın. Önce şekli inceleme, sonra esaslı inceleme yapılır.
+- Olumlu karardan sonra patent verilir; geçerliliğini korumak için yıllık harçlar ödenir.
+
+## En temel kural
+
+Başvuru yapılıncaya kadar çözümün özünü açıkça açıklamayın. Bir makalede, konferans sunumunda veya tezde ayrıntılı anlatım yeniliği yok edebilir. Önce başvuru, sonra yayın.
+
+## Bilim insanına ne kazandırır
+
+DGU belgeleri ve patentler bilimsel raporlarda, değerlendirmelerde ve hibe başvurularında dikkate alınır; geliştirme ticarileştirildiğinde de haklarınızı korur. Karmaşık durumlarda patent vekilinden yararlanın.
+  `,
+    kk: `
+## Қай құжат нені қорғайды
+
+- ДГУ куәлігі — ЭЕМ-ге арналған бағдарламаның немесе деректер қорының ресми тіркелгенін растайды. Бағдарлама авторлық құқықпен қорғалады және қорғау бағдарлама жасалған сәттен басталады; тіркеу болса авторлықты дәлелдеуді жеңілдетеді.
+- Өнертабыс патенті — техникалық шешімді: құрылғыны, әдісті немесе затты қорғайды. Ол үшін шешім жаңа, ойлап табушылық деңгейге ие және өнеркәсіпте қолданылатын болуы керек.
+- Пайдалы модель патенті — құрылғыларға қатысты техникалық шешімдерге арналған, талаптары жеңілдеу және қарау әдеттегіден жылдамырақ.
+- Өнеркәсіптік үлгі — бұйымның сыртқы көрінісін қорғайды.
+
+## Қайда жүгіну керек
+
+Өзбекстанда зияткерлік меншік нысандарын тіркеумен Әділет министрлігі жүйесіндегі уәкілетті орган айналысады. Өтініш бланкілері, баж мөлшері мен мерзімдер өзгеріп отырады, сондықтан оларды ресми сайттан немесе патенттік өкілден анықтаңыз.
+
+## Бағдарламаны тіркеу (ДГУ)
+
+- Авторлар мен құқық иесін анықтаңыз: бағдарлама еңбек міндеті аясында жасалған болса, құқық иесі жұмыс беруші болуы мүмкін.
+- Өтінішті, бағдарлама рефератын және идентификациялайтын материалдарды (әдетте бағдарлама кодының бір бөлігін) дайындаңыз.
+- Мемлекеттік бажды төлеп, құжаттарды тапсырыңыз.
+- Сараптамадан кейін бағдарлама реестрге енгізіліп, куәлік беріледі.
+
+## Өнертабысқа патент алу
+
+- Патенттік іздеуден өткізіңіз: ұқсас шешім бұрын тіркелген бе.
+- Өнертабыс сипаттамасын, формуласын, сызбалары мен рефератын дайындаңыз. Формула қорғау ауқымын анықтайды, сондықтан оны мұқият жазу аса маңызды.
+- Өтінішті тапсырыңыз. Алдымен ресми сараптама, содан кейін мазмұны бойынша сараптама жүргізіледі.
+- Оң қаулыдан кейін патент беріледі; оның күшінде сақтау үшін жыл сайынғы баждар төленеді.
+
+## Ең басты ереже
+
+Өтініш тапсырылғанға дейін шешімнің мәнін жария айтпаңыз. Мақалада, конференция баяндамасында немесе диссертацияда толық баяндау жаңалықты жоғалтуға әкелуі мүмкін. Алдымен өтініш, сосын жарияланым.
+
+## Ғалымға не береді
+
+ДГУ куәлігі мен патенттер ғылыми есептерде, аттестацияда және грант өтініштерінде есепке алынады, ал жасалманы коммерцияландырғанда құқықтарыңызды қорғайды. Күрделі жағдайларда патенттік өкілдің көмегін пайдаланыңыз.
+  `,
     uz: `
 ## Qaysi hujjat nimani himoya qiladi
 

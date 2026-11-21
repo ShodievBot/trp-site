@@ -4,16 +4,88 @@ export const article: UsefulArticle = {
   slug: "h-index",
   date: "2026-11-10",
   title: {
+    tr: "Hirsch indeksi (h-indeks): nedir, nasıl hesaplanır ve nasıl yükseltilir",
+    kk: "Хирш индексі (h-индекс): бұл не, қалай есептеледі және қалай көтеріледі",
     uz: "Xirsh indeksi (h-indeks): bu nima, qanday hisoblanadi va qanday oshiriladi",
     ru: "Индекс Хирша: что это, как посчитать и как повысить",
     en: "The h-index: what it is, how to calculate it and how to raise it",
   },
   description: {
+    tr: "Hirsch indeksi basit bir örnekle: nasıl hesaplanır, Scopus ile Google Scholar'da neden farklıdır ve nasıl dürüst yollarla yükseltilir.",
+    kk: "Хирш индексі қарапайым мысалда: қалай есептеледі, Scopus пен Google Scholar-да неге өзгешеленеді және оны адал жолмен қалай көтеруге болады.",
     uz: "Xirsh indeksi oddiy misolda: qanday hisoblanadi, Scopus va Google Scholar’da nega farq qiladi va uni halol yo‘l bilan qanday oshirish mumkin.",
     ru: "Индекс Хирша на простом примере: как считается, почему отличается в Scopus и Google Scholar и как повысить его честными способами.",
     en: "The h-index with a simple example: how it is calculated, why it differs between Scopus and Google Scholar and how to raise it honestly.",
   },
   body: {
+    tr: `
+## Tanımı
+
+Hirsch indeksi (h-indeks), bir bilim insanının yayın faaliyetini ve atıf etkisini tek sayıda gösterir. Bir araştırmacının h-indeksi h'ye eşittir, eğer en az h makalesinin her biri en az h kez atıf almışsa.
+
+## Basit bir örnek
+
+Diyelim ki 6 makaleniz var ve bunlara 15, 9, 5, 4, 2 ve 0 kez atıf yapıldı. Makaleleri atıf sayısına göre azalan sıralayın. Dördüncü makalede 4 atıf, beşincisinde ise yalnızca 2 var. O halde h-indeks 4'tür: her biri en az 4 atıf almış 4 makaleniz var.
+
+## Nereden bakılır
+
+- Scopus: yazar profilinde, yalnızca Scopus'ta dizinlenen yayınlar üzerinden.
+- Web of Science: kendi veri tabanındaki yayınlar üzerinden.
+- Google Scholar: en geniş kapsam; kitaplar, bildiriler ve yerel dergiler dâhil.
+
+Bu yüzden Google Scholar'daki değer genellikle Scopus'takinden yüksektir. Rapor ve belgelerde daima kaynağı belirtin: "Scopus'a göre h-indeks".
+
+## Sınırlılıkları
+
+H-indeks bilimsel kıdille birlikte büyür; bu yüzden genç araştırmacılarda düşüktür. Atıf alışkanlıkları disiplinler arasında farklıdır; bir fizikçiyi bir filologla bu sayı üzerinden karşılaştırmak yanıltıcıdır. Tek bir çok meşhur makale de indeksi ani biçimde yükseltmez.
+
+## Dürüst yükseltme yolları
+
+- Alanınızdaki araştırmacıların okuduğu, dizinlenen dergilerde yayın yapın.
+- Kesin bir başlık, bilgilendirici bir özet ve doğru anahtar kelimeler yazın: makale kolay bulunsun.
+- Mümkünse açık erişimde yayınlayın veya izinli bir sürümü bir repozitorya paylaşın.
+- Uluslararası ortak yazarlarla çalışın ve konferanslarda sunum yapın.
+- ORCID, Scopus ve Google Scholar profillerini düzenli tutun; tüm makaleler size bağlı olsun.
+- Derleme (review) makaleleri yazın: onlara daha çok atıf yapılır.
+
+## Nelerden kaçınmalı
+
+Karşılıklı atıf anlaşmaları, yapay öz-atıf ve "atıf satın alma" ihlaldir. Scopus bu tür örüntüleri tespit eder, dergiler veri tabanından çıkarılır ve yazarın itibarı zarar görür.
+`,
+    kk: `
+## Анықтамасы
+
+Хирш индексі (h-индекс) ғалымның жарияланым белсенділігі мен дәйексөздік ықпалын бір санмен көрсетеді. Ғалымның индексі h-ге тең, егер оның h мақаласының әрқайсысына кемінде h рет дәйексөз келтірілген болса.
+
+## Қарапайым мысал
+
+Айтайық, сізде 6 мақала бар және оларға 15, 9, 5, 4, 2 және 0 рет дәйексөз келтірілген. Мақалаларды дәйексөздер саны бойынша кеміту ретімен орналастырайық. Төртінші мақалада 4 дәйексөз, бесіншісінде небары 2. Демек, Хирш индексі 4-ке тең: кемінде 4 рет дәйексөз алынған 4 мақала бар.
+
+## Қайдан қарауға болады
+
+- Scopus: автор профилінде, тек Scopus-та индекстелген жарияланымдар бойынша.
+- Web of Science: өз базасындағы жарияланымдар бойынша.
+- Google Scholar: ең кең қамту, соның ішінде кітаптар, тезистер мен жергілікті журналдар.
+
+Сондықтан Google Scholar-дағы көрсеткіш әдетте Scopus-тағыдан жоғары болады. Есептер мен құжаттарда әрқашан дереккөзді көрсетіңіз: «Scopus бойынша h-индекс».
+
+## Шектеулері
+
+Индекс ғылыми стажбен бірге өседі, сондықтан жас ғалымдарда төмен болады. Әртүрлі ғылымдарда дәйексөз келтіру дәстүрлері әр түрлі — физик пен филологты бұл сан бойынша салыстыру дұрыс емес. Бір өте танымал мақала да индексті күрт көтермейді.
+
+## Адал көтеру жолдары
+
+- Саладағы ғалымдар оқитын, индекстелетін журналдарда жарияланыңыз.
+- Нақты атау, мазмұнды аннотация және дұрыс кілт сөздер жазыңыз: мақала оңай табылсын.
+- Мүмкін болса, ашық қолжетімділікте жариялаңыз немесе рұқсат етілген нұсқаны репозиторийге орналастырыңыз.
+- Халықаралық серіктес авторлармен жұмыс істеп, конференцияларда баяндама жасаңыз.
+- ORCID, Scopus пен Google Scholar профильдерін ретте ұстаңыз: барлық мақала сізге байланысты болсын.
+- Шолу мақалалар жазыңыз: оларға көбірек сілтеме жасалады.
+
+## Неліктен сақ болу керек
+
+Өзара дәйексөз келтіру туралы келісімдер, жасанды өзіндік дәйексөз және «дәйексөз сатып алу» — бұзушылық. Scopus мұндай жағдайларды анықтайды, журналдар базадан шығарылады, ал автордың беделі зиян шегеді.
+`,
     uz: `
 ## Ta’rifi
 

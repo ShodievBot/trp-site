@@ -4,16 +4,68 @@ export const article: UsefulArticle = {
   slug: "oak-journals-list",
   date: "2026-11-21",
   title: {
+    tr: "OAK dergi listesi: bir dergiyi nasıl bulur ve doğrularsınız",
+    kk: "ОАК журналдар тізімі: журналды қалай тауып, тексеруге болады",
     uz: "OAK jurnallari ro‘yxati: jurnalni qanday topish va tekshirish",
     ru: "Список журналов ОАК: как найти и проверить журнал",
     en: "OAK journal list: how to find and verify a journal",
   },
   description: {
+    tr: "OAK (Yüksek Attestasyon Komisyonu) dergi listesinin nasıl yürütüldüğü, bir derginin listede nasıl kontrol edileceği ve PhD/DSc gereksinimlerine uyup uymadığının nasıl belirleneceği.",
+    kk: "ОАК (Жоғары аттестациялық комиссия) журналдар тізімі қалай жүргізіледі, журналды тізім бойынша қалай тексеру және PhD/DSc талаптарына сай екенін қалай анықтау.",
     uz: "OAK (Oliy attestatsiya komissiyasi) jurnallari ro‘yxati qanday yuritiladi, jurnalni ro‘yxatda qanday tekshirish va PhD/DSc talablariga mosligini qanday aniqlash.",
     ru: "Как ведётся перечень журналов ОАК (Высшей аттестационной комиссии), как проверить журнал по списку и убедиться, что он подходит под требования PhD/DSc.",
     en: "How the OAK (Higher Attestation Commission) journal list is maintained, how to verify a journal against it and match PhD/DSc requirements.",
   },
   body: {
+    tr: `
+## OAK nedir ve liste kime gerekli
+
+OAK, Özbekistan Cumhuriyeti Yüksek Attestasyon Komisyonu'dur. Akademik derece ve unvanların verilme düzenini yürütür ve bu amaçla bilimsel dergilerin resmî listesini tutar: bu listedeki dergilerde yayımlanan makaleler tez savunması için sonuç sayılır.
+
+## Liste nasıl yürütülür
+
+Liste sabit değildir: OAK onu düzenli günceller — yeni dergiler eklenir, bazıları çıkarılır. Bu yüzden "eskiden indirilmiş" eski bir listeye değil, güncel duruma bakın. Listeyi OAK'ın resmî kaynaklarında ve bakanlık sitelerinde bulabilirsiniz.
+
+## Dergi kontrol adımları
+
+- Derginin adını resmî listede bulun — ad tam olarak aynı yazılmalı.
+- Derginin alanının (bilim dalı) araştırma yönünüzle uyumlu olduğunu kontrol edin.
+- Yayımlandıktan sonra makalenin tam künyesini saklayın: dergi adı, yıl, cilt, sayı ve sayfalar.
+- Listede olmayan veya yakın zamanda çıkarılmış bir dergiye güvenmeyin — doktora için böyle bir yayın sayılmaz.
+
+## Gereksinimleri önceden netleştirin
+
+PhD ve DSc gereksinimlerinde kaç makale, hangi sistemlerde (OAK, Scopus, Web of Science) ve hangi koşullarda yayımlanacağı açıkça yazılıdır. Bu gereksinimleri savunmadan önce, makaleler hazırlanmaya başlandığında kontrol edin — sonradan ek yayın istenebilir.
+
+## Desteğimiz
+
+OAK listesinden ve Scopus veri tabanından dergi seçiminde yanınızdayız: konunuza uygun dergiler bulur, makaleyi gereksinimlere uyarlamaya yardım eder ve yayın sürecini izleriz. Danışmanlık için talep bırakın.
+`,
+    kk: `
+## ОАК деген не және тізім кімге керек
+
+ОАК — Өзбекстан Республикасының Жоғары аттестациялық комиссиясы. Ол ғылыми дәреже мен атақтар берудің тәртібін жүргізеді және осы мақсатта ғылыми журналдардың ресми тізімін құрайды: осы тізімдегі журналдарда жарияланған мақалалар dissertация қорғауы үшін нәтиже ретінде есептеледі.
+
+## Тізім қалай жүргізіледі
+
+Тізім өзгермелі: ОАК оны тұрақты жаңартып отырады — жаңа журналдар енгізіледі, кейбірі шығарылады. Сондықтан «бұрын сақтап алынған» ескі тізімге емес, бүгінгі күйге қараңыз. Тізімді ОАК-ның ресми ресурстарынан және министрлік сайттарынан табуға болады.
+
+## Журналды тексеру қадамдары
+
+- Журнал атауын ресми тізімнен табыңыз — атау дәл сәйкес жазылуы керек.
+- Журнал саласының (ғылым саласы) зерттеу бағытыңызға сай екенін тексеріңіз.
+- Жарияланғаннан кейін мақаланың толық деректемелерін сақтаңыз: журнал атауы, жыл, том, нөмір және беттер.
+- Тізімде жоқ немесе жақында шығарылған журналға сенбеген дұрыс — докторантура үшін мұндай жарияланым есептелмейді.
+
+## Талаптарды алдын ала анықтаңыз
+
+PhD пен DSc талаптарында қанша мақала, қай жүйелерде (ОАК, Scopus, Web of Science) және қандай шарттарда жариялануы керектігі нақты жазылған. Бұл талаптарды қорғау алдында, мақалалар дайындала бастағанда тексеріп отырыңыз — кейін қосымша жарияланым талап етілуі мүмкін.
+
+## Біздің көмек
+
+Біз ОАК тізімі мен Scopus базасынан журнал таңдауға сүйемелдік жасаймыз: тақырыпқа сай журналдар табамыз, талаптарға бейімдеуге көмектесеміз және жарияланым процесін қадағалаймыз. Кеңес алу үшін өтініш қалдырыңыз.
+`,
     uz: `
 ## OAK nima va ro‘yxat kim uchun kerak
 

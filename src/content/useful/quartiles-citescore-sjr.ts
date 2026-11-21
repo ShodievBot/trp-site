@@ -4,16 +4,76 @@ export const article: UsefulArticle = {
   slug: "quartiles-citescore-sjr",
   date: "2026-11-10",
   title: {
+    tr: "Q1–Q4 kuartilleri, CiteScore ve SJR: ne anlama gelir ve dergi nasıl seçilir",
+    kk: "Q1–Q4 квартильдері, CiteScore және SJR: бұл не және журналды қалай таңдау керек",
     uz: "Q1–Q4 kvartillari, CiteScore va SJR: bu nima va jurnalni qanday tanlash kerak",
     ru: "Квартили Q1–Q4, CiteScore и SJR: что это и как выбрать журнал",
     en: "Quartiles Q1–Q4, CiteScore and SJR: what they mean and how to choose a journal",
   },
   description: {
+    tr: "Scopus dergi kuartilleri, CiteScore ve SJR göstergelerinin sade dille anlatımı: nasıl hesaplanır, nereden bakılır ve dergi seçiminde nasıl kullanılır.",
+    kk: "Scopus журналдарының квартильдері, CiteScore және SJR көрсеткіштері қарапайым тілде: қалай есептеледі, қайдан қарайды және журнал таңдауда қалай қолданылады.",
     uz: "Scopus jurnallarining kvartili, CiteScore va SJR ko‘rsatkichlari oddiy tilda: qanday hisoblanadi, qayerdan ko‘riladi va jurnal tanlashda qanday foydalaniladi.",
     ru: "Квартили журналов Scopus, показатели CiteScore и SJR простыми словами: как считаются, где смотреть и как использовать при выборе журнала.",
     en: "Scopus journal quartiles, CiteScore and SJR in plain language: how they are calculated, where to find them and how to use them when choosing a journal.",
   },
   body: {
+    tr: `
+## Kuartil nedir
+
+Kuartil, bir derginin kendi alanındaki yerini gösterir. Alandaki tüm dergiler bir göstergeye göre sıralanır ve dört eşit gruba ayrılır. Q1 en üst %25, Q4 en alt %25'tir. Bir dergi birden fazla alana girebilir ve her birinde farklı kuartile sahip olabilir.
+
+## CiteScore
+
+CiteScore, Scopus'un kendi göstergesidir. Dört yıllık bir dönem için hesaplanır: o yıllarda dergi makalelerine yapılan atıfların sayısı, aynı yıllarda yayımlanan belge sayısına bölünür. CiteScore değeri ve derginin yüzdelik dilimi scopus.com/sources sayfasında ücretsiz görülebilir.
+
+## SJR
+
+SJR (SCImago Journal Rank) da Scopus verilerine dayanır ama atıfların "ağırlığını" hesaba katar: saygın bir dergiden gelen atıf daha çok puan alır. SJR ve ona dayalı kuartiller scimagojr.com sitesinde görülebilir.
+
+## Kuartiller neden farklı olabilir
+
+Scopus sayfasındaki yüzdelik dilim CiteScore'a, SCImago'daki kuartil ise SJR'ye göre hesaplanır. Bu yüzden aynı dergi bir kaynakta Q2, diğerinde Q3 olabilir. Kurumunuz veya bilim kurulunuz hangi kaynağı kabul ediyor, önceden öğrenin.
+
+## Dergi nasıl seçilir
+
+- Önce konu uyumunu kontrol edin: dergi sizin alanınızda makale yayımlıyor mu?
+- Derginin şu anda Scopus'ta aktif olduğunu ve çıkarılmadığını doğrulayın.
+- Gerekli kuartili gereksinimlerinizle karşılaştırın. Q1 ve Q2 dergileri daha talepkârdır, daha çok makaleyi geri çevirir ve daha uzun değerlendirir.
+- Değerlendirme süresi, yayın dili ve ücret koşullarını dergi sitesinden okuyun.
+
+## Sonuç
+
+Kuartil, dergi kalitesinin tek ölçüsü değildir ama gereksinimlere uygun yayın seçiminde kullanışlı bir göstergedir. En önemlisi, makale konusunun derginin kapsamıyla uyuşmasıdır.
+`,
+    kk: `
+## Квартиль деген не
+
+Квартиль журналдың өз саласындағы орнын көрсетеді. Бір саладағы барлық журналдар көрсеткіш бойынша реттеліп, төрт тең бөлікке бөлінеді. Q1 — жоғарғы 25%, Q4 — төменгі 25%. Бір журнал бірнеше салага кіріп, оларда түрлі квартильге ие болуы мүмкін.
+
+## CiteScore
+
+CiteScore — Scopus-тың өз көрсеткіші. Ол төрт жылдық кезең үшін есептеледі: сол жылдары журнал мақалаларына жасалған дәйексөздер саны сол жылдары жарияланған құжаттар санына бөлінеді. CiteScore мәні мен журналдың пайыздық орнын scopus.com/sources бетінде тегін көруге болады.
+
+## SJR
+
+SJR (SCImago Journal Rank) да Scopus деректеріне негізделеді, бірақ дәйексөздердің «салмағын» ескереді: беделді журналдан келген дәйексөз көбірек бағаланады. SJR және оған негізделген квартильдер scimagojr.com сайтында қаралуы мүмкін.
+
+## Квартильдер неге ықпалдаспауы мүмкін
+
+Scopus бетіндегі пайыздық орын CiteScore бойынша, ал SCImago сайтындағы квартиль SJR бойынша есептеледі. Сондықтан бір журнал бір дереккөзде Q2, екіншісінде Q3 болуы мүмкін. Ұйымыңыз немесе ғылыми кеңесіңіз қай дереккөзді қабылдайтынын алдын ала анықтаңыз.
+
+## Журналды қалай таңдау керек
+
+- Алдымен тақырып сәйкестігін тексеріңіз: журнал сіздің бағытыңыздағы мақалаларды жариялай ма.
+- Журналдың қазір Scopus базасында белсенді екенін және шығарылмағанын көріңіз.
+- Қажетті квартильді талаптарыңызбен салыстырыңыз. Q1 мен Q2 журналдарында талап пен қайтарылулар үлесі жоғары, қарау мерзімі ұзағырақ.
+- Қарау мерзімін, жарияланым тілін және ақы шарттарын журнал сайтынан оқыңыз.
+
+## Қорытынды
+
+Квартиль — журнал сапасының жалғыз өлшемі емес, бірақ талаптарға сай басылым таңдауда ыңғайлы бағдар. Ең бастысы — мақала тақырыбының журнал бағытына сәйкес келуі.
+`,
     uz: `
 ## Kvartil nima
 

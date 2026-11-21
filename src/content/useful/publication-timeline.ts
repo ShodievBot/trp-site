@@ -4,16 +4,82 @@ export const article: UsefulArticle = {
   slug: "publication-timeline",
   date: "2026-11-10",
   title: {
+    tr: "Yayın süreleri: makalenin gönderilmesinden yayımlanmasına ne kadar zaman gerekir",
+    kk: "Жарияланым мерзімдері: мақала тапсырылғаннан шығуға дейін қанша уақыт кетеді",
     uz: "Nashr muddatlari: maqolani topshirishdan chop etilishigacha qancha vaqt ketadi",
     ru: "Сроки публикации: сколько занимает путь от подачи статьи до выхода",
     en: "Publication timelines: how long it takes from submission to publication",
   },
   description: {
+    tr: "Bilimsel makalenin yayımlanma aşamaları ve ortalama süreleri: editöryel kontrol, hakemlik, revizyon, kabul ve Scopus'ta dizinlenme.",
+    kk: "Ғылыми мақала жарияланымының кезеңдері мен шамалы мерзімдері: редакциялық тексеру, пікірлау, толықтыру, қабылдау және Scopus базасында индекстелу.",
     uz: "Ilmiy maqola nashrining bosqichlari va taxminiy muddatlari: tahririyat tekshiruvi, taqriz, qayta ishlash, qabul va Scopus bazasida indekslanish.",
     ru: "Этапы и ориентировочные сроки публикации научной статьи: редакционная проверка, рецензирование, доработка, принятие и индексация в Scopus.",
     en: "The stages and typical timing of publishing a research article: editorial check, peer review, revision, acceptance and indexing in Scopus.",
   },
   body: {
+    tr: `
+## Neden hızlı olmaz
+
+Saygın bir dergide yayın birkaç bağımsız aşamadan geçer ve her birinde insanlar çalışır: editör, hakemler, dizgici. Aşağıdaki süreler yaklaşıktır: bilim alanına ve dergiye göre büyük farklılık gösterir. Kesin bilgiyi derginin sitesinden alın: çoğu dergi ortalama inceleme süresini açıklar.
+
+## Aşamalar
+
+- Editöryel kontrol: birkaç günden iki-üç haftaya. Konu uygunluğu, biçim ve özgünlük kontrol edilir. Bu aşamada makale hakemliğe gitmeden reddedilebilir.
+- Hakemlik: genellikle birkaç hafta ile birkaç ay arası. En uzun ve en önceden kestirilemeyen aşama, çünkü hakemler gönüllü çalışır.
+- Revizyon: yazara genellikle iki haftadan iki aya kadar süre verilir. Çoğunlukla iki, bazen üç tur olur.
+- Kabul ve yayına hazırlık: redaksiyon, dizgi ve baskı öncesi okuma birkaç hafta sürer.
+- Çevrim içi yayım: birçok dergi makaleyi sayının çıkmasını beklemeden siteye koyar.
+- Dizinleme: makale dergi sitesinde çıktıktan sonra Scopus'ta görünmesi için birkaç hafta, bazen birkaç ay daha gerekebilir.
+
+## Toplamda ne sürer
+
+Uygulamada gönderimden yayımlanmaya genellikle üç aydan bir yıla kadar zaman gider. Yüksek kartilli dergilerde bu süre genellikle daha uzundur. Bu yüzden savunmadan veya raporluk süreden en az bir yıl önce işe başlamak uygundur.
+
+## Süreci nasıl hızlandırırsınız
+
+- Konuya tam uyan bir dergi seçin: yanlış seçim en çok zaman götürür.
+- Yazarlar için kılavuzu harfiyen uygulayın.
+- İngilizce metni göndermeden önce profesyonel editörlükten geçirin.
+- Hakemlerin her bir notuna ayrı ayrı, net ve saygılı cevap yazın.
+- Revize edilen sürümü süresinden önce gönderin.
+- Makalenin durumunu dergi sisteminde izleyin; belirtilen süre belirgin şekilde aşılırsa editöre nazik bir mektup yazın.
+
+## Bir haftada yayın sözüne dikkat edin
+
+Gerçek hakemli bir dergi bir makaleyi birkaç günde yayımlamaz. Çok hızlı yayın sözü, yırtıcı derginin başlıca işaretlerinden biridir. Süreniz darsa hız yerine güvenilir ve dürüst bir seçenek seçin: örneğin inceleme sürelerini açıkça yayınlayan bir dergi.
+  `,
+    kk: `
+## Неге тез болмайды
+
+Беделді журналда жарияланым бірнеше тәуелсіз кезеңнен өтеді және олардың әрқайсысында адамдар жұмыс істейді: редактор, пікіршілер, беттегіш. Төмендегі мерзімдер шамалы: олар ғылым саласы мен журналына қарай күрт өзгереді. Нақты деректі журнал сайтынан алыңыз: көпшілік журналдар қараудың орташа мерзімін жариялайды.
+
+## Кезеңдер
+
+- Редакциялық тексеру: бірнеше күннен екі-үш аптаға дейін. Тақырып сәйкестігі, ресімдеу және өзіндік тексеріледі. Бұл кезеңде мақала пікірсіз қайтарылуы мүмкін.
+- Пікірлау: әдетте бір айдан бірнеше айға дейін. Ең ұзақ және ең алдын ала болжамсыз кезең, себебі пікіршілер ерікті жұмыс істейді.
+- Толықтыру: авторға әдетте екі аптадан екі айға дейін уақыт беріледі. Көбіне екі, кейде үш раунд болады.
+- Қабылдау және баспаға дайындау: редакция, беттеу мен корректура бірнеше апта алады.
+- Онлайн жариялау: көптеген журналдар мақаланы санның шығуын күтпестен сайтқа орналастырады.
+- Индекстелу: мақала журнал сайтында шыққаннан кейін Scopus базасында пайда болуы үшін тағы бірнеше апта, кейде бірнеше ай керек болады.
+
+## Жалпы қанша уақыт
+
+Тәжірибеде тапсырудан жариялануға дейін көбіне үш айдан бір жылға дейін уақыт кетеді. Жоғарғы квартильдік журналдарда бұл мерзім әдетте ұзағырақ. Сондықтан қорғау немесе есеп мерзімінен кем дегенде бір жыл бұрын жұмысты бастаған дұрыс.
+
+## Процесті қалай жылдамдатады
+
+- Тақырыпқа нақты сәйкес журнал таңдаңыз: қате таңдау ең көп уақыт алады.
+- Авторларға арналған нұсқаулықты сөзбе-сөз орындаңыз.
+- Ағылшынша мәтінді тапсырардан бұрын кәсіби редакциядан өткізіңіз.
+- Пікіршілердің әрбір ескертпесіне бөлек, нақты және сыйластықпен жауап жазыңыз.
+- Өңделген нұсқаны мерзімінен бұрын жіберіңіз.
+- Мақала күйін журнал жүйесінде қадағалаңыз; мерзім анық өтілсе, редакторға сыпайы хат жазыңыз.
+
+## Бір аптада жариялау уәдесінен сақ болыңыз
+
+Шынайы пікірлейтін журнал мақаланы бірнеше күнде жарияламайды. Аса тез жариялану уәдесі — жыртқыш журналдың басты белгілерінің бірі. Мерзім қысса, жылдамдық емес, сенімді әрі адал нұсқаны таңдаңыз: мысалы, қарау мерзімі ашық көрсетілген журналды.
+  `,
     uz: `
 ## Nega tez bo‘lmaydi
 

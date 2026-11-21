@@ -4,16 +4,94 @@ export const article: UsefulArticle = {
   slug: "international-conference",
   date: "2026-11-10",
   title: {
+    tr: "Uluslararası bir konferansa nasıl katılırsınız: bildiri özeti, sunum ve sertifika",
+    kk: "Халықаралық конференцияға қалай қатысады: тезис, баяндама және сертификат",
     uz: "Xalqaro konferensiyada qanday ishtirok etish kerak: tezis, ma’ruza va sertifikat",
     ru: "Как участвовать в международной конференции: тезисы, доклад и сертификат",
     en: "How to take part in an international conference: abstract, talk and certificate",
   },
   description: {
+    tr: "Uluslararası bilimsel konferansa katılmanın aşamaları: konferans seçimi, bildiri özeti yazımı, sunum ve slayt hazırlığı, bildiri kitabı ve sertifika.",
+    kk: "Халықаралық ғылыми конференцияға қатысу кезеңдері: конференция таңдау, тезис жазу, баяндама мен презентация дайындау, жинақ және сертификат алу.",
     uz: "Xalqaro ilmiy konferensiyada ishtirok etish bosqichlari: konferensiya tanlash, tezis yozish, ma’ruza va taqdimot tayyorlash, to‘plam va sertifikat olish.",
     ru: "Этапы участия в международной научной конференции: выбор конференции, тезисы, подготовка доклада и презентации, сборник и сертификат.",
     en: "The stages of taking part in an international research conference: choosing an event, writing an abstract, preparing a talk and slides, proceedings and the certificate.",
   },
   body: {
+    tr: `
+## Konferans size ne kazandırır
+
+Konferans, araştırma sonuçlarını hızlıca duyurmanın, uzmanlardan geri bildirim almanın ve yurt dışı iş birliği ortakları bulmanın en kolay yoludur. Sunum ve bildiri kitabındaki yayın, bilimsel raporlarda gösterilir ve doktora savunması için sonuç sunumu (aprobasyon) sayılır.
+
+## Konferansı nasıl seçersiniz
+
+- Konu araştırmanıza uysun.
+- Düzenleyicileri kontrol edin: bir üniversite, bilim derneği veya resmî yayıncı olması, geçmiş yılların kitaplarına bakın.
+- Bilim kurulu üyelerini ve bildiri kitabının nerede yayımlanacağını öğrenin: ISBN, DOI, dizinleme var mı.
+- Katılım biçimi: yüz yüze, çevrim içi veya sadece bildiri.
+- Ücretin ne kapsadığını önceden sorun.
+
+## Bildiri özeti veya makale hazırlığı
+
+Düzenleyicilerin şablonuna harfiyen uyun: uzunluk, yazı tipi, yapı ve kaynakça stili. Özette problem, yöntem, ana sonuç ve sonuç kısaca verilir. Özgünlüğü kontrol edin ve son tarihi kaçırmayın: geç gelen çalışmalar programa genellikle alınmaz.
+
+## Sunum ve slaytlar
+
+- Sürenizi öğrenin: genellikle 10–15 dakika sunum artı birkaç dakika sorular.
+- Bir slayt, bir fikir. Az metin, çok grafik ve tablo.
+- Yapı: problem, yöntem, sonuçlar, sonuç ve iletişim bilgileri.
+- Sunumu zaman tutarak sesli prova edin.
+- Muhtemel sorulara cevapları önceden düşünün.
+
+## Yurt dışındaki konferans
+
+Pasaport geçerliliğini, vize koşullarını ve davet mektubunu erken kontrol edin. Bilet, otel ve sigortayı erken ayarlayın. Kurumunuzdan seyahat için gereken belgeleri isteyin.
+
+## Konferanstan sonra
+
+Katılımcı sertifikasını, programı ve bildiri kitabını saklayın: raporlar ve değerlendirmeler için gerekir. Yayını ORCID ve Google Scholar profilinize ekleyin. Tanıştığınız kişilere yazın: ortak makale ve projeler çoğu zaman böyle başlar.
+
+## Dikkatli olun
+
+Sahte konferanslar da vardır: programı yok, sunumları kimse dinlemez, sadece ücret ve sertifika önerilir. Düzenleyicinin resmî belgelerini ve geçmiş etkinliklerin izlerini kontrol edin.
+  `,
+    kk: `
+## Конференция не береді
+
+Конференция — зерттеу нәтижелерін тез жария етіп, мамандардан баға алып, шетелдік әріптестер табудың ең ыңғайлы жолы. Баяндама мен жинақтағы жарияланым ғылыми есептерде және диссертация қорғауында апробация ретінде көрсетіледі.
+
+## Конференцияны қалай таңдайды
+
+- Тақырып сіздің зерттеуіңізге сәйкес болсын.
+- Ұйымдастырушыларды тексеріңіз: университет, ғылыми қоғам немесе ресми баспагер екенін, өткен жылдардағы материалдарын көріңіз.
+- Бағдарлама комитетінің құрамы мен материалдар жинағы қайда басылатынын анықтаңыз: ISBN, DOI, индекстелу бар ма.
+- Қатысу түрі: тікелей, онлайн немесе сырттай.
+- Төлемге ненің кіретінін алдын ала сұраңыз.
+
+## Тезис немесе мақала дайындау
+
+Ұйымдастырушылардың үлгісін нақты орындаңыз: көлем, шрифт, құрылым және әдебиет стилі. Тезисте мәселе, әдіс, негізгі нәтиже мен қорытынды қысқа баяндалады. Мәтіннің өзіндігін тексеріп, белгіленген мерзімнен кешіктіріңіз: кеш түскен еңбектер әдетте бағдарламаға енгізілмейді.
+
+## Баяндама мен презентация
+
+- Уақытты нақты біліп алыңыз: әдетте 10–15 минут баяндама мен сұрақтарға бірнеше минут.
+- Бір слайд — бір ой. Мәтін аз, график пен кесте көп болсын.
+- Құрылым: мәселе, әдіс, нәтижелер, қорытынды және байланыс деректері.
+- Баяндаманы уақытқа қарай дауыстап жаттығыңыз.
+- Ықтимал сұрақтарға жауаптарды алдын ала ойлап қойыңыз.
+
+## Шетелдегі конференция
+
+Паспорт мерзімін, виза талаптары мен шақыртуды алдын ала тексеріңіз. Билет, қонақүй және сақтандыруды ерте ресімдеңіз. Ұйымыңыздан іссапар үшін қажетті құжаттарды сұраңыз.
+
+## Конференциядан кейін
+
+Қатысушы сертификатын, бағдарлама мен материалдар жинағын сақтап қойыңыз: олар есеп пен аттестацияға керек болады. Жарияланымды ORCID және Google Scholar профиліңізге қосыңыз. Танысқан әріптестеріңізге жазыңыз: бірлескен мақала мен жобалар көбіне дәл осылай басталады.
+
+## Сақ болыңыз
+
+Жалған конференциялар да кездеседі: бағдарламасы жоқ, баяндамаларды ешкім тыңдамайды, тек төлем мен сертификат ұсынылады. Ұйымдастырушының ресми құжаттары мен өткен іс-шаралар туралы мәліметтерді тексеріңіз.
+  `,
     uz: `
 ## Konferensiya nima beradi
 

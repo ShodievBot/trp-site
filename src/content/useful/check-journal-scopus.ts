@@ -4,16 +4,74 @@ export const article: UsefulArticle = {
   slug: "check-journal-scopus",
   date: "2026-11-21",
   title: {
+    tr: "Bir dergiyi Scopus veri tabanında kontrol etme: adım adım kılavuz",
+    kk: "Журналды Scopus базасында тексеру: қадамдық нұсқаулық",
     uz: "Jurnalni Scopus bazasida tekshirish: bosqichma-bosqich qo‘llanma",
     ru: "Как проверить журнал в Scopus: пошаговая инструкция",
     en: "How to check a journal in Scopus: a step-by-step guide",
   },
   description: {
+    tr: "Bir derginin gerçekten Scopus veri tabanında olup olmadığını resmî scopus.com sitesinde dakikalar içinde kontrol etme yöntemleri ve sahte sitelerden korunma kuralları.",
+    kk: "Журналдың Scopus базасында бар-жоғын ресми scopus.com сайтында бірнеше минутта тексеру жолдары және жалған сайттардан сақтану ережелері.",
     uz: "Jurnal haqiqatan Scopus bazasidami — buni rasmiy scopus.com saytida bir necha daqiqada tekshirish usullari va soxta saytlardan saqlanish qoidalari.",
     ru: "Проверка журнала на индексацию в Scopus на официальном сайте scopus.com за несколько минут, а также правила защиты от поддельных сайтов.",
     en: "Verifying a journal's Scopus indexing on the official scopus.com site in minutes, plus how to avoid fake websites.",
   },
   body: {
+    tr: `
+## Yalnızca resmî kaynak: scopus.com
+
+Bir derginin Scopus'ta olup olmadığını kontrol etmenin tek güvenilir yolu resmî sitedir. Scopus'a tam erişim ücretlidir, ancak derginin veri tabanında bulunup bulunmadığını ücretsiz kontrol edebilirsiniz: "Sources" bölümü (scopus.com/sources) veya Scopus Preview aracılığıyla.
+
+## Kontrol adımları
+
+- scopus.com/sources sayfasını açın ve "Search for a source title" alanını bulun.
+- Dergi adını veya ISSN'sini girin ve arama sonucunu açın.
+- Dergi bulunursa alanını, yayıncısını ve kapsam yıllarını ("Coverage") görürsünüz — yani veri tabanına ne zaman alındığını.
+- Dergi bulunmuyorsa veya "Inactive" / "Discontinued" durumundaysa, bu derginin yeni makaleleri artık veri tabanında dizinlenmiyor demektir. Böyle bir dergiye makale göndermeyin.
+
+## Sahtekârlık ve sahte listeler konusunda dikkatli olun
+
+- "Scopus dergi listesi" olarak dağıtılan pdf dosyaları ve siteler resmî değildir — güncel olmayan veya sahte olabilirler.
+- Bir dergi sitesinde Scopus logosu kullanılması dizinlendiğini kanıtlamaz: logoyu koyanın kim olduğunu kimse kontrol etmez.
+- Makaleyi birkaç günde kabul edeceklerini vaat eden "dergi ajanlıkları" genellikle yırtıcı yayıncılık belirtileri taşır.
+- Kontrol sonucunun ekran görüntüsünü saklayın: yazar için kanıt olur.
+
+## Yayıncıyı da kontrol edin
+
+Dergi Scopus'ta olsa bile yayıncı hakkında kısa bir araştırma yapın: kuruluş ne kadar süredir faaliyette, editör kurulu ve yayın ilkeleri açıkça listeleniyor mu, makaleler DOI alıyor mu. Güvenilir bir dergi kendisi hakkında açık bilgi verir.
+
+## Size nasıl yardımcı oluruz
+
+Çalıştığımız her derginin veri tabanındaki durumunu, kuartilini ve yayıncı geçmişini kontrol ederiz. Dergi seçimi danışmanlığı için talep bırakın.
+`,
+    kk: `
+## Тек ресми дереккөз: scopus.com
+
+Журналдың Scopus-қа кіретінін тексерудің жалғыз сенімді жолы — ресми сайт. Scopus-қа толық қолжетімділік ақылы, бірақ журналдың базада бар-жоғын тегін тексеруге болады: «Sources» бөлімі (scopus.com/sources) немесе Scopus Preview арқылы.
+
+## Тексеру қадамдары
+
+- scopus.com/sources бетін ашып, «Search for a source title» өрісін табыңыз.
+- Журнал атауын немесе ISSN-ін енгізіп, іздеу нәтижесін ашыңыз.
+- Журнал табылса, оның саласы, баспасы және қамтудың («Coverage») жылдары көрінеді — яғни базаға қашан енгізілгені.
+- Журнал табылмаса немесе «Inactive» / «Discontinued» күйінде болса — бұл журналға жаңа мақалалар енді базада индекстелмейді деген сөз. Мұндай журналға мақала берген дұрыс емес.
+
+## Жалған сайттардан және «тізімдерден» сақ болыңыз
+
+- «Scopus журналдар тізімі» деп таратылатын pdf файлдары мен сайттар ресми емес — олар ескірген немесе жалған болуы мүмкін.
+- Журнал сайтындағы Scopus логотипі оның базада бар екенін дәлелдемейді: логотипті кім қойғанын ешкім тексермейді.
+- Мақаланы бірнеше күнде қабылдайтынын уағдайлаған «журналдық агенттіктер» әдетте жыртқыш басылым белгілерін көрсетеді.
+- Тексеру нәтижесінің скриншотын сақтап қойыңыз: ол автор үшін дәлел болады.
+
+## Баспаны да тексеріңіз
+
+Журнал Scopus-та болса да, баспа туралы қысқаша мәлімет жинаңыз: ұйым қашаннан жұмыс істейді, редакция мен саясат ашық көрсетілген бе, мақалаларға DOI беріле ме. Сенімді журнал өзі туралы ашық айтады.
+
+## Біз көмектесеміз
+
+Бізбен жұмыс істейтін әр журналдың базадағы күйін, квартилін және баспа тарихын тексеріп отырамыз. Журнал таңдау бойынша кеңес алу үшін өтініш қалдырыңыз.
+`,
     uz: `
 ## Faqat rasmiy manba: scopus.com
 

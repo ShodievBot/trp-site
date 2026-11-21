@@ -4,16 +4,80 @@ export const article: UsefulArticle = {
   slug: "predatory-journals",
   date: "2026-11-10",
   title: {
+    tr: "Yırtıcı dergiler: nasıl tanınır ve para nasıl kurtarılır",
+    kk: "Жыртқыш журналдар: қалай ажырату және ақшадан қалай сақтану",
     uz: "Yirtqich jurnallar: qanday aniqlash va pulni yo‘qotmaslik",
     ru: "Хищные журналы: как распознать и не потерять деньги",
     en: "Predatory journals: how to spot them and not lose money",
   },
   description: {
+    tr: "Yırtıcı ve sahte dergilerin belirtileri, dergi kontrol adımları ve makaleyi güvenle yayımlamaya dair pratik öneriler.",
+    kk: "Жыртқыш және жалған журналдардың белгілері, басылымды тексеру тәртібі және мақаланы қауіпсіз жариялау бойынша тәжірибелік кеңестер.",
     uz: "Soxta va yirtqich jurnallarning belgilari, jurnalni tekshirish tartibi va maqolani xavfsiz nashr etish bo‘yicha amaliy maslahatlar.",
     ru: "Признаки хищных и поддельных журналов, порядок проверки издания и практические советы, как безопасно опубликовать статью.",
     en: "Warning signs of predatory and hijacked journals, a step-by-step check and practical advice on publishing safely.",
   },
   body: {
+    tr: `
+## Yırtıcı dergi nedir
+
+Yırtıcı dergi, yazardan ücret alıp gerçek hakem değerlendirmesi olmadan hemen her metni yayımlayan yayındır. Böyle bir dergide çıkan makale akademik derece için sayılmayabilir ve Scopus ya da Web of Science'a girmeyebilir. Sonuçta araştırmacı hem parasını hem makalesini kaybeder, çünkü bir kez yayımlanmış iş başka dergiye gönderilemez.
+
+## Başlıca belirtiler
+
+- "3–5 günde yayın" vaadi. Gerçek hakem değerlendirmesi genellikle haftalar veya aylar sürer.
+- E-posta yoluyla gelen davetiyeler: "Sayın profesör, makalenizi bekliyoruz".
+- Çok geniş kapsam: tıp, ekonomi ve filoloji aynı sayıda.
+- Editör kurulu hakkında bilgi yok ya da listelenen bilim insanları dergiyi hiç duymamıştır.
+- Site adresi bilinen bir dergiye çok benzer ama tek harf fark eder. Bu "çalınmış dergi" (hijacked journal) belirtisidir.
+- Ödeme kişisel karta veya belirsiz bir hesaba istenir, sözleşme verilmez.
+
+## Bir dergi nasıl kontrol edilir
+
+- Dergiyi Scopus kaynak listesinde (scopus.com/sources) adı ve ISSN ile arayın ve "discontinued" olmadığından emin olun.
+- Resmî adı ve yayıncısını ISSN portalında (portal.issn.org) karşılaştırın.
+- Dergi sitesini arama reklamından değil, Scopus veya yayıncı sayfasındaki bağlantıdan açın.
+- Son sayılardaki makalelere bakın: konuya uygun mudur, kaliteleri nasıldır?
+- Açık erişim dergileri için DOAJ dizinini kontrol edin.
+
+## Ücret her zaman kötü belirti değildir
+
+Birçok saygın açık erişim dergisi makale işleme ücreti (APC) alır. Fark şu: dürüst bir dergi ücreti makale hakem değerlendirmesinden geçip kabul edildikten sonra ister ve fiyatlar sitede açıkça yazılıdır.
+
+## Sonuç
+
+Göndermeden önce dergiyi kontrol etmeye ayrılan yirmi dakika, aylarca süren emeği kurtarır. Şüpheniz varsa dergi seçiminde bir uzmana danışın ve her zaman resmî sözleşme isteyin.
+`,
+    kk: `
+## Жыртқыш журнал деген не
+
+Жыртқыш журнал автордан ақы алып, шынайы рецензиясыз кез келген мәтінді жариялайды. Мұндай басылымда шыққан мақала ғылыми дәрежеге есептелмей қалуы және Scopus пен Web of Science-қа түспеуі мүмкін. Нәтижесінде зерттеуші де ақшасынан, де мақаласынан айырылады, өйткені бір рет жарияланған еңбекті басқа журналға жібере алмайсыз.
+
+## Негізгі белгілер
+
+- «3–5 күнде жариялану» уәдесі. Шынайы рецензия әдетте апталап немесе айлап уақыт алады.
+- Электрондық поштаға келетін ұсыныстар: «Құрметті профессор, мақалаңызды күтеміз».
+- Тым кең тақырып: медицина, экономика және филология бір нөмірде.
+- Редакциялық алқа туралы мәлімет жоқ немесе тізімдегі ғалымдардың өзі бұл журналдан хабары жоқ.
+- Сайт мекенжайы белгілі журналға өте ұқсас, бірақ бір әріппен өзгешеленеді. Бұл «ұрланған журнал» (hijacked journal) белгісі.
+- Төлем жеке картаға немесе түсінсіз шотқа сұралады, шарт берілмейді.
+
+## Журналды қалай тексеру керек
+
+- Scopus көздер тізімінде (scopus.com/sources) журнал атауы және ISSN бойынша іздеңіз. Журналдың «discontinued» еместігіне көз жеткізіңіз.
+- Ресми атауы мен баспасын ISSN порталында (portal.issn.org) салыстырыңыз.
+- Журналдың ресми сайтын іздеу жүйесіндегі жарнамадан емес, Scopus немесе баспа бетіндегі сілтеме арқылы ашыңыз.
+- Соңғы нөмірлердегі мақалаларды қараңыз: олар тақырыпқа сәйкес ме, сапасы қандай.
+- Ашық қолжетімділік журналдары үшін DOAJ каталогын тексеріңіз.
+
+## Төлем әрдайым жаман белгі емес
+
+Көптеген беделді ашық қолжетімділік журналдары мақаланы өңдеу ақысын (APC) алады. Айырмашылығы — адал журнал ақыны мақала рецензиядан өтіп, қабылданғаннан кейін сұрайды және бағалар сайтта ашық көрсетілген.
+
+## Қорытынды
+
+Мақала жібермес бұрын журналды тексеруге кеткен 20 минут айлап еңбекті сақтап қалады. Күмән болса, журнал таңдауда маманмен кеңесіңіз және әрқашан ресми шарт талап етіңіз.
+`,
     uz: `
 ## Yirtqich jurnal nima
 
