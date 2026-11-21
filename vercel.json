@@ -1,1 +1,9 @@
-{ "regions": ["syd1"] }
+{
+  "regions": ["syd1"],
+  "crons": [
+    {
+      "path": "/api/keep-alive",
+      "schedule": "0 3 * * *"
+    }
+  ]
+}
