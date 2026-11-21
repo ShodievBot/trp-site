@@ -14,7 +14,7 @@ export type NavKey =
 export const navItems: { key: NavKey; path: string; enabled: boolean }[] = [
   { key: "services", path: "/services", enabled: true },
   { key: "conferences", path: "/conferences", enabled: true },
-  { key: "partners", path: "/partners", enabled: false },
+  { key: "partners", path: "/partners", enabled: true },
   { key: "news", path: "/news", enabled: true },
   { key: "useful", path: "/useful", enabled: true },
   { key: "documents", path: "/documents", enabled: true },
@@ -61,7 +61,7 @@ export const navLabels: Record<Locale, Record<NavKey, string>> = {
     useful: "Faydalı",
     documents: "Belgeler",
     payment: "Ödeme",
-    contact: "İletişim",
+    contact: "İletiśim",
   },
   kk: {
     services: "Қызметтер",

@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation';
 import { isLocale, type Locale } from '@/lib/i18n';
 import { dictionary } from '@/lib/dictionary';
 import { pageMetadata } from '@/lib/seo';
+import FaqSection from '@/components/FaqSection';
 
 export const revalidate = 300;
 
@@ -296,6 +297,8 @@ export default async function ServicesPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      <FaqSection locale={locale} />
 
       <section className="serviceCta">
         <div>

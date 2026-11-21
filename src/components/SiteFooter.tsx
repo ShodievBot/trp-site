@@ -6,11 +6,12 @@ import { site } from "@/lib/siteConfig";
 
 const footer: Record<
   Locale,
-  { pages: string; tagline: string; license: string; offer: string; privacy: string; telegramGroup: string; rights: string }
+  { pages: string; tagline: string; director: string; license: string; offer: string; privacy: string; telegramGroup: string; rights: string }
 > = {
   uz: {
     pages: "Sahifalar",
     tagline: "Ilmiy nashrlar va akademik hamkorlik",
+    director: "Direktor",
     license: "Nashriyot guvohnomasi",
     offer: "Ommaviy oferta",
     privacy: "Konfidensiallik siyosati",
@@ -20,6 +21,7 @@ const footer: Record<
   en: {
     pages: "Pages",
     tagline: "Scientific publications & academic cooperation",
+    director: "Director",
     license: "Publishing license",
     offer: "Public offer",
     privacy: "Privacy policy",
@@ -29,6 +31,7 @@ const footer: Record<
   ru: {
     pages: "Страницы",
     tagline: "Научные публикации и академическое сотрудничество",
+    director: "Директор",
     license: "Лицензия издательства",
     offer: "Публичная оферта",
     privacy: "Политика конфиденциальности",
@@ -38,6 +41,7 @@ const footer: Record<
   tr: {
     pages: "Sayfalar",
     tagline: "Bilimsel yayınlar ve akademik iş birliği",
+    director: "Direktör",
     license: "Yayınevi lisansı",
     offer: "Kamuya açık teklif",
     privacy: "Gizlilik politikası",
@@ -47,8 +51,9 @@ const footer: Record<
   kk: {
     pages: "Беттер",
     tagline: "Ғылыми басылымдар және академиялық серіктестік",
+    director: "Директор",
     license: "Баспа лицензиясы",
-    offer: "Жария оферта",
+    offer: "Жария өферта",
     privacy: "Құпиялылық саясаты",
     telegramGroup: "Telegram арнасы",
     rights: "Барлық құқықтар қорғалған.",
@@ -83,6 +88,7 @@ export default function SiteFooter({ locale }: Props) {
               {item.label}
             </Link>
           ))}
+          <Link href={`/${locale}/director`}>{t.director}</Link>
           <Link href={`/${locale}/license`}>{t.license}</Link>
           <Link href={`/${locale}/offer`}>{t.offer}</Link>
           <Link href={`/${locale}/privacy`}>{t.privacy}</Link>

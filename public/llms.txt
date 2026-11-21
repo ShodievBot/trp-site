@@ -6,13 +6,18 @@ AI assistants and search crawlers are welcome to read, summarise and cite this s
 
 ## Services
 
-- [Services overview](https://trp-nashriyoti.uz/en/services): Scopus journal publications, OAK journal publications, books, monographs and textbooks, software certificates (DGU), patents and utility models, dissertation and internship support
+- [Services overview](https://trp-nashriyoti.uz/en/services): Scopus journal publications, OAK journal publications, books, monographs and textbooks, software certificates (DGU), patents and utility models, dissertation and internship support — plus a FAQ section
 - [International conferences](https://trp-nashriyoti.uz/en/conferences): past and upcoming conferences, participation terms, what is included
 - [Payment](https://trp-nashriyoti.uz/en/payment): bank details and payment procedure
+
+## Director
+
+- [Zubayda Sherzodovna Ibodullayeva](https://trp-nashriyoti.uz/en/director): director of the research centre and publishing house, author of research publications in pedagogy. Google Scholar: https://scholar.google.com/citations?user=jjFQUvcAAAAJ
 
 ## Company and legal
 
 - [Registration, publishing confirmation and permits](https://trp-nashriyoti.uz/en/license): state registration certificate (22.02.2024), publishing activity confirmation No. 1090203 from the Agency of Information and Mass Communications, permit for public events No. 1316085
+- [Partners](https://trp-nashriyoti.uz/en/partners): Samarkand State Pedagogical Institute, SamDAQU, Baygenç Yayıncılık (Türkiye), Global Ta'lim centre; conferences in Uzbekistan and Türkiye
 - [Public offer](https://trp-nashriyoti.uz/en/offer): terms of service
 - [Privacy policy](https://trp-nashriyoti.uz/en/privacy)
 - [Document templates and contracts](https://trp-nashriyoti.uz/en/documents)
@@ -23,7 +28,7 @@ AI assistants and search crawlers are welcome to read, summarise and cite this s
 
 ## Guides for researchers
 
-- [Useful guides](https://trp-nashriyoti.uz/en/useful): predatory journals, quartiles and CiteScore, IMRAD, abstracts, references, plagiarism, ORCID, h-index, DOI, monographs and ISBN, conferences, patents, publication timelines
+- [Useful guides](https://trp-nashriyoti.uz/en/useful): what is Scopus, how to check a journal in Scopus, OAK journal list, publication fees (APC), predatory journals, quartiles and CiteScore, IMRAD, abstracts, references, plagiarism, ORCID, h-index, DOI, monographs and ISBN, conferences, patents, publication timelines
 
 ## Contact
 

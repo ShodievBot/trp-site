@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import ImageLightbox from "@/components/ImageLightbox";
 import ServicesPromo from "@/components/ServicesPromo";
 import { isLocale, locales, pick, type LocaleMap } from "@/lib/i18n";
+import { JsonLd, articleLd, eventLd } from "@/lib/jsonld";
+import { eventFor } from "@/content/events";
 import { galleryBlocks } from "@/lib/legacyMedia";
 import { pageMetadata } from "@/lib/seo";
 import { articleCover, parseBody, type UsefulArticle } from "@/lib/useful";
@@ -46,8 +48,33 @@ export function articleRoute(section: string, items: UsefulArticle[], labels: La
       const title = pick(a.title, locale);
       const media = galleryBlocks.find((b) => b.id === a.gallery);
 
+      const path = `/${section}/${a.slug}`;
+      const eventData = section === "conferences" ? eventFor(a.slug) : undefined;
+      const jsonLd = eventData
+        ? eventLd({
+            locale,
+            path,
+            title: pick(eventData.title, locale),
+            description: pick(eventData.description, locale),
+            start: eventData.start,
+            end: eventData.end,
+            city: eventData.city,
+            country: eventData.country,
+            image: articleCover(a),
+          })
+        : articleLd({
+            locale,
+            path,
+            title,
+            description: pick(a.description, locale),
+            date: a.date,
+            image: articleCover(a),
+          });
+
       return (
         <main>
+          <JsonLd data={jsonLd} />
+
           <section className="innerHero">
             <div className="innerHeroContent">
               <p className="innerKicker">{t.kicker}</p>

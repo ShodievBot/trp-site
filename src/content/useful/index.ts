@@ -1,4 +1,8 @@
 import type { UsefulArticle } from "@/lib/useful";
+import { article as scopusNima } from "./scopus-nima";
+import { article as checkScopus } from "./check-journal-scopus";
+import { article as oakList } from "./oak-journals-list";
+import { article as fee } from "./publication-fee";
 import { article as predatory } from "./predatory-journals";
 import { article as quartiles } from "./quartiles-citescore-sjr";
 import { article as imrad } from "./imrad-structure";
@@ -16,6 +20,7 @@ import { article as timeline } from "./publication-timeline";
 
 // Order here is the order on the «Полезное» page.
 export const articles: UsefulArticle[] = [
+  scopusNima, checkScopus, oakList, fee,
   predatory, quartiles, imrad, abstract, references, plagiarism, profiles,
   hIndex, doi, monograph, oak, conference, dgu, timeline,
 ];

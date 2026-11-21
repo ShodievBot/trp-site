@@ -7,12 +7,16 @@ import { services } from "@/content/services";
 import { conferences } from "@/content/conferences";
 import { licenses } from "@/content/licenses";
 
+// Locales with real translated content only — tr/kk currently render fallback text.
+// Add them here together with seo.ts once the translations ship.
 const locales = ["uz", "ru", "en"] as const;
 
 const staticPages = [
   "",
   "/services",
   "/conferences",
+  "/partners",
+  "/director",
   "/news",
   "/useful",
   "/documents",
@@ -23,13 +27,17 @@ const staticPages = [
   "/privacy",
 ] as const;
 
+// Real date of the last content update for static pages. A constantly-refreshing
+// "now" makes crawlers stop trusting lastmod, so this is bumped by hand.
+const CONTENT_UPDATED = new Date("2026-11-21");
+
 function safeDate(value?: string) {
-  if (!value) return new Date();
+  if (!value) return CONTENT_UPDATED;
 
   const date = new Date(value);
 
   if (Number.isNaN(date.getTime())) {
-    return new Date();
+    return CONTENT_UPDATED;
   }
 
   return date;
@@ -43,15 +51,13 @@ function encodeSlug(slug: string) {
 export const revalidate = 3600;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date();
-
   const urls: MetadataRoute.Sitemap = [];
 
   for (const locale of locales) {
     for (const page of staticPages) {
       urls.push({
         url: `${SITE_URL}/${locale}${page}`,
-        lastModified: now,
+        lastModified: CONTENT_UPDATED,
         changeFrequency: page === "" ? "weekly" : "monthly",
         priority: page === "" ? 0.95 : 0.8,
       });

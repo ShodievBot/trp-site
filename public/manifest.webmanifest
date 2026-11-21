@@ -1,0 +1,13 @@
+{
+  "name": "The Most Reliable Publication",
+  "short_name": "TRP",
+  "description": "Ilmiy nashrlar, Scopus, OAK jurnallari va xalqaro konferensiyalar markazi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#140f2e",
+  "theme_color": "#140f2e",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

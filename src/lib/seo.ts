@@ -11,6 +11,13 @@ const SITE_NAME = "The Most Reliable Publication";
 
 const ogLocale: Record<Locale, string> = { uz: "uz_UZ", en: "en_US", ru: "ru_RU", tr: "tr_TR", kk: "kk_KZ" };
 
+// hreflang lists only locales with real translated content. tr/kk currently show
+// fallback text; advertising them to search engines creates duplicate pages.
+// Add them back (and to sitemap.ts locales) once tr/kk translations ship.
+const translatedLocales = ["uz", "ru", "en"] as const;
+
+const DEFAULT_OG_IMAGE = "/images/og-default.webp";
+
 /**
  * Metadata for a public page. `path` is the part after the locale, e.g. "/news" or "".
  */
@@ -29,6 +36,7 @@ export function pageMetadata({
 }): Metadata {
   const url = `${SITE_URL}/${locale}${path}`;
   const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
+  const ogImage = image ?? DEFAULT_OG_IMAGE;
 
   return {
     metadataBase: new URL(SITE_URL),
@@ -37,7 +45,7 @@ export function pageMetadata({
     alternates: {
       canonical: url,
       languages: {
-        ...Object.fromEntries(locales.map((l) => [l, `${SITE_URL}/${l}${path}`])),
+        ...Object.fromEntries(translatedLocales.map((l) => [l, `${SITE_URL}/${l}${path}`])),
         "x-default": `${SITE_URL}/uz${path}`,
       },
     },
@@ -49,12 +57,13 @@ export function pageMetadata({
       url,
       locale: ogLocale[locale],
       alternateLocale: locales.filter((l) => l !== locale).map((l) => ogLocale[l]),
-      ...(image ? { images: [{ url: image }] } : {}),
+      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
     },
     twitter: {
-      card: image ? "summary_large_image" : "summary",
+      card: "summary_large_image",
       title: fullTitle,
       description,
+      images: [ogImage],
     },
   };
 }

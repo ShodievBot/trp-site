@@ -4,6 +4,7 @@ import sharp from "sharp";
 
 const covers = [
   ["news", "TRP", "The Most Reliable Publication"],
+  ["og-default", "TRP", "Scopus · OAK · International conferences"],
   ["predatory-journals", "⚠ Journals", "Predatory journals"],
   ["quartiles-citescore-sjr", "Q1–Q4", "CiteScore · SJR"],
   ["imrad-structure", "IMRAD", "Introduction · Methods · Results · Discussion"],
@@ -18,6 +19,10 @@ const covers = [
   ["international-conference", "Conference", "Abstract · Talk · Certificate"],
   ["dgu-patent", "DGU · Patent", "Software · Invention"],
   ["publication-timeline", "Timeline", "Submission → Publication"],
+  ["scopus-nima", "Scopus", "What is Scopus · Why publish"],
+  ["check-journal-scopus", "Scopus ✓", "Check a journal before submitting"],
+  ["oak-journals-list", "OAK", "Journal list · How to verify"],
+  ["publication-fee", "APC", "Publication fee · What is included"],
   ["services/scopus-publication", "Scopus", "Journal publications"],
   ["services/conference-organization", "Conferences", "International events for universities"],
   ["services/book-publishing", "Books", "Monographs · Textbooks · ISBN"],
@@ -49,7 +54,25 @@ for (const [slug, label, caption] of covers) {
   <text x="80" y="490" font-family="Helvetica, Arial, sans-serif" font-size="${capSize}" fill="#e7def7">${esc(caption)}</text>
   <text x="80" y="570" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#b9a9dd">trp-nashriyoti.uz</text>
 </svg>`;
-  const file = slug === "news" ? "covers/news" : slug.includes("/") ? slug : `useful/${slug}`;
+  const file =
+    slug === "news" ? "covers/news" : slug === "og-default" ? "og-default" : slug.includes("/") ? slug : `useful/${slug}`;
   await sharp(Buffer.from(svg)).webp({ quality: 88 }).toFile(`public/images/${file}.webp`);
 }
-console.log(covers.length, "covers written");
+
+// Square app icons for manifest.webmanifest (rounded square + TRP monogram).
+const iconSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#140f2e"/><stop offset="1" stop-color="#3a0f8f"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f6dda0"/><stop offset="1" stop-color="#d8ad58"/></linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+  <rect x="112" y="132" width="288" height="150" rx="28" fill="none" stroke="url(#gold)" stroke-width="10"/>
+  <text x="256" y="235" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="82" fill="#f6dda0" letter-spacing="8">TRP</text>
+  <text x="256" y="392" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="40" fill="#e7def7" letter-spacing="2">NASHRIYOTI</text>
+</svg>`;
+
+for (const size of [192, 512]) {
+  await sharp(Buffer.from(iconSvg)).png().resize(size, size).toFile(`public/icon-${size}.png`);
+}
+
+console.log(covers.length, "covers + 2 icons written");
