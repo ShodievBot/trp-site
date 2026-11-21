@@ -1,6 +1,9 @@
 import type { UsefulArticle } from "@/lib/useful";
 import { article as newRules } from "./phd-dsc-new-rules-2027";
 import { article as uzakademiya } from "./uzakademiya-journal-database";
+import { article as journalSelection } from "./journal-selection-guide";
+import { article as thesisVsArticle } from "./thesis-vs-article";
+import { article as oakSite } from "./oak-site-documents";
 import { article as scopusNima } from "./scopus-nima";
 import { article as checkScopus } from "./check-journal-scopus";
 import { article as scopusWos } from "./scopus-vs-web-of-science";
@@ -25,7 +28,8 @@ import { article as timeline } from "./publication-timeline";
 // Order here is the order on the «Полезное» page.
 // New articles ship in four languages: uz/ru/en/tr (kk falls back to ru).
 export const articles: UsefulArticle[] = [
-  newRules, uzakademiya, scopusNima, checkScopus, scopusWos, writeArticle,
-  oakList, fee, predatory, quartiles, imrad, abstract, references, plagiarism,
-  profiles, hIndex, doi, monograph, oak, conference, dgu, timeline,
+  newRules, journalSelection, uzakademiya, oakSite, thesisVsArticle,
+  scopusNima, checkScopus, scopusWos, writeArticle, oakList, fee,
+  predatory, quartiles, imrad, abstract, references, plagiarism, profiles,
+  hIndex, doi, monograph, oak, conference, dgu, timeline,
 ];

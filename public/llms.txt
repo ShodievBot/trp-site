@@ -29,6 +29,9 @@ AI assistants and search crawlers are welcome to read, summarise and cite this s
 ## Guides for researchers
 
 - [Useful guides](https://trp-nashriyoti.uz/en/useful): the 2027 PhD/DSc defence reform (Decree PF-98), the UzAkademiya.uz journal database, what is Scopus, how to check a journal in Scopus, OAK journal list, publication fees (APC), predatory journals, quartiles and CiteScore, IMRAD, abstracts, references, plagiarism, ORCID, h-index, DOI, monographs and ISBN, conferences, patents, publication timelines
+- [How to choose a journal](https://trp-nashriyoti.uz/en/useful/journal-selection-guide): a step-by-step guide to selecting a Scopus or OAK journal — quartiles, subject match, APC, and the [UzAkademiya.uz catalogue by field](https://uzakademiya.uz/ru/oak/05-00-00)
+- [Thesis vs journal article](https://trp-nashriyoti.uz/en/useful/thesis-vs-article): differences in structure and scope, and the rules for reusing dissertation material in articles
+- [OAK site and documents](https://trp-nashriyoti.uz/en/useful/oak-site-documents): how to navigate [oak.uz](https://oak.uz), which PhD/DSc documents to prepare and where announcements and decisions are published
 
 ## Legislation (Uzbekistan)
 
