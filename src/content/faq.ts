@@ -37,7 +37,7 @@ export const faqItems: FaqItem[] = [
       en: "How long does publication take?",
     },
     a: {
-      uz: "O‘rtacha bir necha oydagi jarayon: jurnal tanlash, maqolani talablarga moslash, navbat va ko‘rib chiqish (peer review). Tezkor jurnallarda maqola 1–2 oyda, ko‘p sonli kvartilli jurnallarda 6 oy va undan ko‘p vaqt olishi mumkin. Konferensiya materiallari odatda tezroq chop etiladi.",
+      uz: "O‘rtacha bir necha oydagi jarayon: jurnal tanlash, maqolani talablarga moslash, navbat va ko‘rib chiqish (peer review). Tezkor jurnallarda maqola 1–2 oyda, kvartilli jurnallarda 6 oy va undan ko‘p vaqt olishi mumkin. Konferensiya materiallari odatda tezroq chop etiladi.",
       ru: "В среднем это процесс на несколько месяцев: подбор журнала, подготовка статьи к требованиям, очередь и рецензирование (peer review). В быстрых журналах статья выходит за 1–2 месяца, в квартильных — может занять 6 месяцев и больше. Материалы конференций публикуются обычно быстрее.",
       en: "On average, this is a process of several months: journal selection, preparing the manuscript to meet requirements, queue and peer review. Fast journals publish within 1–2 months, quartile journals can take 6 months or more. Conference proceedings are usually published faster.",
     },
@@ -52,6 +52,42 @@ export const faqItems: FaqItem[] = [
       uz: "OAK (Oliy attestatsiya komissiyasi) nashrdagi jurnallarning rasmiy ro‘yxatini yuritadi. Jurnalni shu ro‘yxat bo‘yicha va bosilgan son (jild, №, sahifalar) ma’lumotlari bilan tekshirish kerak. Biz izlanayotgan jurnalning OAK ro‘yxatida mavjudligini ham tekshirib beramiz.",
       ru: "ОАК (Высшая аттестационная комиссия) ведёт официальный перечень журналов. Журнал нужно проверять по этому перечню и по выходным данным напечатанного номера (том, №, страницы). Мы также проверяем, есть ли выбранный журнал в перечне ОАК.",
       en: "The OAK (Higher Attestation Commission of Uzbekistan) maintains an official list of journals. A journal should be checked against this list and against the printed issue details (volume, issue number, pages). We also verify whether the chosen journal is on the OAK list.",
+    },
+  },
+  {
+    q: {
+      uz: "VAK (OAK) jurnallari ro‘yxatini qayerdan topaman?",
+      ru: "Где найти актуальный список журналов ВАК (ОАК)?",
+      en: "Where can I find the current list of VAK (OAK) journals?",
+    },
+    a: {
+      uz: "Rasmiy manba — oak.uz sayti. Qulayroq variant: UzAkademiya.uz bazasida 800 dan ortiq VAK jurnali fan tarmoqlari bo‘yicha (masalan, texnika 05.00.00, pedagogika 13.00.00) ISSN, indeksatsiya va nashriyot bilan keltirilgan — kvartil va soha bo‘yicha filtrlash mumkin.",
+      ru: "Официальный источник — сайт oak.uz. Удобнее пользоваться базой UzAkademiya.uz: более 800 журналов ВАК собраны по отраслям (например, технические 05.00.00, педагогические 13.00.00) с ISSN, индексацией и издателем, есть фильтры по квартилю и области.",
+      en: "The official source is oak.uz. A more convenient option is the UzAkademiya.uz database: 800+ VAK journals are grouped by field (e.g. Engineering 05.00.00, Pedagogy 13.00.00) with ISSN, indexing and publisher, with filters by quartile and subject area.",
+    },
+  },
+  {
+    q: {
+      uz: "PhD va DSc uchun qancha nashr kerak?",
+      ru: "Сколько публикаций нужно для PhD и DSc?",
+      en: "How many publications are required for PhD and DSc?",
+    },
+    a: {
+      uz: "Amaldagi tartibga ko‘ra: PhD — kamida 7 ta chop etilgan ilmiy ish, shundan 3 tasi maqola (bittasi nufuzli xorijiy jurnalda); DSc — kamida 15 ta ish, shundan 10 tasi maqola. Batafsil UzAkademiya.uz sahifasida va ilmiy darajalar berish tartibi to‘g‘risidagi Nizomda (lex.uz).",
+      ru: "По действующему порядку: PhD — не менее 7 опубликованных научных работ, из них 3 статьи (одна в авторитетном зарубежном журнале); DSc — не менее 15 работ, из них 10 статей. Подробнее на странице UzAkademiya.uz и в Положении о присуждении степеней (lex.uz).",
+      en: "Under the current rules: PhD — at least 7 published research works, including 3 articles (one in a reputable international journal); DSc — at least 15 works, including 10 articles. Details on UzAkademiya.uz and in the degree-awarding regulation (lex.uz).",
+    },
+  },
+  {
+    q: {
+      uz: "2027-yilda himoya tartibida nima o‘zgaradi?",
+      ru: "Что меняется в защите диссертаций с 2027 года?",
+      en: "What changes in dissertation defences from 2027?",
+    },
+    a: {
+      uz: "PF-98-son farmoniga ko‘ra 2027-yil 1-yanvardan mavzu ro‘yxati, avtoreferat, yetakchi tashkilot, tarmoq kengash ekspertizasi va boshqa bosqichlar bekor qilinadi. E’loni berilganlar uchun himoya muddati — 2026-yil 31-dekabr. Batafsil tahlil va rasmiy havolalar alohida maqolamizda.",
+      ru: "По Указу ПФ-98 с 1 января 2027 года отменяются регистрация темы, автореферат, ведущая организация, экспертиза отраслевого совета и другие этапы. Для тех, кому объявление уже дано, — защита до 31 декабря 2026 года. Подробный разбор и ссылки на документы — в нашей статье.",
+      en: "Under Decree PF-98, from 1 January 2027 the topic registration, abstract, leading-organisation review, sectoral-council expertise and other stages are abolished. Those whose announcement has been issued must defend by 31 December 2026. Full breakdown with document links in our article.",
     },
   },
   {
@@ -122,7 +158,7 @@ export const faqItems: FaqItem[] = [
     },
     a: {
       uz: "Xizmatlar rasmiy ommaviy oferta asosida ko‘rsatiladi; «Ipak yo‘li» bankidagi joriy hisobga to‘lov qilinadi va hujjatlashtiriladi. Rekvizitlar /payment sahifasida, kompaniyaning guvohnomalari va ruxsatnomalari esa /license sahifasida ochiq joylashgan.",
-      ru: "Услуги оказываются на основе официальной публичной оферты; оплата производится и документально оформляется на расчётный счёт в банке « Ipak yo‘li ». Реквизиты — на странице /payment, свидетельства и разрешения компании — открыто на странице /license.",
+      ru: "Услуги оказываются на основе официальной публичной оферты; оплата производится и документально оформляется на расчётный счёт в банке «Ipak yo‘li». Реквизиты — на странице /payment, свидетельства и разрешения компании — открыто на странице /license.",
       en: "Services are provided under an official public offer; payment is made and documented to the current account at Ipak Yuli bank. Bank details are on the /payment page, and the company's registration certificates and permits are openly listed on the /license page.",
     },
   },
@@ -145,7 +181,7 @@ export const faqItems: FaqItem[] = [
       en: "How do I publish a monograph or textbook?",
     },
     a: {
-      uz: "Qo‘lyozmani tahrirlash, SARLAVHA, ISBN olish, bosmaga tayyorlash va chop etish bosqichlarini birga o‘taymiz. Nashr amalga oshirilgach, kitob berilgan ISBN bilan rasman hisobga tushadi. Batafsil jarayon /services/book-publishing sahifasida.",
+      uz: "Qo‘lyozmani tahrirlash, ISBN olish, bosmaga tayyorlash va chop etish bosqichlarini birga o‘taymiz. Nashr amalga oshirilgach, kitob berilgan ISBN bilan rasman hisobga tushadi. Batafsil jarayon /services/book-publishing sahifasida.",
       ru: "Мы вместе проходим этапы: редактирование рукописи, присвоение ISBN, подготовка макета и печать. После издания книга официально учтена под присвоенным ISBN. Подробный процесс — на странице /services/book-publishing.",
       en: "We go through the stages together: manuscript editing, ISBN assignment, layout preparation and printing. Once published, the book is officially registered under its ISBN. The detailed process is on the /services/book-publishing page.",
     },

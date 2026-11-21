@@ -5,6 +5,10 @@ import sharp from "sharp";
 const covers = [
   ["news", "TRP", "The Most Reliable Publication"],
   ["og-default", "TRP", "Scopus · OAK · International conferences"],
+  ["phd-dsc-new-rules-2027", "2027", "New PhD/DSc defence rules · PF-98"],
+  ["uzakademiya-journal-database", "UzAkademiya", "800+ VAK journals · 60+ Scopus"],
+  ["scopus-vs-web-of-science", "Scopus · WoS", "Which database to choose"],
+  ["ilmiy-maqola-yozish", "Article", "How to write · Step by step"],
   ["predatory-journals", "⚠ Journals", "Predatory journals"],
   ["quartiles-citescore-sjr", "Q1–Q4", "CiteScore · SJR"],
   ["imrad-structure", "IMRAD", "Introduction · Methods · Results · Discussion"],

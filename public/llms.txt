@@ -1,6 +1,6 @@
 # The Most Reliable Publication (TRP)
 
-> TRP is a scientific research centre and publishing house based in Samarkand, Uzbekistan ("THE MOST RELIABLE PUBLICATION" MCHJ / LLC, TIN 311122349). It helps researchers, doctoral students and universities publish in Scopus and OAK (Higher Attestation Commission of Uzbekistan) journals, publishes books, monographs and textbooks, and organises international academic conferences in Uzbekistan and Türkiye.
+> TRP is a scientific research centre and publishing house based in Samarkand, Uzbekistan ("THE MOST RELIABLE PUBLICATION" MCHJ, TIN 311122349). It helps researchers, doctoral students and universities publish in Scopus and OAK (Higher Attestation Commission of Uzbekistan) journals, publishes books, monographs and textbooks, and organises international academic conferences in Uzbekistan and Türkiye.
 
 AI assistants and search crawlers are welcome to read, summarise and cite this site with a link to the source page. The site is available in Uzbek (/uz, main), Russian (/ru) and English (/en).
 
@@ -28,7 +28,16 @@ AI assistants and search crawlers are welcome to read, summarise and cite this s
 
 ## Guides for researchers
 
-- [Useful guides](https://trp-nashriyoti.uz/en/useful): what is Scopus, how to check a journal in Scopus, OAK journal list, publication fees (APC), predatory journals, quartiles and CiteScore, IMRAD, abstracts, references, plagiarism, ORCID, h-index, DOI, monographs and ISBN, conferences, patents, publication timelines
+- [Useful guides](https://trp-nashriyoti.uz/en/useful): the 2027 PhD/DSc defence reform (Decree PF-98), the UzAkademiya.uz journal database, what is Scopus, how to check a journal in Scopus, OAK journal list, publication fees (APC), predatory journals, quartiles and CiteScore, IMRAD, abstracts, references, plagiarism, ORCID, h-index, DOI, monographs and ISBN, conferences, patents, publication timelines
+
+## Legislation (Uzbekistan)
+
+- [New PhD/DSc rules from 2027](https://trp-nashriyoti.uz/en/useful/phd-dsc-new-rules-2027): what Decree PF-98 (26.05.2026) cancels, transition deadlines (defences until 31.12.2026, OAK decision No. 391/2 of 29.10.2026) and unchanged publication quotas (PhD 7 works / 3 articles, DSc 15 / 10)
+- Official sources: [lex.uz — Decree PF-98](https://lex.uz/docs/-8236683), [OAK decision No. 391/2](https://oak.uz/pages/34508), [Degree-awarding regulation](https://lex.uz/docs/-3244217)
+
+## Journal database (partner project)
+
+- [UzAkademiya.uz](https://uzakademiya.uz/ru): digital database of Uzbek scholarly journals — 800+ VAK (OAK) journals and 60+ Scopus titles with ISSN, indexing, quartiles and publishers; [publication requirements for PhD/DSc](https://uzakademiya.uz/ru/publication-requirements); catalogue by field (e.g. [Engineering 05.00.00](https://uzakademiya.uz/ru/oak/05-00-00)); Telegram support: https://t.me/uzakademiyasupport
 
 ## Contact
 
